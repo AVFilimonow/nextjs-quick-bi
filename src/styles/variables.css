@@ -68,14 +68,12 @@
     }
 }
 
-
-
 @media screen and (min-width: 1536px) {
     :root {
         --font-h1-size: 88px;
         --font-h1-height: 124px;
-        --font-h2-size: 56px;
-        --font-h2-height: 80px;
+        --font-h2-size: 80px;
+        --font-h2-height: 88px;
         --font-h3-size: 48px;
         --font-h3-height: 56px;
         --font-h4-size: 32px;
@@ -84,11 +82,11 @@
         --font-h5-height: 32px;
         --font-p1-size: 32px;
         --font-p1-height: 42px;
-        --font-p2-size: 24px;
-        --font-p2-height: 32px;
-        --font-p3-size: 18px;
-        --font-p3-height: 26px;
-        --font-p4-size: 16px;
+        --font-p2-size: 40px;
+        --font-p2-height: 44px;
+        --font-p3-size: 32px;
+        --font-p3-height: 42px;
+        --font-p4-size: 20px;
         --font-p4-height: 22px;
     }
 }
