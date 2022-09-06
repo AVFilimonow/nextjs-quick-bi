@@ -1,0 +1,38 @@
+stages:
+  - build
+  - deploy
+
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  image: node:16
+  stage: build
+  script:
+    - yarn install --silent
+    - yarn start
+    - rm -rf public
+    - mv out public
+    - cp public/index.html public/404.html
+    - node -pe "require('./package.json').version" > public/version.txt
+    - gzip -k -6 $(find public -type f)
+  artifacts:
+    expire_in: 1 year
+    paths:
+      - public
+  only:
+    - main
+pages:
+  image: alpine:latest
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none        # Do not clone git repo
+  script: echo ./public/version.txt
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
+  when: manual
