@@ -12,10 +12,9 @@ build:
   stage: build
   script:
     - yarn install --silent
-    - yarn start
+    - yarn export
     - rm -rf public
     - mv out public
-    - cp public/index.html public/404.html
     - node -pe "require('./package.json').version" > public/version.txt
     - gzip -k -6 $(find public -type f)
   artifacts:
