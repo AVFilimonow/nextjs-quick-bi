@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/button/index";
-import { Footer } from "@/components/footer/index";
+import { Container } from "../container";
 
 export const Main: React.FC<{ title?: string }> = () => {
     const mainBlock = useRef(null);
@@ -8,10 +8,10 @@ export const Main: React.FC<{ title?: string }> = () => {
 
     return (
         <main>
-            <section className="bg-gray-100 px-[176px] pt-[120px] h-[724px]">
+            <Container className="bg-gray-100 lg:h-[724px]">
                 <h2
                     className={
-                        "text-h2 uppercase font-familyBold text-black mb-[64px]"
+                        "text-h2 uppercase font-familyBold text-black mb-[16px] lg:mb-[64px]"
                     }
                 >
                     У нас есть всё для
@@ -19,37 +19,39 @@ export const Main: React.FC<{ title?: string }> = () => {
                     эффективной тренировки
                 </h2>
 
-                <div className="flex justify-between font-familyBold">
+                <div className="flex justify-start lg:justify-between gap-x-[50px] font-familyBold">
                     <div
-                        className="bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
+                        className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px]
 "
                     >
-                        <div>
+                        <div className="">
                             <img
+                                className="w-[40px] h-[40px]"
                                 src="../../../images/main/feat_1.svg"
                                 alt="features"
                             />
-                            <span className="text-p2 uppercase block mt-[40px]">
+                            <span className="text-p2 uppercase block mt-[16px] lg:mt-[40px]">
                                 Полотенца
                             </span>
                         </div>
                     </div>
                     <div
-                        className="bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
+                        className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px]
 "
                     >
-                        <div>
+                        <div className="">
                             <img
+                                className="w-[40px] h-[40px]"
                                 src="../../../images/main/feat_2.svg"
                                 alt="features"
                             />
-                            <span className="text-p2 uppercase block mt-[40px]">
+                            <span className="text-p2 uppercase block mt-[16px] lg:mt-[40px]">
                                 free wi-fi
                             </span>
                         </div>
                     </div>
                     <div
-                        className="bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
+                        className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
 "
                     >
                         <div>
@@ -63,7 +65,7 @@ export const Main: React.FC<{ title?: string }> = () => {
                         </div>
                     </div>
                     <div
-                        className="bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
+                        className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
 "
                     >
                         <div>
@@ -77,162 +79,241 @@ export const Main: React.FC<{ title?: string }> = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-            <section className="bg-white px-[176px] py-[120px]">
+            </Container>
+            <Container className="bg-white pb-[40px] lg:pb-[120px]">
                 <h2
                     className={
-                        "text-h2 uppercase font-familyBold font-bold text-black w-3/5 mb-[28px]"
+                        "text-h2 uppercase font-familyBold font-bold text-black mb-[6px] lg:mb-[64px]"
                     }
                 >
                     Фитнес направления
                 </h2>
-                <h4 className={"text-h4 text-black w-3/5 mb-[64px]"}>
+                <h4
+                    className={
+                        "text-h4 text-black mb-[24px] lg:mb-[64px] font-['PT-Root-UI'] lg:font-['Arsenal']"
+                    }
+                >
                     Эфективные направления для твоих целей
                 </h4>
-                <div className="flex gap-x-[50px] mb-[48px]">
+                <div className="flex lg:gap-x-[50px] lg:mb-[48px]">
                     <div
-                        style={{
-                            backgroundImage: `url("../../../images/main/stretching.jpg")`,
-                            backgroundPosition: `cover`,
-                        }}
-                        className={`w-[616px] h-[480px]`}
-                    ></div>
+                        style={{}}
+                        className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/stretching.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                    >
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Stretching
+                        </span>
+                    </div>
                     <div
-                        style={{
-                            backgroundImage: `url("../../../images/main/fitnes.jpg")`,
-                            backgroundPosition: `cover`,
-                        }}
-                        className={`w-[616px] h-[480px]`}
-                    ></div>
+                        style={{}}
+                        className={`hidden lg:block bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/fitnes.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                    >
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Stretching
+                        </span>
+                    </div>
                 </div>
                 <Button
-                    className={`block mx-auto px-[150px] bg-transparent border-[#AC6A66] border-2 text-[#AC6A66]`}
+                    className={`hidden lg:block mx-auto px-[150px] bg-transparent border-[#AC6A66] border-2 text-[#AC6A66]`}
                 >
                     Все направления
                 </Button>
-            </section>
-            <section className="bg-gray-100 px-[176px] pt-[120px] h-[593px] relative">
+            </Container>
+            <Container className="bg-gray-100 lg:h-[593px] relative">
                 <h2
                     className={
-                        "text-h2 uppercase font-familyBold font-bold text-black w-3/5 mb-[28px]"
+                        "text-h2 uppercase font-familyBold font-bold text-black mb-[6px] lg:mb-[64px]"
                     }
                 >
                     Лучшее время,
                     <br />
                     чтобы начать - сейчас
                 </h2>
-                <h4 className={"text-h4 text-black mb-[48px]"}>
+                <h4
+                    className={
+                        "text-h4 text-black mb-[42px] lg:mb-[48px] font-['PT-Root-UI'] lg:font-['Arsenal']"
+                    }
+                >
                     Начни с первой тренировки
                 </h4>
                 <img
-                    className="absolute right-[176px] top-[96px]"
+                    className="hidden lg:block lg:absolute right-[176px] top-[96px]"
                     src="../../../images/main/a-logo.png"
                     alt=""
                 />
-                <Button className={`px-[180px] bg-[#D08884] text-white`}>
+                <Button
+                    className={`px-[0px] w-[100%] lg:w-[480px] bg-[#D08884] text-white`}
+                >
                     Попробовать
                 </Button>
-            </section>
-            <section className="bg-white px-[176px] py-[120px]">
+            </Container>
+            <Container className="bg-white pb-[40px] lg:pb-[120px]">
                 <h2
                     className={
-                        "text-h2 uppercase font-familyBold font-bold text-black w-3/5 mb-[28px]"
+                        "text-h2 uppercase font-familyBold font-bold text-black mb-[6px] lg:mb-[64px]"
                     }
                 >
                     Студии Academy
                 </h2>
-                <h4 className={"text-h4 text-black mb-[64px]"}>
+                <h4
+                    className={
+                        "text-h4 text-black mb-[24px] lg:mb-[64px] font-['PT-Root-UI'] lg:font-['Arsenal']"
+                    }
+                >
                     Выбери свой Academy
                 </h4>
-                <div className="flex gap-x-[50px] mb-[48px]">
+                <div className="flex lg:gap-x-[50px] lg:mb-[48px]">
                     <div
-                        style={{
-                            backgroundImage: `url("../../../images/main/studio_1.jpg")`,
-                            backgroundPosition: `cover`,
-                        }}
-                        className={`w-[616px] h-[480px]`}
-                    ></div>
+                        style={{}}
+                        className={`bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                    >
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                            }
+                        >
+                            Нур-Султан
+                        </span>
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Studio Name
+                        </span>
+                    </div>
                     <div
-                        style={{
-                            backgroundImage: `url("../../../images/main/studio_2.jpg")`,
-                            backgroundPosition: `cover`,
-                        }}
-                        className={`w-[616px] h-[480px]`}
-                    ></div>
+                        style={{}}
+                        className={`hidden lg:block bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_2.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                    >
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                            }
+                        >
+                            Нур-Султан
+                        </span>
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Studio Name
+                        </span>
+                    </div>
                 </div>
                 <Button
-                    className={`block mx-auto px-[150px] bg-transparent border-[#AC6A66] border-2 text-[#AC6A66]`}
+                    className={`hidden lg:block mx-auto px-[0px] w-[100%] lg:w-[480px] bg-transparent border-[#AC6A66] border-2 text-[#AC6A66]`}
                 >
                     Все направления
                 </Button>
-            </section>
-            <section className="bg-gray-100 h-[666px]">
-                <div className="flex">
+            </Container>
+            <section className="bg-gray-100 lg:h-[666px]">
+                <div className="flex flex-col lg:flex-row">
                     <div>
                         <img src="../../../images/main/join.jpg" alt="" />
                     </div>
-                    <div className="ml-[64px]">
+                    <div className="lg:ml-[64px] px-[16px] lg:px-[0px] pb-[40px] lg:pb-[0px]">
                         <h2
                             className={
-                                "text-h2 uppercase font-familyBold font-bold text-black mb-[48px] mt-[102px] max-w-[640px]"
+                                "text-h2 uppercase font-familyBold font-bold text-black mb-[20px] lg:mb-[48px] mt-[24px] lg:mt-[102px] lg:max-w-[640px]"
                             }
                         >
-                            Получите Эксклюзивные Условия На Абонемент
+                            Получи Эксклюзивные Условия На Абонемент
                         </h2>
-                        <Button className={`px-[80px] bg-[#D08884] text-white`}>
+                        <Button
+                            className={`px-[0px] w-[100%] lg:w-[335px] lg:px-[80px] bg-[#D08884] text-white`}
+                        >
                             Присоединиться
                         </Button>
                     </div>
                 </div>
             </section>
-            <section className="bg-white px-[176px] py-[120px]">
+            <Container className="bg-white pb-[40px] lg:pb-[120px]">
                 <h2
                     className={
-                        "text-h2 uppercase font-familyBold font-bold text-black mb-[64px]"
+                        "text-h2 uppercase font-familyBold font-bold text-black mb-[24px] lg:mb-[64px]"
                     }
                 >
                     Тренеры, Которые приведут тебя <br />к результату
                 </h2>
-                <div className="flex gap-x-[50px] mb-[48px]">
+                <div className="flex lg:gap-x-[50px] mb-[24px] lg:mb-[48px]">
                     <div
-                        style={{
-                            backgroundImage: `url("../../../images/main/trener_1.jpg")`,
-                            backgroundPosition: `cover`,
-                        }}
-                        className={`w-[616px] h-[480px]`}
-                    ></div>
+                        style={{}}
+                        className={`bg-[url('/images/main/trener_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/trener_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                    >
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Васильева Софья
+                        </span>
+                    </div>
                     <div
-                        style={{
-                            backgroundImage: `url("../../../images/main/trener_2.jpg")`,
-                            backgroundPosition: `cover`,
-                        }}
-                        className={`w-[616px] h-[480px]`}
-                    ></div>
+                        style={{}}
+                        className={`hidden lg:block bg-[url('/images/main/trener_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/trener_2.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                    >
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Васильева Софья
+                        </span>
+                    </div>
                 </div>
                 <Button
-                    className={`block mx-auto px-[180px] bg-transparent border-[#AC6A66] border-2 text-[#AC6A66]`}
+                    className={`hidden lg:block mx-auto px-[180px] bg-transparent border-[#AC6A66] border-2 text-[#AC6A66]`}
                 >
                     Все тренеры
                 </Button>
-            </section>
-            <section className="bg-[#292929] px-[148px] py-[160px]">
-                <div className="flex justify-between">
+                <div className="flex lg:hidden">
+                    <img
+                        src="../../../images/main/all_treners_icon.svg"
+                        alt=""
+                    />
+                    <a
+                        className="ml-[12px] uppercase text-[#292929] text-h4 underline"
+                        href="#"
+                    >
+                        Все тренеры
+                    </a>
+                </div>
+            </Container>
+            <section className="bg-[#292929] px-[20px] py-[60px] lg:px-[148px] lg:py-[160px]">
+                <div className="lg:flex lg:justify-between">
                     <h2
                         className={
-                            "text-h2 uppercase font-familyBold font-bold text-white"
+                            "text-h2 uppercase font-familyBold font-bold text-white mb-[8px] lg:mb-[0px]"
                         }
                     >
                         Узнавай первым
                     </h2>
-                    <div>
+                    <h4
+                        className={
+                            "lg:hidden text-h4 text-white mb-[24px] lg:mb-[64px] font-['PT-Root-UI'] lg:font-['Arsenal']"
+                        }
+                    >
+                        Оставь номер телефона и ...
+                    </h4>
+                    <div className="mx-auto">
                         <input
                             type="phone"
                             placeholder="Телефон"
-                            className="text-white text-p3 font-['PT-Root-UI'] outline-none pb-[8px] pt-[20px] min-w-[430px] bg-transparent border-b-[1px] border-b-white"
+                            className="text-white text-p3 font-['PT-Root-UI'] outline-none pb-[8px] pt-[20px] w-[90%] lg:min-w-[430px] bg-transparent border-b-[1px] border-b-white"
                         />
                         <button
                             type="submit"
-                            className="bg-transparent border-b-[1px] pt-[3px] pb-[18px] border-b-white"
+                            className="bg-transparent border-b-[1px] pt-[3px] pb-[15px] lg:pt-[3px] lg:pb-[18px] border-b-white"
                         >
                             <img
                                 src="../../../images/main/arrow_right.svg"
