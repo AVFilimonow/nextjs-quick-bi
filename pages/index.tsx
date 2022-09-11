@@ -3,6 +3,7 @@ import { PostData } from "@/types/postdata";
 import { PostsApi } from "@/lib/api";
 import { Button } from "@/components/button/index";
 import dynamic from "next/dynamic";
+import { StudioQuiz, Training, TrainingQuiz } from "@/components";
 
 const Main = dynamic<any>(
     () => import("@/components/main").then((mod) => mod.Main),
@@ -18,16 +19,21 @@ const Footer = dynamic<any>(
     },
 );
 
+const TrialForm = dynamic<any>(
+    () => import("@/components/trial_form").then((mod) => mod.TrialForm),
+    {
+        ssr: false,
+    },
+);
+
 const Home: React.FC = () => {
     return (
         <div className="">
             <div className="bg-white h-screen lg:hidden flex flex-col justify-between">
-                <div className="pt-[64px] px-[16px]">
-                    <img
-                        className="ml-auto"
-                        src="../../../images/modal/close_btn.svg"
-                        alt=""
-                    />
+                <div className="pt-[64px] px-[16px] ml-auto">
+                    <button>
+                        <img src="../../../images/modal/close_btn.svg" alt="" />
+                    </button>
                 </div>
                 <div className="px-[32px] pb-[20px] mt-auto flex flex-col justify-between h-[80%]">
                     <ul className="flex flex-col text-black text-h2 uppercase font-familyBold">
@@ -150,19 +156,20 @@ const Home: React.FC = () => {
                     </li>
                 </u>
             </div>
-            <Main />
-            <Footer />
+            {/* <Main />
+            <Footer /> */}
+            <StudioQuiz />
         </div>
     );
 };
 
-export const getStaticProps: GetStaticProps = async (_context) => {
-    // fetch list of posts
-    const posts: PostData[] = await PostsApi.getPosts();
-    return {
-        props: {
-            postDataList: posts,
-        },
-    };
-};
+// export const getStaticProps: GetStaticProps = async (_context) => {
+//     // fetch list of posts
+//     const posts: PostData[] = await PostsApi.getPosts();
+//     return {
+//         props: {
+//             postDataList: posts,
+//         },
+//     };
+// };
 export default Home;

@@ -172,7 +172,6 @@ export const Main: React.FC<{ title?: string }> = () => {
                 </h4>
                 <div className="flex lg:gap-x-[50px] lg:mb-[48px]">
                     <div
-                        style={{}}
                         className={`bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
                     >
                         <span
