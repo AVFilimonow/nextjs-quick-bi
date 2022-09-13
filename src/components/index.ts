@@ -4,6 +4,7 @@ export { Footer } from "./footer";
 export { Container } from "./container";
 export { Select } from "./select";
 export { Input } from "./input";
+export { Checkbox } from "./checkbox";
 export { TrialForm } from "./trial_form";
 export { Thankyou } from "./thank_you";
 export { TrainingTypes } from "./training_types";

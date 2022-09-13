@@ -3,7 +3,14 @@ import { PostData } from "@/types/postdata";
 import { PostsApi } from "@/lib/api";
 import { Button } from "@/components/button/index";
 import dynamic from "next/dynamic";
-import { StudioQuiz, Training, TrainingQuiz } from "@/components";
+import {
+    StudioOnMap,
+    StudioQuiz,
+    Thankyou,
+    TrainerQuiz,
+    Training,
+    TrainingQuiz,
+} from "@/components";
 
 const Main = dynamic<any>(
     () => import("@/components/main").then((mod) => mod.Main),
@@ -157,8 +164,8 @@ const Home: React.FC = () => {
                 </u>
             </div>
             {/* <Main />
-            <Footer /> */}
-            <StudioQuiz />
+            <Footer />*/}
+            <TrainingQuiz />
         </div>
     );
 };

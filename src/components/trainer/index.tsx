@@ -4,7 +4,7 @@ import { Button } from "@/components/button/index";
 export const Trainer: React.FC<{ title?: string }> = () => {
     return (
         <div>
-            <div className="bg-[#FAFAFA] px-[16px] pt-[16px] pb-[20px] h-screen flex flex-col">
+            <div className="bg-gray px-[16px] pt-[16px] pb-[20px] h-screen flex flex-col">
                 <div className="flex mb-[42px]">
                     <button className="mr-[16px]">
                         <img
@@ -49,7 +49,7 @@ export const Trainer: React.FC<{ title?: string }> = () => {
                     </button>
                 </div>
             </div>
-            <div className="bg-[#FAFAFA] px-[16px] pt-[16px] pb-[20px] flex flex-col">
+            <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col">
                 <div className="flex mb-[42px]">
                     <button className="mr-[16px]">
                         <img
@@ -99,7 +99,7 @@ export const Trainer: React.FC<{ title?: string }> = () => {
                     </button>
                 </div>
             </div>
-            <div className="bg-[#FAFAFA] px-[16px] pt-[16px] pb-[20px] flex flex-col">
+            <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col">
                 <div className="flex mb-[28px]">
                     <button className="mr-[16px]">
                         <img

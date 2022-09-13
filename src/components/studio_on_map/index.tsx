@@ -4,7 +4,7 @@ import { Button } from "@/components/button/index";
 export const StudioOnMap: React.FC<{ title?: string }> = () => {
     return (
         <div>
-            <div className="bg-[#FAFAFA] px-[16px] pt-[20px] pb-[32px] h-screen flex flex-col">
+            <div className="bg-gray px-[16px] pt-[20px] pb-[32px] h-screen flex flex-col">
                 <div className="flex items-center justify-start mb-[32px]">
                     <button className="mr-[16px]">
                         <img
@@ -47,7 +47,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                     </button>
                 </div>
             </div>
-            <div className="bg-[#FAFAFA] px-[16px] pt-[20px] pb-[32px] h-screen flex flex-col">
+            <div className="bg-gray px-[16px] pt-[20px] pb-[32px] flex flex-col">
                 <div className="flex items-center justify-start mb-[32px]">
                     <button className="mr-[16px]">
                         <img
@@ -182,7 +182,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                 </Button>
             </div>
             <div>
-                <div className="bg-[#FAFAFA] px-[16px] pt-[20px] flex flex-col">
+                <div className="bg-gray px-[16px] pt-[20px] flex flex-col">
                     <div className="flex items-center justify-start mb-[32px]">
                         <button className="mr-[16px]">
                             <img
@@ -283,7 +283,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-[#FAFAFA] px-[16px] pt-[24px] pb-[20px]">
+                <div className="bg-gray px-[16px] pt-[24px] pb-[20px]">
                     <h2
                         className={
                             "text-h2 uppercase font-familyBold font-bold text-[#292929] mb-[8px]"
