@@ -4,7 +4,7 @@ import { Button } from "@/components/button/index";
 export const Thankyou: React.FC<{ title?: string }> = () => {
     return (
         <div className="bg-[#FAFAFA] px-[20px] lg:px-[94px] h-screen flex flex-col justify-center items-center">
-            <button className="hidden lg:block ml-auto">
+            <button className="hidden ml-auto">
                 <img src="../../../images/modal/close_btn.svg" alt="" />
             </button>
             <img
@@ -12,10 +12,14 @@ export const Thankyou: React.FC<{ title?: string }> = () => {
                 src="../../../images/modal/thank_you.png"
                 alt=""
             />
-
+            <img
+                className="hidden lg:block mx-auto mb-[55px] w-[635px]"
+                src="../../../images/modal/thank_you_desktop.png"
+                alt=""
+            />
             <h2
                 className={
-                    "text-h2 lg:text-h3 uppercase font-familyBold font-bold text-[#292929] mb-[32px] lg:mb-[48px] lg:mt-[64px]"
+                    "text-h2 lg:text-h3 uppercase font-familyBold font-bold text-[#292929] mb-[32px] lg:mb-[48px]"
                 }
             >
                 Спасибо!
@@ -27,8 +31,9 @@ export const Thankyou: React.FC<{ title?: string }> = () => {
             >
                 Ваши данные отправлены, мы перезвоним Вам
             </span>
-
-            <Button className={`w-[100%] bg-[#D08884] text-white`}>Ок</Button>
+            <Button className={`w-[100%] bg-[#D08884] text-white lg:w-[400px]`}>
+                Ок
+            </Button>
         </div>
     );
 };

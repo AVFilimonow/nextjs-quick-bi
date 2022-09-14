@@ -165,7 +165,7 @@ const Home: React.FC = () => {
             </div>
             {/* <Main />
             <Footer />*/}
-            <TrainingQuiz />
+            <StudioOnMap />
         </div>
     );
 };
