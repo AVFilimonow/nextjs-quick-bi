@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Button, Container, Input, Checkbox } from "@/components/";
+import { Button, Container, Input, Checkbox } from "@/components";
 import { Footer } from "../footer";
 import { StudioQuiz } from "../studio_quiz";
 

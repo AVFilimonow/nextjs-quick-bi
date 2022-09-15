@@ -7,6 +7,7 @@ import {
     StudioOnMap,
     StudioQuiz,
     Thankyou,
+    Trainer,
     TrainerQuiz,
     Training,
     TrainingQuiz,
@@ -165,7 +166,7 @@ const Home: React.FC = () => {
             </div>
             {/* <Main />
             <Footer />*/}
-            <StudioOnMap />
+            <TrainerQuiz />
         </div>
     );
 };
