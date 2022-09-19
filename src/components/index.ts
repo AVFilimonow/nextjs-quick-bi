@@ -14,3 +14,4 @@ export { TrainingQuiz } from "./training_quiz";
 export { StudioQuiz } from "./studio_quiz";
 export { TrainerQuiz } from "./trainer_quiz";
 export { StudioOnMap } from "./studio_on_map";
+export { MobMenu } from "./mobile_menu";
