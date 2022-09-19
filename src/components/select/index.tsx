@@ -12,7 +12,7 @@ export const Select: React.FC<ISelect> = ({
 }) => {
     return (
         <select
-            className={`bg-transparent pb-[8px] pt-[20px] outline-none border-b-[1px] border-b-black text-[#292929]
+            className={`bg-transparent pb-[8px] pt-[20px] outline-none border-b-[1px] border-b-black text-[#292929] lg:text-[24px]
              ${className}`}
             {...rest}
             data-testid="input"

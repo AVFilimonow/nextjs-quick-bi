@@ -8,14 +8,14 @@ export const Footer: React.FC<{ title?: string }> = () => {
                 <div
                     className={`flex items-center justify-between mb-[40px] lg:mb-[48px]`}
                 >
-                    <a href="#" className={`mr-auto lg:mr-0`}>
+                    <a href="#" className={`mr-auto lg:mr-[32px]`}>
                         <img
                             className="w-[194px] h-[52px] lg:w-[195px] lg:h-[52px]"
                             src="/images/main/logo.svg"
                             alt=""
                         />
                     </a>
-                    <ul className="hidden lg:block text-white text-p4 font-familyBold uppercase flex">
+                    <ul className="hidden text-white text-p4 font-familyBold uppercase lg:flex">
                         <li className="mr-[40px]">
                             <a href="#">Направления</a>
                         </li>
@@ -55,7 +55,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         </li>
                     </u>
                 </div>
-                <span className="inline-block text-[16px] lg:text-[18px] text-[#DADADA] font-['PT-Root-UI'] mb-[40px] lg:mb-[0px]">
+                <span className="inline-block text-p4 lg:text-[18px] text-[#DADADA] font-['PT-Root-UI'] mb-[40px] lg:mb-[0px]">
                     © Academy 2022. Cеть фитнес-студий.
                 </span>
                 <h2
@@ -68,7 +68,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                 <a
                     href="tel:+77779876543"
                     className={
-                        "lg:hidden block text-[#DADADA] text-[16px] mb-[8px] font-['PT-Root-UI']"
+                        "lg:hidden block text-[#DADADA] text-p4 mb-[8px] font-['PT-Root-UI']"
                     }
                 >
                     +7 (777) - 987 - 65 - 43
@@ -76,7 +76,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                 <a
                     href="mailto:name@academy.kz"
                     className={
-                        "lg:hidden block text-[#DADADA] text-[16px] mb-[40px] font-['PT-Root-UI']"
+                        "lg:hidden block text-[#DADADA] text-p4 mb-[40px] font-['PT-Root-UI']"
                     }
                 >
                     name@academy.kz
@@ -93,7 +93,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         <a
                             href="#"
                             className={
-                                "lg:hidden block text-[#DADADA] text-[16px] mb-[8px] font-['PT-Root-UI']"
+                                "lg:hidden block text-[#DADADA] text-p4 mb-[8px] font-['PT-Root-UI']"
                             }
                         >
                             Реквизиты
@@ -103,7 +103,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         <a
                             href="#"
                             className={
-                                "lg:hidden block text-[#DADADA] text-[16px] mb-[8px] font-['PT-Root-UI']"
+                                "lg:hidden block text-[#DADADA] text-p4 mb-[8px] font-['PT-Root-UI']"
                             }
                         >
                             Политика конфидициальности
@@ -113,7 +113,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         <a
                             href="#"
                             className={
-                                "lg:hidden block text-[#DADADA] text-[16px] mb-[8px] font-['PT-Root-UI']"
+                                "lg:hidden block text-[#DADADA] text-p4 mb-[8px] font-['PT-Root-UI']"
                             }
                         >
                             Публичная оферта
@@ -123,7 +123,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         <a
                             href="#"
                             className={
-                                "lg:hidden block text-[#DADADA] text-[16px] mb-[8px] font-['PT-Root-UI']"
+                                "lg:hidden block text-[#DADADA] text-p4 mb-[8px] font-['PT-Root-UI']"
                             }
                         >
                             Способы оплаты
@@ -133,7 +133,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         <a
                             href="#"
                             className={
-                                "lg:hidden block text-[#DADADA] text-[16px] font-['PT-Root-UI']"
+                                "lg:hidden block text-[#DADADA] text-p4 font-['PT-Root-UI']"
                             }
                         >
                             Вакансии
@@ -142,7 +142,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                 </ul>
             </div>
 
-            <div className="bg-white flex justify-between py-[24px] px-[16px]">
+            <div className="lg:hidden bg-white flex justify-between py-[24px] px-[16px]">
                 <a
                     className="ml-[12px] text-[#292929] uppercase text-h4 underline"
                     href="#"
