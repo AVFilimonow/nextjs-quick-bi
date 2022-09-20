@@ -7,7 +7,7 @@ export const Container: FC<{ className?: string; children: ReactNode }> = ({
 }) => {
     return (
         <div
-            className={`px-[16px] py-[40px] lg:px-[176px] lg:pt-[120px]
+            className={`px-[16px] py-[40px] lg:px-[176px] lg:py-[120px]
              ${className}`}
         >
             {children}

@@ -29,25 +29,25 @@ export const MobMenu = (props) => {
                         <a href="#">Контакты</a>
                     </li>
                 </ul>
-                <Button className={`w-[100%] bg-[#D08884] text-white`}>
+                <Button className={`w-[100%] bg-primary text-white`}>
                     Присоединиться
                 </Button>
                 <div className="flex w-[50%] mx-auto justify-between">
                     <a href="#">
                         <img
-                            src="../../../images/modal/telegram_color.svg"
+                            src="../../../images/main/telegram_black.svg"
                             alt=""
                         />
                     </a>
                     <a href="#">
                         <img
-                            src="../../../images/modal/instagram_color.svg"
+                            src="../../../images/main/instagram_black.svg"
                             alt=""
                         />
                     </a>
                     <a href="#">
                         <img
-                            src="../../../images/modal/youtube_color.svg"
+                            src="../../../images/main/youtube_black.svg"
                             alt=""
                         />
                     </a>

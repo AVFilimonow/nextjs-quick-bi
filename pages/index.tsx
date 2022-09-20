@@ -51,25 +51,35 @@ const Home: React.FC = () => {
                         backgroundPosition: `top center`,
                     }}
                 >
-                    <div className={`flex flex-col justify-between`}>
+                    <div className={`flex flex-col justify-between relative`}>
                         <div
-                            className={`flex items-center justify-between mb-[260px] lg:mb-[230px]`}
+                            className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[230px]`}
                         >
-                            <a href="#" className={`mx-auto lg:mx-0`}>
-                                <img
-                                    className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                    src="/images/main/logo.svg"
-                                    alt=""
-                                />
-                            </a>
-                            <ul className="hidden lg:flex text-white text-p4 uppercase font-familyBold">
-                                <li className="mr-[40px]">
+                            <div
+                                className={
+                                    "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
+                                }
+                            >
+                                <a
+                                    href="#"
+                                    className={`mx-auto lg:mx-0 lg:block`}
+                                >
+                                    <img
+                                        className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
+                                        src="/images/main/logo.svg"
+                                        alt=""
+                                    />
+                                </a>
+                            </div>
+
+                            <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-[20px] uppercase font-familyBold">
+                                <li className="lg:mr-[40px]">
                                     <a href="#">Направления</a>
                                 </li>
-                                <li className="mr-[40px]">
+                                <li className="lg:mr-[40px]">
                                     <a href="#">Студии</a>
                                 </li>
-                                <li className="mr-[40px]">
+                                <li className="lg:mr-[40px]">
                                     <a href="#">Тренеры</a>
                                 </li>
                                 <li>
@@ -77,35 +87,36 @@ const Home: React.FC = () => {
                                 </li>
                             </ul>
                             <Button
-                                className={`hidden lg:block text-white border-2 border-white px-[60px]`}
+                                className={`hidden lg:block lg:mb-[32px] text-white border-2 border-white px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px]`}
                             >
                                 Присоединиться
                             </Button>
-                            <button
-                                onClick={() => {
-                                    setOpenMenu(true);
-                                    console.log(openMenu);
-                                }}
-                            >
-                                <img
-                                    className={`lg:hidden`}
-                                    src="/images/main/mob_menu.svg"
-                                    alt=""
-                                />
-                            </button>
                         </div>
-                        <h1 className="absolute left-[10%] top-[58%] lg:left-[176px] lg:top-[425px] text-white uppercase text-h1 text-left">
-                            Бесконечная <br />
-                            энергия Фитнеса
-                        </h1>
+                        <button
+                            className="absolute top-[3%] right-[5%]"
+                            onClick={() => {
+                                setOpenMenu(true);
+                                console.log(openMenu);
+                            }}
+                        >
+                            <img
+                                className={`lg:hidden`}
+                                src="/images/main/mob_menu.svg"
+                                alt=""
+                            />
+                        </button>
                     </div>
+                    <h1 className="absolute left-[10%] top-[58%] lg:left-[7%] lg:top-[45%] text-white uppercase text-h1 text-left">
+                        Бесконечная <br />
+                        энергия Фитнеса
+                    </h1>
                     <img
                         src="/images/main/ellipse.svg"
-                        className="w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] absolute left-[21%] top-[52%] lg:left-[17%] lg:top-[35%]"
+                        className="absolute left-[21%] top-[52%] lg:left-[14%] lg:top-[35%] w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] "
                         alt=""
                     />
 
-                    <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[180px] bottom-[150px]">
+                    <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[176px] bottom-[15%]">
                         <li className="mb-[30px]">
                             <a href="#">
                                 <img src="/images/main/telegram.png" alt="" />

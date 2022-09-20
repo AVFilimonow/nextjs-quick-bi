@@ -6,16 +6,19 @@ export const Footer: React.FC<{ title?: string }> = () => {
         <footer>
             <div className="bg-black py-[60px] px-[16px] lg:py-[145px] lg:px-[173px]">
                 <div
-                    className={`flex items-center justify-between mb-[40px] lg:mb-[48px]`}
+                    className={`flex flex-wrap items-start justify-between mb-[40px] lg:mb-[48px]`}
                 >
-                    <a href="#" className={`mr-auto lg:mr-[32px]`}>
+                    <a
+                        href="#"
+                        className={`mr-auto lg:mx-0 lg:block lg:mb-[32px]`}
+                    >
                         <img
                             className="w-[194px] h-[52px] lg:w-[195px] lg:h-[52px]"
                             src="/images/main/logo.svg"
                             alt=""
                         />
                     </a>
-                    <ul className="hidden text-white text-p4 font-familyBold uppercase lg:flex">
+                    <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-p4 font-familyBold uppercase ">
                         <li className="mr-[40px]">
                             <a href="#">Направления</a>
                         </li>
@@ -33,7 +36,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         </li>
                     </ul>
                     <Button
-                        className={`hidden lg:block text-white border-2 border-white px-[48px]`}
+                        className={`hidden lg:block lg:mb-[32px] text-white border-2 border-white px-[48px] lg:text-[20px] lg:leading-[22px]`}
                     >
                         Присоединиться
                     </Button>
@@ -144,7 +147,7 @@ export const Footer: React.FC<{ title?: string }> = () => {
 
             <div className="lg:hidden bg-white flex justify-between py-[24px] px-[16px]">
                 <a
-                    className="ml-[12px] text-[#292929] uppercase text-h4 underline"
+                    className="ml-[12px] mr-[12px] text-[#292929] uppercase text-h4 underline"
                     href="#"
                 >
                     Присоединиться
