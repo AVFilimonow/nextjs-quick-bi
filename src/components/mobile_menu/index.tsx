@@ -8,7 +8,6 @@ export const MobMenu = (props) => {
                 <button
                     onClick={() => {
                         props.setOpenMenu(false);
-                        console.log("mob menu");
                     }}
                 >
                     <img src="../../../images/modal/close_btn.svg" alt="" />
@@ -29,7 +28,12 @@ export const MobMenu = (props) => {
                         <a href="#">Контакты</a>
                     </li>
                 </ul>
-                <Button className={`w-[100%] bg-primary text-white`}>
+                <Button
+                    onClick={() => {
+                        props.setOpenModal(true);
+                    }}
+                    className={`w-[100%] bg-primary text-white`}
+                >
                     Присоединиться
                 </Button>
                 <div className="flex w-[50%] mx-auto justify-between">

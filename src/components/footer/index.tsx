@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/button/index";
 
-export const Footer: React.FC<{ title?: string }> = () => {
+export const Footer = (props) => {
     return (
         <footer>
             <div className="bg-black py-[60px] px-[16px] lg:py-[145px] lg:px-[173px]">
@@ -19,24 +19,27 @@ export const Footer: React.FC<{ title?: string }> = () => {
                         />
                     </a>
                     <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-p4 font-familyBold uppercase ">
-                        <li className="mr-[40px]">
+                        <li className="mr-[40px] hover:underline">
                             <a href="#">Направления</a>
                         </li>
-                        <li className="mr-[40px]">
+                        <li className="mr-[40px] hover:underline">
                             <a href="#">Студии</a>
                         </li>
-                        <li className="mr-[40px]">
+                        <li className="mr-[40px] hover:underline">
                             <a href="#">Тренеры</a>
                         </li>
-                        <li className="mr-[40px]">
+                        <li className="mr-[40px] hover:underline">
                             <a href="#">Франшиза</a>
                         </li>
-                        <li>
+                        <li className="hover:underline">
                             <a href="#">Контакты</a>
                         </li>
                     </ul>
                     <Button
-                        className={`hidden lg:block lg:mb-[32px] text-white border-2 border-white px-[48px] lg:text-[20px] lg:leading-[22px]`}
+                        onClick={() => {
+                            props.setOpenModal(true);
+                        }}
+                        className={`hidden lg:block lg:mb-[32px] text-white border-2 border-white px-[48px] lg:text-[20px] lg:leading-[22px] hover:bg-white hover:text-[#292929] hover:border-[#292929]`}
                     >
                         Присоединиться
                     </Button>
@@ -146,12 +149,14 @@ export const Footer: React.FC<{ title?: string }> = () => {
             </div>
 
             <div className="lg:hidden bg-white flex justify-between py-[24px] px-[16px]">
-                <a
+                <button
+                    onClick={() => {
+                        props.setOpenModal(true);
+                    }}
                     className="ml-[12px] mr-[12px] text-[#292929] uppercase text-h4 underline"
-                    href="#"
                 >
                     Присоединиться
-                </a>
+                </button>
                 <div className="flex w-[50%] justify-between border-l-[1px] border-l-[#292929] pl-[30px]">
                     <a href="#">
                         <img

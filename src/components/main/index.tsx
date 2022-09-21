@@ -8,7 +8,7 @@ import { Container } from "../container";
 import { useWindowSize } from "../../utils/hooks";
 import { calcClientSliderItemsCount } from "../../utils/helpers";
 
-export const Main: React.FC<{ title?: string }> = () => {
+export const Main = (props) => {
     const { width: windowWidth } = useWindowSize();
     const slidesCount = calcClientSliderItemsCount(windowWidth);
 
@@ -239,8 +239,11 @@ export const Main: React.FC<{ title?: string }> = () => {
                     alt=""
                 />
                 <Button
+                    onClick={() => {
+                        props.setOpenModal(true);
+                    }}
                     className={
-                        "w-[100%] max-w-[343px] lg:max-w-[480px] bg-primary text-white z-50 relative"
+                        "w-[100%] max-w-[343px] lg:max-w-[480px] bg-primary text-white z-50 relative hover:bg-[#AC6A66]"
                     }
                 >
                     Присоединиться
@@ -390,8 +393,11 @@ export const Main: React.FC<{ title?: string }> = () => {
                             Получи Эксклюзивные Условия На Абонемент
                         </h2>
                         <Button
+                            onClick={() => {
+                                props.setOpenModal(true);
+                            }}
                             className={
-                                "block px-[0px] w-[100%] max-w-[343px] lg:w-[335px] lg:px-[80px] bg-primary text-white"
+                                "block px-[0px] w-[100%] max-w-[343px] lg:w-[335px] lg:px-[80px] bg-primary text-white hover:bg-[#AC6A66]"
                             }
                         >
                             Присоединиться

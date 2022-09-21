@@ -3,7 +3,7 @@ import { Button } from "@/components/button/index";
 
 export const Thankyou: React.FC<{ title?: string }> = () => {
     return (
-        <div className="bg-[#FAFAFA] px-[20px] lg:px-[94px] h-screen flex flex-col justify-center items-center">
+        <div className="bg-[#FAFAFA] px-[20px] lg:px-[94px] h-screen lg:h-full flex flex-col justify-center items-center">
             <button className="hidden ml-auto">
                 <img src="../../../images/modal/close_btn.svg" alt="" />
             </button>
