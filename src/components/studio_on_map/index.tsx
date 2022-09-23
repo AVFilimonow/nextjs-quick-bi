@@ -2,8 +2,16 @@ import React, { useEffect, useRef } from "react";
 import { Button, Container, Input, Checkbox } from "@/components";
 import { Footer } from "../footer";
 import { StudioQuiz } from "../studio_quiz";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { useWindowSize } from "../../utils/hooks";
+import { calcClientSliderItemsCount } from "../../utils/helpers";
 
 export const StudioOnMap: React.FC<{ title?: string }> = () => {
+    const { width: windowWidth } = useWindowSize();
+    const slidesCount = calcClientSliderItemsCount(windowWidth);
     return (
         <div>
             <div className="bg-gray px-[16px] pt-[20px] pb-[32px] h-screen flex flex-col lg:px-[176px] lg:pt-[40px] lg:pb-[140px]">
@@ -111,8 +119,8 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                         Выбирай студию в своем городе
                     </span>
                 </div>
-                <div className="lg:flex lg:justify-between lg:flex-wrap">
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                <div className="lg:flex lg:justify-start lg:flex-wrap">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -164,7 +172,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -216,7 +224,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -268,7 +276,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -320,7 +328,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -374,7 +382,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                     </button>
                 </div>
                 <Button
-                    className={`w-[100%] mb-[16px] py-[10px] bg-transparent border-[1px] border-[#292929] text-[#292929] flex items-center justify-center lg:text-p4 lg:w-[350px] lg:absolute lg:right-[220px] lg:bottom-[165px]`}
+                    className={`w-[100%] mb-[16px] py-[10px] bg-transparent border-[1px] border-[#292929] text-[#292929] flex items-center justify-center lg:text-p4 lg:w-[350px] lg:block lg:ml-auto lg:flex lg:mr-[32px]`}
                 >
                     <img
                         className="mr-[16px]"
@@ -392,34 +400,37 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
             <div className="hidden lg:block">
                 <div className="hidden lg:block lg:px-[176px]">
                     <div
-                        className={`flex items-center justify-between mb-[260px] lg:mb-[0px] lg:h-[130px]`}
+                        className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full lg:pt-[32px]`}
                     >
-                        <a href="#" className={`mx-auto lg:mx-0`}>
-                            <img
-                                className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                src="/images/training/logo_black.svg"
-                                alt=""
-                            />
-                        </a>
-                        <ul className="hidden lg:flex text-black text-p4 uppercase font-familyBold">
-                            <li className="mr-[40px]">
+                        <div
+                            className={
+                                "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
+                            }
+                        >
+                            <a href="#" className={`mx-auto lg:mx-0 lg:block`}>
+                                <img
+                                    className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
+                                    src="/images/training/logo_black.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                        <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
+                            <li className="lg:mr-[40px] hover:underline">
                                 <a href="#">Направления</a>
                             </li>
-                            <li className="mr-[40px]">
+                            <li className="lg:mr-[40px] hover:underline">
                                 <a href="#">Студии</a>
                             </li>
-                            <li className="mr-[40px]">
+                            <li className="lg:mr-[40px] hover:underline">
                                 <a href="#">Тренеры</a>
                             </li>
-                            <li className="mr-[40px]">
-                                <a href="#">Франшиза</a>
-                            </li>
-                            <li>
+                            <li className="hover:underline">
                                 <a href="#">Контакты</a>
                             </li>
                         </ul>
                         <Button
-                            className={`hidden lg:block lg:w-[300px] lg:py-[20px] lg:px-[48px] text-black border-2 border-black px-[60px]`}
+                            className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
                         >
                             Присоединиться
                         </Button>
@@ -427,8 +438,8 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                 </div>
                 <div className="hidden lg:block bg-[url('/images/studio/desktop_bg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                 <Container className="bg-gray hidden lg:block">
-                    <div className="lg:flex lg:items-start lg:justify-between mb-[136px]">
-                        <div className="flex items-center justify-start mb-[32px] w-[25%]">
+                    <div className="lg:flex lg:items-start lg:justify-between lg:flex-wrap mb-[136px]">
+                        <div className="flex items-center justify-start mb-[32px] w-[25%] lg:w-[390px] lg:mr-[32px]">
                             <button className="mr-[16px]">
                                 <img
                                     className="lg:h-[64px] lg:w-[64px]"
@@ -446,7 +457,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                                 </h2>
                             </div>
                         </div>
-                        <div className="lg:flex lg:justify-between font-['PT-Root-UI'] w-[40%] ">
+                        <div className="lg:flex lg:justify-between font-['PT-Root-UI'] w-[40%] lg:w-[500px] lg:mr-[32px]">
                             <div className="">
                                 <div className="flex items-center mb-[32px] lg:items-start">
                                     <img
@@ -512,7 +523,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                         </Button>
                     </div>
                 </Container>
-                <Container className="bg-gray-100 lg:h-[724px]">
+                <Container className="bg-gray-100 lg:h-full">
                     <h2
                         className={
                             "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3 mb-[80px]"
@@ -523,9 +534,9 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                         эффективной тренировки
                     </h2>
 
-                    <div className="flex justify-start lg:justify-between gap-x-[50px] font-familyBold">
+                    <div className="flex justify-start lg:justify-between lg:flex-wrap gap-x-[50px] font-familyBold">
                         <div
-                            className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px]
+                            className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px] lg:mb-[32px]
 "
                         >
                             <div className="">
@@ -540,7 +551,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                         <div
-                            className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px]
+                            className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px] lg:mb-[32px]
 "
                         >
                             <div className="">
@@ -555,7 +566,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                         <div
-                            className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
+                            className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px] lg:mb-[32px]
 "
                         >
                             <div>
@@ -570,7 +581,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                         <div
-                            className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px]
+                            className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px] lg:mb-[32px]
 "
                         >
                             <div>
@@ -586,40 +597,79 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                         </div>
                     </div>
                 </Container>
-                <Container className="bg-white pb-[40px] lg:pb-[120px]">
+                <Container className="bg-white pb-[0px] lg:pb-[0px] lg:relative lg:mb-[64px]">
                     <h2
                         className={
-                            "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3 mb-[64px]"
+                            "text-h2 uppercase font-familyBold text-black mb-[6px] lg:mb-[28px]"
                         }
                     >
-                        Направления В <br />
-                        студии Studio name
+                        Фитнес направления
                     </h2>
-                    <div className="flex lg:gap-x-[50px] lg:mb-[48px]">
-                        <div
-                            className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/studio/training_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
-                        >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Stretching
-                            </span>
-                        </div>
-                        <div
-                            className={`hidden lg:block bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/studio/training_2.jpg')] lg:w-[616px] lg:h-[480px] relative`}
-                        >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Yoga
-                            </span>
+                    <p
+                        className={
+                            "text-p4 lg:text-p1 text-black mb-[24px] font-['PT-Root-UI']"
+                        }
+                    >
+                        Эффективные направления для твоих целей
+                    </p>
+                    <div className="hidden lg:block absolute lg:top-[250px] lg:right-[176px]">
+                        <div className="flex">
+                            <button className="swiper-button-next bg-[url('/images/main/next_btn.svg')] bg-contain bg-no-repeat w-[60px] h-[60px] outline-none mr-[8px]"></button>
+                            <button className="swiper-button-prev bg-[url('/images/main/prev_btn.svg')] w-[60px] h-[60px] outline-none"></button>
                         </div>
                     </div>
                 </Container>
+                <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px]">
+                    <Swiper
+                        slidesPerView={slidesCount}
+                        spaceBetween={40}
+                        modules={[Navigation]}
+                        className="mySwiper"
+                    >
+                        <SwiperSlide>
+                            <img
+                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/stretching.jpg"
+                                alt=""
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/yoga.jpg"
+                                alt=""
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/stretching.jpg"
+                                alt=""
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/yoga.jpg"
+                                alt=""
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/stretching.jpg"
+                                alt=""
+                            />
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/yoga.jpg"
+                                alt=""
+                            />
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
                 <Footer />
                 <StudioQuiz />
             </div>
@@ -706,7 +756,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                         <div className="bg-white p-[16px] rounded-[16px] w-[47%] mr-[16px]">
                             <img
                                 className="mb-[16px]"
-                                src="../../../images/studio/comfort_1.svg"
+                                src="../../../images/studio/comfort_1.png"
                                 alt=""
                             />
                             <span className="text-[#292929] uppercase font-bold">
@@ -716,7 +766,7 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                         <div className="bg-white p-[16px] rounded-[16px] w-[47%] mr-[16px]">
                             <img
                                 className="mb-[16px]"
-                                src="../../../images/studio/comfort_2.svg"
+                                src="../../../images/studio/comfort_2.png"
                                 alt=""
                             />
                             <span className="text-[#292929] uppercase font-bold">
@@ -736,16 +786,92 @@ export const StudioOnMap: React.FC<{ title?: string }> = () => {
                     <span className="text-p4 text-[#292929] font-['PT-Root-UI']">
                         Выбирай студию в своем городе
                     </span>
-                    <div
-                        className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
-                    >
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
-                            }
+                    <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px]">
+                        <Swiper
+                            slidesPerView={slidesCount}
+                            spaceBetween={40}
+                            modules={[Navigation]}
+                            className="mySwiper"
                         >
-                            Stretching
-                        </span>
+                            <SwiperSlide>
+                                <div
+                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                >
+                                    <span
+                                        className={
+                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                        }
+                                    >
+                                        Stretching
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div
+                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                >
+                                    <span
+                                        className={
+                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                        }
+                                    >
+                                        Stretching
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div
+                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                >
+                                    <span
+                                        className={
+                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                        }
+                                    >
+                                        Stretching
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div
+                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                >
+                                    <span
+                                        className={
+                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                        }
+                                    >
+                                        Stretching
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div
+                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                >
+                                    <span
+                                        className={
+                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                        }
+                                    >
+                                        Stretching
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                            <SwiperSlide>
+                                <div
+                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                >
+                                    <span
+                                        className={
+                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                        }
+                                    >
+                                        Stretching
+                                    </span>
+                                </div>
+                            </SwiperSlide>
+                        </Swiper>
                     </div>
                     <Button
                         className={`w-[100%] bg-[#D08884] text-white mb-[16px]`}

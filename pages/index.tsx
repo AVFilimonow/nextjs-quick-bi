@@ -7,7 +7,16 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { MobMenu, TrialForm, Button } from "@/components";
+import {
+    MobMenu,
+    TrialForm,
+    Button,
+    StudioOnMap,
+    Training,
+    Thankyou,
+    StudioQuiz,
+    Trainer,
+} from "@/components";
 
 const Main = dynamic<any>(
     () => import("@/components/main").then((mod) => mod.Main),
@@ -174,7 +183,8 @@ const Home: React.FC = () => {
                             </Swiper>
                         </div>
                     )}
-                    <Main setOpenModal={setOpenModal} />
+                    <Trainer />
+                    {/* <Main setOpenModal={setOpenModal} /> */}
                     <Footer setOpenModal={setOpenModal} />
                 </div>
             )}

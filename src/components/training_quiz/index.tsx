@@ -94,7 +94,7 @@ export const TrainingQuiz: React.FC<{ title?: string }> = () => {
                     </span>
                 </div>
                 <div className="lg:flex lg:justify-between lg:flex-wrap">
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -146,7 +146,7 @@ export const TrainingQuiz: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -198,7 +198,7 @@ export const TrainingQuiz: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -250,7 +250,7 @@ export const TrainingQuiz: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -302,7 +302,7 @@ export const TrainingQuiz: React.FC<{ title?: string }> = () => {
                             </div>
                         </div>
                     </button>
-                    <button className="block mx-auto lg:mx-[0px] lg:w-[20%] lg:mr-[32px] lg:mb-[32px]">
+                    <button className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]">
                         <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px]">
                             <img
                                 className="w-[343px] lg:w-full"
@@ -389,49 +389,49 @@ export const TrainingQuiz: React.FC<{ title?: string }> = () => {
                         Выбери удобное для себя время занятий
                     </span>
                 </div>
-                <div className="flex flex-col lg:flex-row lg:justify-between">
+                <div className="flex flex-col lg:flex-row lg:flex-wrap lg:justify-between">
                     <button className="lg:w-[30%]">
                         <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px]">
-                            <h4 className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
+                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
                                 Пробное занятие
-                            </h4>
-                            <span className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
+                            </p>
+                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
                                 Весь день в студии
-                            </span>
-                            <h3 className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
+                            </p>
+                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
                                 4 999 ₸
-                            </h3>
+                            </p>
                         </div>
                     </button>
                     <button className="lg:w-[30%]">
                         <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px]">
-                            <h4 className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
+                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
                                 Безлимит на месяц
-                            </h4>
-                            <span className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
+                            </p>
+                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
                                 Весь месяц в студии
-                            </span>
-                            <h3 className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
+                            </p>
+                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
                                 24 999 ₸
-                            </h3>
+                            </p>
                         </div>
                     </button>
                     <button className="lg:w-[30%]">
                         <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px]">
-                            <h4 className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
+                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
                                 Безлимит на год
-                            </h4>
-                            <span className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
+                            </p>
+                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
                                 Весь год в студии
-                            </span>
-                            <h3 className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
+                            </p>
+                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
                                 249 999 ₸
-                            </h3>
+                            </p>
                         </div>
                     </button>
                 </div>
             </div>
-            <div className="bg-gray px-[16px] pt-[20px] pb-[32px] h-screen flex flex-col lg:px-[176px] lg:pt-[40px]">
+            <div className="bg-gray px-[16px] pt-[20px] pb-[32px] h-screen lg:h-full flex flex-col lg:px-[176px] lg:pt-[40px]">
                 <div className="flex items-center justify-between lg:justify-start mb-[32px]">
                     <button className="lg:mr-[128px]">
                         <img

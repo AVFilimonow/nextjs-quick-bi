@@ -31,7 +31,7 @@ export const TrainingTypes: React.FC<{ title?: string }> = () => {
             </div>
             <div className="grow">
                 <button className="w-full lg:w-[48%]">
-                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px]">
+                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
                         <img
                             className="mr-[20px]"
                             src="../../../images/training/training_1.png"
@@ -47,7 +47,7 @@ export const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </div>
                 </button>
                 <button className="w-full lg:w-[48%]">
-                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px]">
+                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
                         <img
                             className="mr-[20px]"
                             src="../../../images/training/training_2.png"
@@ -63,7 +63,7 @@ export const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </div>
                 </button>
                 <button className="w-full lg:w-[48%]">
-                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px]">
+                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
                         <img
                             className="mr-[20px]"
                             src="../../../images/training/training_3.png"
@@ -79,7 +79,7 @@ export const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </div>
                 </button>
                 <button className="w-full lg:w-[48%]">
-                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px]">
+                    <div className="flex items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
                         <img
                             className="mr-[20px]"
                             src="../../../images/training/training_4.png"

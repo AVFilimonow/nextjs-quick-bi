@@ -31,7 +31,7 @@ export const Footer = (props) => {
                         <li className="mr-[40px] hover:underline">
                             <a href="#">Франшиза</a>
                         </li>
-                        <li className="hover:underline">
+                        <li className="mr-[40px] hover:underline">
                             <a href="#">Контакты</a>
                         </li>
                     </ul>

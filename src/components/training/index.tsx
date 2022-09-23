@@ -10,42 +10,47 @@ export const Training: React.FC<{ title?: string }> = () => {
             <div className="hidden lg:block">
                 <div className="hidden lg:block lg:px-[176px]">
                     <div
-                        className={`flex items-center justify-between mb-[260px] lg:mb-[0px] lg:h-[130px]`}
+                        className={
+                            "flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full lg:pt-[32px]"
+                        }
                     >
-                        <a href="#" className={`mx-auto lg:mx-0`}>
-                            <img
-                                className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                src="/images/training/logo_black.svg"
-                                alt=""
-                            />
-                        </a>
-                        <ul className="hidden lg:flex text-black text-p4 uppercase font-familyBold">
-                            <li className="mr-[40px]">
+                        <div
+                            className={
+                                "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
+                            }
+                        >
+                            <a href="#" className={`mx-auto lg:mx-0 lg:block`}>
+                                <img
+                                    className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
+                                    src="/images/training/logo_black.svg"
+                                    alt=""
+                                />
+                            </a>
+                        </div>
+                        <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
+                            <li className="lg:mr-[40px] hover:underline">
                                 <a href="#">Направления</a>
                             </li>
-                            <li className="mr-[40px]">
+                            <li className="lg:mr-[40px] hover:underline">
                                 <a href="#">Студии</a>
                             </li>
-                            <li className="mr-[40px]">
+                            <li className="lg:mr-[40px] hover:underline">
                                 <a href="#">Тренеры</a>
                             </li>
-                            <li className="mr-[40px]">
-                                <a href="#">Франшиза</a>
-                            </li>
-                            <li>
+                            <li className="hover:underline">
                                 <a href="#">Контакты</a>
                             </li>
                         </ul>
                         <Button
-                            className={`hidden lg:block lg:w-[300px] lg:py-[20px] lg:px-[48px] text-black border-2 border-black px-[60px]`}
+                            className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
                         >
                             Присоединиться
                         </Button>
                     </div>
                 </div>
-                <div className="hidden lg:block bg-[url('/images/training/training_mainbg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
+                <div className="hidden lg:block bg-[url('/images/training/training_mainbg_1.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                 <Container className="bg-gray hidden lg:block lg:flex">
-                    <div className="flex items-center justify-start mb-[32px] lg:w-[45%]">
+                    <div className="flex items-center justify-start mb-[32px] lg:w-[45%] lg:mr-[32px]">
                         <button className="mr-[16px]">
                             <img
                                 className="lg:h-[64px] lg:w-[64px]"
@@ -53,14 +58,14 @@ export const Training: React.FC<{ title?: string }> = () => {
                                 alt=""
                             />
                         </button>
-                        <div>
-                            <h2
+                        <div className="">
+                            <p
                                 className={
                                     "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
                                 }
                             >
                                 Stretching
-                            </h2>
+                            </p>
                         </div>
                     </div>
                     <div className="lg:w-[45%] lg:text-[18px] font-['PT-Root-UI']">
@@ -76,11 +81,11 @@ export const Training: React.FC<{ title?: string }> = () => {
                         </span>
                     </div>
                 </Container>
-                <Container className="bg-gray hidden lg:block lg:flex lg:gap-[64px] lg:justify-between">
-                    <div className="bg-white lg:p-[40px] rounded-[16px] w-[20%] h-[222px] drop-shadow-xl">
+                <Container className="bg-gray hidden lg:block lg:flex lg:flex-wrap lg:gap-[64px] lg:justify-between">
+                    <div className="bg-white lg:p-[40px] rounded-[16px] w-[370px] drop-shadow-lg">
                         <img
                             className="mb-[16px] lg:h-[64px] lg:w-[64px]"
-                            src="../../../images/training/feat_5.svg"
+                            src="../../../images/training/feat_5.png"
                             alt=""
                         />
                         <span className="block lg:text-p3 lg:font-bold uppercase">
@@ -90,10 +95,10 @@ export const Training: React.FC<{ title?: string }> = () => {
                             продолжительность
                         </span>
                     </div>
-                    <div className="bg-white lg:p-[40px] rounded-[16px] w-[20%] h-[222px] drop-shadow-xl">
+                    <div className="bg-white lg:p-[40px] rounded-[16px] w-[370px] drop-shadow-lg">
                         <img
                             className="mb-[16px] lg:h-[64px] lg:w-[64px]"
-                            src="../../../images/training/feat_6.svg"
+                            src="../../../images/training/feat_6.png"
                             alt=""
                         />
                         <span className="block lg:text-p3 lg:font-bold uppercase">
@@ -103,10 +108,10 @@ export const Training: React.FC<{ title?: string }> = () => {
                             уровень подготовки
                         </span>
                     </div>
-                    <div className="bg-white lg:p-[40px] rounded-[16px] w-[20%] h-[222px] drop-shadow-xl">
+                    <div className="bg-white lg:p-[40px] rounded-[16px] w-[370px] drop-shadow-xl">
                         <img
                             className="mb-[16px] lg:h-[64px] lg:w-[64px]"
-                            src="../../../images/training/feat_7.svg"
+                            src="../../../images/training/feat_7.png"
                             alt=""
                         />
                         <span className="block lg:text-p3 lg:font-bold uppercase">
@@ -116,7 +121,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                             интенсивность
                         </span>
                     </div>
-                    <button className="w-[20%] h-[222px]">
+                    <button className="w-[370px]">
                         <div className="bg-[#D08884] p-[40px] rounded-[16px] drop-shadow-xl h-full flex flex-col justify-between">
                             <img
                                 className="block mb-[16px] w-[64px] h-[64px]"
@@ -130,15 +135,15 @@ export const Training: React.FC<{ title?: string }> = () => {
                     </button>
                 </Container>
                 <Container className="bg-[#F5F5F5] hidden lg:block lg:px-[176px] lg:py-[140px]">
-                    <h2
+                    <p
                         className={
                             "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3 lg:mb-[80px]"
                         }
                     >
                         Фитнес цель
-                    </h2>
-                    <div className="flex items-center justify-between">
-                        <div className="flex items-center">
+                    </p>
+                    <div className="flex flex-wrap items-center justify-between">
+                        <div className="flex items-center lg:mr-[20px] lg:mb-[32px]">
                             <img
                                 className="mr-[32px]"
                                 src="/images/training/aim_4.png"
@@ -148,7 +153,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                                 Жиросжигание
                             </span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center lg:mr-[20px] lg:mb-[32px]">
                             <img
                                 className="mr-[32px]"
                                 src="/images/training/aim_5.png"
@@ -158,7 +163,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                                 Снижение веса
                             </span>
                         </div>
-                        <div className="flex items-center">
+                        <div className="flex items-center lg:mr-[20px] lg:mb-[32px]">
                             <img
                                 className="mr-[32px]"
                                 src="/images/training/aim_6.png"
@@ -175,42 +180,48 @@ export const Training: React.FC<{ title?: string }> = () => {
                 <div>
                     <div className="hidden lg:block lg:px-[176px]">
                         <div
-                            className={`flex items-center justify-between mb-[260px] lg:mb-[0px] lg:h-[130px]`}
+                            className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full lg:pt-[32px]`}
                         >
-                            <a href="#" className={`mx-auto lg:mx-0`}>
-                                <img
-                                    className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                    src="/images/training/logo_black.svg"
-                                    alt=""
-                                />
-                            </a>
-                            <ul className="hidden lg:flex text-black text-p4 uppercase font-familyBold">
-                                <li className="mr-[40px]">
+                            <div
+                                className={
+                                    "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
+                                }
+                            >
+                                <a
+                                    href="#"
+                                    className={`mx-auto lg:mx-0 lg:block`}
+                                >
+                                    <img
+                                        className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
+                                        src="/images/training/logo_black.svg"
+                                        alt=""
+                                    />
+                                </a>
+                            </div>
+                            <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
+                                <li className="lg:mr-[40px] hover:underline">
                                     <a href="#">Направления</a>
                                 </li>
-                                <li className="mr-[40px]">
+                                <li className="lg:mr-[40px] hover:underline">
                                     <a href="#">Студии</a>
                                 </li>
-                                <li className="mr-[40px]">
+                                <li className="lg:mr-[40px] hover:underline">
                                     <a href="#">Тренеры</a>
                                 </li>
-                                <li className="mr-[40px]">
-                                    <a href="#">Франшиза</a>
-                                </li>
-                                <li>
+                                <li className="hover:underline">
                                     <a href="#">Контакты</a>
                                 </li>
                             </ul>
                             <Button
-                                className={`hidden lg:block lg:w-[300px] lg:py-[20px] lg:px-[48px] text-black border-2 border-black px-[60px]`}
+                                className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
                             >
                                 Присоединиться
                             </Button>
                         </div>
                     </div>
-                    <div className="hidden lg:block bg-[url('/images/training/training_mainbg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
+                    <div className="hidden lg:block bg-[url('/images/training/training_mainbg_2.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                     <Container className="bg-gray hidden lg:block lg:flex">
-                        <div className="flex items-center justify-start mb-[32px] lg:w-[45%]">
+                        <div className="flex items-center justify-start mb-[32px] lg:w-[45%] lg:mr-[32px]">
                             <button className="mr-[16px]">
                                 <img
                                     className="lg:h-[64px] lg:w-[64px]"
@@ -218,14 +229,14 @@ export const Training: React.FC<{ title?: string }> = () => {
                                     alt=""
                                 />
                             </button>
-                            <div>
-                                <h2
+                            <div className="">
+                                <p
                                     className={
                                         "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
                                     }
                                 >
                                     Stretching split
-                                </h2>
+                                </p>
                             </div>
                         </div>
                         <div className="lg:w-[45%] lg:text-[18px] font-['PT-Root-UI']">
@@ -242,12 +253,12 @@ export const Training: React.FC<{ title?: string }> = () => {
                             </span>
                         </div>
                     </Container>
-                    <Container className="bg-gray hidden lg:block lg:flex justify-between pb-[140px]">
-                        <div className="w-[30%] flex flex-col justify-between">
+                    <Container className="bg-gray hidden lg:block lg:flex lg:flex-wrap justify-between pb-[140px]">
+                        <div className="w-[480px] flex flex-col justify-between lg:mr-[32px] lg:mb-[32px]">
                             <div className="bg-white rounded-[20px] drop-shadow-xl p-[40px] flex items-center justify-between h-[45%]">
                                 <img
                                     className="block mb-[16px] lg:h-[80px] lg:w-[80px]"
-                                    src="../../../images/training/feat_5.svg"
+                                    src="../../../images/training/feat_5.png"
                                     alt=""
                                 />
                                 <div className="text-right ">
@@ -263,7 +274,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                             <div className="bg-white rounded-[20px] drop-shadow-xl p-[40px] flex items-center justify-between h-[45%]">
                                 <img
                                     className="block mb-[16px] lg:h-[80px] lg:w-[80px]"
-                                    src="../../../images/training/feat_5.svg"
+                                    src="../../../images/training/feat_8.png"
                                     alt=""
                                 />
                                 <div className="text-right ">
@@ -277,7 +288,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bg-white rounded-[20px] drop-shadow-xl p-[40px] w-[30%]">
+                        <div className="bg-white rounded-[20px] drop-shadow-xl p-[40px] w-[480px] lg:mr-[32px] lg:mb-[32px]">
                             <span className="block text-[#292929] text-p1 uppercase font-bold mb-[40px]">
                                 Форма одежды
                             </span>
@@ -316,7 +327,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                                 </li>
                             </ul>
                         </div>
-                        <div className="bg-white rounded-[20px] drop-shadow-xl p-[40px] w-[30%]">
+                        <div className="bg-white rounded-[20px] drop-shadow-xl p-[40px] w-[480px] lg:mr-[32px] lg:mb-[32px]">
                             <span className="block text-[#292929] text-p1 uppercase font-bold mb-[40px]">
                                 Противопоказания
                             </span>
@@ -400,7 +411,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                         <div className="flex justify-between items-center">
                             <img
                                 className="mb-[16px]"
-                                src="../../../images/training/feat_1.svg"
+                                src="../../../images/training/feat_1.png"
                                 alt=""
                             />
                             <span className="block text-h4 uppercase">
@@ -415,7 +426,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                         <div className="flex justify-between items-center">
                             <img
                                 className="mb-[16px]"
-                                src="../../../images/training/feat_2.svg"
+                                src="../../../images/training/feat_2.png"
                                 alt=""
                             />
                             <span className="block text-h4 uppercase">
@@ -437,32 +448,32 @@ export const Training: React.FC<{ title?: string }> = () => {
                 <ul className="text-[16px] font-['PT-Root-UI'] px-[16px] mb-[48px]">
                     <li className="mb-[16px] flex items-center">
                         <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
+                            className="h-[40px] w-[40px] mr-[16px]"
+                            src="../../../images/training/clothes_1.svg"
                             alt=""
                         />
                         футболка
                     </li>
                     <li className="mb-[16px] flex items-center">
                         <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
+                            className="h-[40px] w-[40px] mr-[16px]"
+                            src="../../../images/training/clothes_2.svg"
                             alt=""
                         />
                         леггинсы
                     </li>
                     <li className="mb-[16px] flex items-center">
                         <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
+                            className="h-[40px] w-[40px] mr-[16px]"
+                            src="../../../images/training/clothes_3.svg"
                             alt=""
                         />
                         носочки (обязательно), либо чешки
                     </li>
                     <li className="mb-[16px] flex items-center">
                         <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
+                            className="h-[40px] w-[40px] mr-[16px]"
+                            src="../../../images/training/clothes_4.svg"
                             alt=""
                         />
                         кроссовки не потребуются
@@ -479,35 +490,27 @@ export const Training: React.FC<{ title?: string }> = () => {
                 <ul className="text-[16px] font-['PT-Root-UI'] px-[16px] mb-[30px]">
                     <li className="mb-[16px] flex items-center">
                         <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
+                            className="h-[24px] w-[24px] mr-[16px]"
+                            src="../../../images/training/stop.svg"
                             alt=""
                         />
-                        Информация
+                        Острые инфекционные болезни
                     </li>
                     <li className="mb-[16px] flex items-center">
                         <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
+                            className="h-[24px] w-[24px] mr-[16px]"
+                            src="../../../images/training/stop.svg"
                             alt=""
                         />
-                        Информация
+                        Хронические заболевания в период обострения
                     </li>
                     <li className="mb-[16px] flex items-center">
                         <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
+                            className="h-[24px] w-[24px] mr-[16px]"
+                            src="../../../images/training/stop.svg"
                             alt=""
                         />
-                        Информация
-                    </li>
-                    <li className="mb-[16px] flex items-center">
-                        <img
-                            className="h-[8px] w-[8px] mr-[16px]"
-                            src="../../../images/training/point.png"
-                            alt=""
-                        />
-                        Информация
+                        Все болезни в острой (активной) фазе
                     </li>
                 </ul>
 
@@ -569,7 +572,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                     <div className="bg-white p-[16px] rounded-[16px] w-[48%]">
                         <img
                             className="mb-[16px]"
-                            src="../../../images/training/feat_1.svg"
+                            src="../../../images/training/feat_1.png"
                             alt=""
                         />
                         <span className="block text-h4 uppercase">55 мин</span>
@@ -580,7 +583,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                     <div className="bg-white p-[16px] rounded-[16px] w-[48%]">
                         <img
                             className="mb-[16px]"
-                            src="../../../images/training/feat_3.svg"
+                            src="../../../images/training/feat_3.png"
                             alt=""
                         />
                         <span className="block text-h4 uppercase">Средний</span>
@@ -593,7 +596,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                     <div className="bg-white p-[16px] rounded-[16px] w-[48%]">
                         <img
                             className="mb-[16px]"
-                            src="../../../images/training/feat_4.svg"
+                            src="../../../images/training/feat_4.png"
                             alt=""
                         />
                         <span className="block text-h4 uppercase">Высокая</span>
@@ -625,7 +628,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                     <li className="mb-[24px] flex items-center">
                         <img
                             className="h-[32px] w-[32px] mr-[16px]"
-                            src="../../../images/training/aim_1.png"
+                            src="../../../images/training/aim_4.png"
                             alt=""
                         />
                         Жиросжигание
@@ -633,7 +636,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                     <li className="mb-[24px] flex items-center">
                         <img
                             className="h-[32px] w-[32px] mr-[16px]"
-                            src="../../../images/training/aim_2.png"
+                            src="../../../images/training/aim_5.png"
                             alt=""
                         />
                         Снижение веса
@@ -641,7 +644,7 @@ export const Training: React.FC<{ title?: string }> = () => {
                     <li className="mb-[24px] flex items-center">
                         <img
                             className="h-[32px] w-[32px] mr-[16px]"
-                            src="../../../images/training/aim_3.png"
+                            src="../../../images/training/aim_6.png"
                             alt=""
                         />
                         Выносливость
