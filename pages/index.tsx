@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 import { PostData } from "@/types/postdata";
 import { PostsApi } from "@/lib/api";
+import Link from "next/link";
 import dynamic from "next/dynamic";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -66,30 +67,39 @@ const Home: React.FC = () => {
                                                 "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
                                             }
                                         >
-                                            <a
-                                                href="#"
-                                                className={`mx-auto lg:mx-0 lg:block`}
-                                            >
-                                                <img
-                                                    className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                                    src="/images/main/logo.svg"
-                                                    alt=""
-                                                />
-                                            </a>
+                                            <Link href="/">
+                                                <a
+                                                    className={`mx-auto lg:mx-0 lg:block`}
+                                                >
+                                                    <img
+                                                        className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
+                                                        src="/images/main/logo.svg"
+                                                        alt=""
+                                                    />
+                                                </a>
+                                            </Link>
                                         </div>
 
                                         <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-[20px] uppercase font-familyBold">
                                             <li className="lg:mr-[40px] hover:underline">
-                                                <a href="#">Направления</a>
+                                                <Link href="/training_types">
+                                                    <a>Направления</a>
+                                                </Link>
                                             </li>
                                             <li className="lg:mr-[40px] hover:underline">
-                                                <a href="#">Студии</a>
+                                                <Link href="/studio_quiz_page1">
+                                                    <a>Студии</a>
+                                                </Link>
                                             </li>
                                             <li className="lg:mr-[40px] hover:underline">
-                                                <a href="#">Тренеры</a>
+                                                <Link href="/trainer_quiz_page1">
+                                                    <a>Тренеры</a>
+                                                </Link>
                                             </li>
                                             <li className="hover:underline">
-                                                <a href="#">Контакты</a>
+                                                <Link href="/training_types">
+                                                    <a>Контакты</a>
+                                                </Link>
                                             </li>
                                         </ul>
                                         <Button
@@ -183,8 +193,7 @@ const Home: React.FC = () => {
                             </Swiper>
                         </div>
                     )}
-                    <Trainer />
-                    {/* <Main setOpenModal={setOpenModal} /> */}
+                    <Main setOpenModal={setOpenModal} />
                     <Footer setOpenModal={setOpenModal} />
                 </div>
             )}

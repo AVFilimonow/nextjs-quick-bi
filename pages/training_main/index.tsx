@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import { Button } from "@/components/button/index";
-import { TrainingTypes } from "../training_types";
-import { Footer } from "../footer";
-import { Container } from "../container";
+import { Button } from "@/components";
+import { Footer } from "../../src/components/footer";
+import { Container } from "../../src/components/container";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-export const Training: React.FC<{ title?: string }> = () => {
+const Training: React.FC<{ title?: string }> = () => {
+    const router = useRouter();
+
     return (
         <div>
             <div className="hidden lg:block">
@@ -19,29 +22,40 @@ export const Training: React.FC<{ title?: string }> = () => {
                                 "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
                             }
                         >
-                            <a href="/" className={`mx-auto lg:mx-0 lg:block`}>
-                                <img
-                                    className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                    src="/images/training/logo_black.svg"
-                                    alt=""
-                                />
-                            </a>
+                            <Link href="/">
+                                <a className={`mx-auto lg:mx-0 lg:block`}>
+                                    <img
+                                        className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
+                                        src="/images/training/logo_black.svg"
+                                        alt=""
+                                    />
+                                </a>
+                            </Link>
                         </div>
                         <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
                             <li className="lg:mr-[40px] hover:underline">
-                                <a href="#">Направления</a>
+                                <Link href="/training_types">
+                                    <a>Направления</a>
+                                </Link>
                             </li>
                             <li className="lg:mr-[40px] hover:underline">
-                                <a href="#">Студии</a>
+                                <Link href="/training_types">
+                                    <a>Студии</a>
+                                </Link>
                             </li>
                             <li className="lg:mr-[40px] hover:underline">
-                                <a href="#">Тренеры</a>
+                                <Link href="/training_types">
+                                    <a>Тренеры</a>
+                                </Link>
                             </li>
                             <li className="hover:underline">
-                                <a href="#">Контакты</a>
+                                <Link href="/training_types">
+                                    <a>Контакты</a>
+                                </Link>
                             </li>
                         </ul>
                         <Button
+                            onClick={() => router.push("/training_quiz_page1")}
                             className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
                         >
                             Присоединиться
@@ -51,7 +65,10 @@ export const Training: React.FC<{ title?: string }> = () => {
                 <div className="hidden lg:block bg-[url('/images/training/training_mainbg_1.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                 <Container className="bg-gray hidden lg:block lg:flex">
                     <div className="flex items-center justify-start mb-[32px] lg:w-[45%] lg:mr-[32px]">
-                        <button className="mr-[16px]">
+                        <button
+                            onClick={() => router.back()}
+                            className="mr-[16px]"
+                        >
                             <img
                                 className="lg:h-[64px] lg:w-[64px]"
                                 src="/images/modal/arrow_left.svg"
@@ -176,7 +193,6 @@ export const Training: React.FC<{ title?: string }> = () => {
                     </div>
                 </Container>
                 <Footer />
-                <TrainingTypes />
                 <div>
                     <div className="hidden lg:block lg:px-[176px]">
                         <div
@@ -187,32 +203,45 @@ export const Training: React.FC<{ title?: string }> = () => {
                                     "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
                                 }
                             >
-                                <a
-                                    href="#"
-                                    className={`mx-auto lg:mx-0 lg:block`}
-                                >
-                                    <img
-                                        className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                        src="/images/training/logo_black.svg"
-                                        alt=""
-                                    />
-                                </a>
+                                <Link href="/">
+                                    <a
+                                        href="#"
+                                        className={`mx-auto lg:mx-0 lg:block`}
+                                    >
+                                        <img
+                                            className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
+                                            src="/images/training/logo_black.svg"
+                                            alt=""
+                                        />
+                                    </a>
+                                </Link>
                             </div>
                             <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
                                 <li className="lg:mr-[40px] hover:underline">
-                                    <a href="#">Направления</a>
+                                    <Link href="/training_types">
+                                        <a>Направления</a>
+                                    </Link>
                                 </li>
                                 <li className="lg:mr-[40px] hover:underline">
-                                    <a href="#">Студии</a>
+                                    <Link href="/training_types">
+                                        <a>Студии</a>
+                                    </Link>
                                 </li>
                                 <li className="lg:mr-[40px] hover:underline">
-                                    <a href="#">Тренеры</a>
+                                    <Link href="/training_types">
+                                        <a>Тренеры</a>
+                                    </Link>
                                 </li>
                                 <li className="hover:underline">
-                                    <a href="#">Контакты</a>
+                                    <Link href="/training_types">
+                                        <a>Контакты</a>
+                                    </Link>
                                 </li>
                             </ul>
                             <Button
+                                onClick={() =>
+                                    router.push("/training_quiz_page1")
+                                }
                                 className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
                             >
                                 Присоединиться
@@ -220,37 +249,59 @@ export const Training: React.FC<{ title?: string }> = () => {
                         </div>
                     </div>
                     <div className="hidden lg:block bg-[url('/images/training/training_mainbg_2.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
-                    <Container className="bg-gray hidden lg:block lg:flex">
-                        <div className="flex items-center justify-start mb-[32px] lg:w-[45%] lg:mr-[32px]">
-                            <button className="mr-[16px]">
-                                <img
-                                    className="lg:h-[64px] lg:w-[64px]"
-                                    src="/images/modal/arrow_left.svg"
-                                    alt=""
-                                />
-                            </button>
-                            <div className="">
-                                <p
-                                    className={
-                                        "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
-                                    }
+                    <Container className="bg-gray hidden lg:block lg:flex lg:flex-col">
+                        <div className="bg-gray hidden lg:block lg:flex lg:mb-[64px]">
+                            <div className="flex items-center justify-start mb-[32px] lg:w-[45%] lg:mr-[32px]">
+                                <button
+                                    onClick={() => router.back()}
+                                    className="mr-[16px]"
                                 >
-                                    Stretching split
-                                </p>
+                                    <img
+                                        className="lg:h-[64px] lg:w-[64px]"
+                                        src="/images/modal/arrow_left.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <div className="">
+                                    <p
+                                        className={
+                                            "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
+                                        }
+                                    >
+                                        Stretching lite
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="lg:w-[45%] lg:text-[18px] font-['PT-Root-UI']">
+                                <span>
+                                    Комплексная растяжка всего тела без
+                                    интенсивной аэробной нагрузки. Тренировка
+                                    проходит в спокойном темпе, с преобладающим
+                                    количеством статических упражнений. <br />
+                                    <br />
+                                    Уровень LITE - был создан специально для
+                                    новичков и для тех, кто совсем без опыта,
+                                    имел большой перерыв между занятиями спортом
+                                    или просто любит спокойные, размеренные
+                                    тренировки.
+                                </span>
                             </div>
                         </div>
-                        <div className="lg:w-[45%] lg:text-[18px] font-['PT-Root-UI']">
-                            <span>
-                                Комплексная растяжка всего тела без интенсивной
-                                аэробной нагрузки. Тренировка проходит в
-                                спокойном темпе, с преобладающим количеством
-                                статических упражнений. <br />
-                                <br />
-                                Уровень LITE - был создан специально для
-                                новичков и для тех, кто совсем без опыта, имел
-                                большой перерыв между занятиями спортом или
-                                просто любит спокойные, размеренные тренировки.
-                            </span>
+                        <div className="hidden lg:flex lg:items-center lg:justify-end">
+                            <Button
+                                onClick={() =>
+                                    router.push("/training_quiz_page1")
+                                }
+                                className={`hidden lg:block lg:mb-[32px] lg:mr-[64px] text-white border-2 border-primary bg-primary px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#AC6A66] hover:border-2 hover:border-[#AC6A66]`}
+                            >
+                                Присоединиться
+                            </Button>
+                            <Button
+                                onClick={() => router.push("")}
+                                className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-white`}
+                            >
+                                Написать whatsapp
+                            </Button>
                         </div>
                     </Container>
                     <Container className="bg-gray hidden lg:block lg:flex lg:flex-wrap justify-between pb-[140px]">
@@ -515,18 +566,17 @@ export const Training: React.FC<{ title?: string }> = () => {
                 </ul>
 
                 <Button
+                    onClick={() => router.push("/training_quiz_page1")}
                     className={`w-[100%] bg-[#D08884] text-white mb-[16px]`}
                 >
                     Присоединиться
                 </Button>
                 <Button
+                    onClick={() => router.push("/training_quiz_page1")}
                     className={`w-[100%] bg-transparent border-[1px] border-[#292929] text-[#292929]`}
                 >
                     Написать whatsapp
                 </Button>
-            </div>
-            <div className="block lg:hidden">
-                <TrainingTypes />
             </div>
             <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col lg:hidden">
                 <div className="flex mb-[32px]">
@@ -652,11 +702,13 @@ export const Training: React.FC<{ title?: string }> = () => {
                 </ul>
 
                 <Button
+                    onClick={() => router.push("/training_quiz_page1")}
                     className={`w-[100%] bg-[#D08884] text-white mb-[16px]`}
                 >
                     Присоединиться
                 </Button>
                 <Button
+                    onClick={() => router.push("/training_quiz_page1")}
                     className={`w-[100%] bg-transparent border-[1px] border-[#292929] text-[#292929]`}
                 >
                     Написать whatsapp
@@ -665,3 +717,5 @@ export const Training: React.FC<{ title?: string }> = () => {
         </div>
     );
 };
+
+export default Training;

@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "../button";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const MobMenu = (props) => {
     return (
@@ -16,13 +18,19 @@ export const MobMenu = (props) => {
             <div className="px-[32px] pb-[20px] mt-auto flex flex-col justify-between h-[80%]">
                 <ul className="flex flex-col text-black text-[24px] uppercase font-familyBold">
                     <li className="mb-[40px]">
-                        <a href="#">Направления</a>
+                        <Link href="/training_types">
+                            <a>Направления</a>
+                        </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <a href="#">Студии</a>
+                        <Link href="/training_types">
+                            <a>Студии</a>
+                        </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <a href="#">Тренеры</a>
+                        <Link href="/training_types">
+                            <a>Тренеры</a>
+                        </Link>
                     </li>
                     <li className="">
                         <a href="#">Контакты</a>
