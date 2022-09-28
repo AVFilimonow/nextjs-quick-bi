@@ -1,71 +1,26 @@
-import React, { useEffect, useRef } from "react";
-import { Button, Container, Input, Checkbox } from "@/components";
-import { Footer, StudioQuiz } from "@/components";
+import React, { useRef } from "react";
+import { Button, Container, Footer } from "@/components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y } from "swiper";
+import { Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { useWindowSize } from "../../src/utils/hooks";
 import { calcClientSliderItemsCount } from "../../src/utils/helpers";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import { SlideNextButton, SlidePrevButton, HeaderWhite } from "@/components";
 
 const StudioMain: React.FC<{ title?: string }> = () => {
     const { width: windowWidth } = useWindowSize();
     const slidesCount = calcClientSliderItemsCount(windowWidth);
     const router = useRouter();
+    const prevBtn = useRef<HTMLButtonElement>(null);
+    const nextBtn = useRef<HTMLButtonElement>(null);
 
     return (
         <div>
             <div className="hidden lg:block">
                 <div className="hidden lg:block lg:px-[176px]">
-                    <div
-                        className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full lg:pt-[32px]`}
-                    >
-                        <div
-                            className={
-                                "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
-                            }
-                        >
-                            <Link href="/">
-                                <a className={`mx-auto lg:mx-0 lg:block`}>
-                                    <img
-                                        className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                        src="/images/training/logo_black.svg"
-                                        alt=""
-                                    />
-                                </a>
-                            </Link>
-                        </div>
-                        <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
-                            <li className="lg:mr-[40px] hover:underline">
-                                <Link href="/training_types">
-                                    <a>Направления</a>
-                                </Link>
-                            </li>
-                            <li className="lg:mr-[40px] hover:underline">
-                                <Link href="/training_types">
-                                    <a>Студии</a>
-                                </Link>
-                            </li>
-                            <li className="lg:mr-[40px] hover:underline">
-                                <Link href="/training_types">
-                                    <a>Тренеры</a>
-                                </Link>
-                            </li>
-                            <li className="hover:underline">
-                                <Link href="/training_types">
-                                    <a>Контакты</a>
-                                </Link>
-                            </li>
-                        </ul>
-                        <Button
-                            onClick={() => router.push("/studio_quiz_page3")}
-                            className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
-                        >
-                            Присоединиться
-                        </Button>
-                    </div>
+                    <HeaderWhite />
                 </div>
                 <div className="hidden lg:block bg-[url('/images/studio/desktop_bg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                 <Container className="bg-gray hidden lg:block">
@@ -147,12 +102,12 @@ const StudioMain: React.FC<{ title?: string }> = () => {
                     <div className="flex justify-end">
                         <Button
                             onClick={() => router.push("/studio_quiz_page3")}
-                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-[#D08884] text-white mr-[64px]`}
+                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-[#D08884] text-white mr-[64px] hover:bg-[#AC6A66] hover:border-2 hover:border-[#AC6A66]`}
                         >
                             присоединиться
                         </Button>
                         <Button
-                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-transparent text-[#292929] border-[#292929] border-[2px]`}
+                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-transparent text-[#292929] border-[#292929] border-[2px] hover:bg-white`}
                         >
                             написать whatsapp
                         </Button>
@@ -247,19 +202,41 @@ const StudioMain: React.FC<{ title?: string }> = () => {
                     >
                         Эффективные направления для твоих целей
                     </p>
-                    <div className="hidden lg:block absolute lg:top-[250px] lg:right-[176px]">
-                        <div className="flex">
-                            <button className="swiper-button-next bg-[url('/images/main/next_btn.svg')] bg-contain bg-no-repeat w-[60px] h-[60px] outline-none mr-[8px]"></button>
-                            <button className="swiper-button-prev bg-[url('/images/main/prev_btn.svg')] w-[60px] h-[60px] outline-none"></button>
-                        </div>
-                    </div>
                 </Container>
-                <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px]">
+                <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px] relative">
+                    <div
+                        className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
+                    >
+                        <SlidePrevButton
+                            className={`h-[48px] w-[48px]`}
+                            ref={prevBtn}
+                        />
+                        <SlideNextButton
+                            className={`ml-[8px] h-[48px] w-[48px]`}
+                            ref={nextBtn}
+                        />
+                    </div>
                     <Swiper
+                        loop={true}
                         slidesPerView={slidesCount}
                         spaceBetween={40}
                         modules={[Navigation]}
-                        className="mySwiper"
+                        navigation={{
+                            prevEl: prevBtn.current,
+                            nextEl: nextBtn.current,
+                        }}
+                        onBeforeInit={(swiper) => {
+                            if (
+                                swiper?.params?.navigation &&
+                                typeof swiper?.params?.navigation != "boolean"
+                            ) {
+                                swiper.params.navigation.prevEl =
+                                    prevBtn.current;
+                                swiper.params.navigation.nextEl =
+                                    nextBtn.current;
+                            }
+                        }}
+                        className=""
                     >
                         <SwiperSlide>
                             <img

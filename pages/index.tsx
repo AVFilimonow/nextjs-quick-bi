@@ -3,21 +3,16 @@ import { PostData } from "@/types/postdata";
 import { PostsApi } from "@/lib/api";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Autoplay } from "swiper";
+import { Navigation, A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import {
-    MobMenu,
-    TrialForm,
-    Button,
-    StudioOnMap,
-    Training,
-    Thankyou,
-    StudioQuiz,
-    Trainer,
-} from "@/components";
+import { MobMenu, TrialForm, Button, Footer } from "@/components";
+import { MainNextButton, HeaderTransparent } from "@/components";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Main = dynamic<any>(
     () => import("@/components/main").then((mod) => mod.Main),
@@ -26,17 +21,16 @@ const Main = dynamic<any>(
     },
 );
 
-const Footer = dynamic<any>(
-    () => import("@/components/footer").then((mod) => mod.Footer),
-    {
-        ssr: false,
-    },
-);
-
 const Home: React.FC = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const [openModal, setOpenModal] = useState(false);
-
+    const nextBtn = useRef<HTMLButtonElement>(null);
+    const pagination = {
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + "</span>";
+        },
+    };
     return (
         <div>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
@@ -59,58 +53,9 @@ const Home: React.FC = () => {
                                 <div
                                     className={`flex flex-col justify-between relative z-30 left-[0px] top-[0px]`}
                                 >
-                                    <div
-                                        className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[230px]`}
-                                    >
-                                        <div
-                                            className={
-                                                "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
-                                            }
-                                        >
-                                            <Link href="/">
-                                                <a
-                                                    className={`mx-auto lg:mx-0 lg:block`}
-                                                >
-                                                    <img
-                                                        className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                                        src="/images/main/logo.svg"
-                                                        alt=""
-                                                    />
-                                                </a>
-                                            </Link>
-                                        </div>
-
-                                        <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-[20px] uppercase font-familyBold">
-                                            <li className="lg:mr-[40px] hover:underline">
-                                                <Link href="/training_types">
-                                                    <a>Направления</a>
-                                                </Link>
-                                            </li>
-                                            <li className="lg:mr-[40px] hover:underline">
-                                                <Link href="/studio_quiz_page1">
-                                                    <a>Студии</a>
-                                                </Link>
-                                            </li>
-                                            <li className="lg:mr-[40px] hover:underline">
-                                                <Link href="/trainer_quiz_page1">
-                                                    <a>Тренеры</a>
-                                                </Link>
-                                            </li>
-                                            <li className="hover:underline">
-                                                <Link href="/training_types">
-                                                    <a>Контакты</a>
-                                                </Link>
-                                            </li>
-                                        </ul>
-                                        <Button
-                                            onClick={() => {
-                                                setOpenModal(true);
-                                            }}
-                                            className={`hidden lg:block lg:mb-[32px] text-white border-2 border-white px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#F5F5F5] hover:text-[#292929] hover:border-[#292929]`}
-                                        >
-                                            Присоединиться
-                                        </Button>
-                                    </div>
+                                    <HeaderTransparent
+                                        setOpenModal={setOpenModal}
+                                    />
                                     <button
                                         className="absolute top-[3%] right-[5%]"
                                         onClick={() => {
@@ -133,7 +78,14 @@ const Home: React.FC = () => {
                                     className="absolute left-[21%] top-[52%] lg:left-[14%] lg:top-[35%] w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] "
                                     alt=""
                                 />
-
+                                <div
+                                    className={`hidden lg:block absolute z-[10] left-[32%] top-[68%] text-primary hidden sm:block`}
+                                >
+                                    <MainNextButton
+                                        className={`ml-5 rounded-full p-3 border border-white bg-white`}
+                                        ref={nextBtn}
+                                    />
+                                </div>
                                 <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[176px] bottom-[15%]">
                                     <li className="mb-[30px]">
                                         <a href="#">
@@ -162,15 +114,34 @@ const Home: React.FC = () => {
                                 </u>
                             </div>
                             <Swiper
+                                navigation={{
+                                    nextEl: nextBtn.current,
+                                }}
+                                onBeforeInit={(swiper) => {
+                                    if (
+                                        swiper?.params?.navigation &&
+                                        typeof swiper?.params?.navigation !=
+                                            "boolean"
+                                    ) {
+                                        swiper.params.navigation.nextEl =
+                                            nextBtn.current;
+                                    }
+                                }}
                                 slidesPerView={1}
                                 spaceBetween={0}
                                 autoplay={{
                                     delay: 3000,
                                     disableOnInteraction: false,
                                 }}
+                                pagination={pagination}
                                 loop={true}
-                                modules={[Navigation, A11y, Autoplay]}
-                                className="mySwiper lg:absolute lg:top-[0px] lg:left-[0px] lg:w-full lg:h-full z-10"
+                                modules={[
+                                    Navigation,
+                                    A11y,
+                                    Autoplay,
+                                    Pagination,
+                                ]}
+                                className="lg:absolute lg:top-[0px] lg:left-[0px] lg:w-full lg:h-full z-10"
                             >
                                 <SwiperSlide>
                                     <div

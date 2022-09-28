@@ -1,38 +1,47 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/button/index";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 export const Footer = (props) => {
+    const router = useRouter();
+
     return (
         <footer>
             <div className="bg-black py-[60px] px-[16px] lg:py-[145px] lg:px-[173px]">
                 <div
                     className={`flex flex-wrap items-start justify-between mb-[40px] lg:mb-[48px]`}
                 >
-                    <a
-                        href="#"
-                        className={`mr-auto lg:mx-0 lg:block lg:mb-[32px]`}
-                    >
-                        <img
-                            className="w-[194px] h-[52px] lg:w-[195px] lg:h-[52px]"
-                            src="/images/main/logo.svg"
-                            alt=""
-                        />
-                    </a>
+                    <Link href="/">
+                        <a className={`mr-auto lg:mx-0 lg:block lg:mb-[32px]`}>
+                            <img
+                                className="w-[194px] h-[52px] lg:w-[195px] lg:h-[52px]"
+                                src="/images/main/logo.svg"
+                                alt=""
+                            />
+                        </a>
+                    </Link>
+
                     <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-p4 font-familyBold uppercase ">
-                        <li className="mr-[40px] hover:underline">
-                            <a href="#">Направления</a>
+                        <li className="lg:mr-[40px] hover:underline">
+                            <Link href="/training_types">
+                                <a>Направления</a>
+                            </Link>
                         </li>
-                        <li className="mr-[40px] hover:underline">
-                            <a href="#">Студии</a>
+                        <li className="lg:mr-[40px] hover:underline">
+                            <Link href="/studio_quiz_page1">
+                                <a>Студии</a>
+                            </Link>
                         </li>
-                        <li className="mr-[40px] hover:underline">
-                            <a href="#">Тренеры</a>
+                        <li className="lg:mr-[40px] hover:underline">
+                            <Link href="/trainer_quiz_page1">
+                                <a>Тренеры</a>
+                            </Link>
                         </li>
-                        <li className="mr-[40px] hover:underline">
-                            <a href="#">Франшиза</a>
-                        </li>
-                        <li className="mr-[40px] hover:underline">
-                            <a href="#">Контакты</a>
+                        <li className="hover:underline">
+                            <Link href="/training_types">
+                                <a>Контакты</a>
+                            </Link>
                         </li>
                     </ul>
                     <Button
@@ -150,9 +159,7 @@ export const Footer = (props) => {
 
             <div className="lg:hidden bg-white flex justify-between py-[24px] px-[16px]">
                 <button
-                    onClick={() => {
-                        props.setOpenModal(true);
-                    }}
+                    onClick={() => router.push("/trial_form")}
                     className="ml-[12px] mr-[12px] text-[#292929] uppercase text-h4 underline"
                 >
                     Присоединиться

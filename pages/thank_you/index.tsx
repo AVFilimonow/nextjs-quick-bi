@@ -1,7 +1,7 @@
-import React, { useEffect, useRef } from "react";
-import { Button } from "@/components/button/index";
+import React from "react";
+import { Button } from "@/components";
 
-export const Thankyou: React.FC<{ title?: string }> = () => {
+const Thankyou: React.FC<{ title?: string }> = () => {
     return (
         <div className="bg-[#FAFAFA] px-[20px] lg:px-[94px] h-screen lg:h-screen flex flex-col justify-center items-center">
             <button className="hidden ml-auto">
@@ -31,9 +31,13 @@ export const Thankyou: React.FC<{ title?: string }> = () => {
             >
                 Ваши данные отправлены, мы перезвоним Вам
             </span>
-            <Button className={`w-[100%] bg-[#D08884] text-white lg:w-[400px]`}>
+            <Button
+                className={`w-[100%] max-w-[400px] bg-[#D08884] text-white lg:w-[400px]`}
+            >
                 Ок
             </Button>
         </div>
     );
 };
+
+export default Thankyou;

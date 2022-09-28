@@ -1,16 +1,35 @@
 import React, { useRef, useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y } from "swiper";
+import { Navigation, Scrollbar } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Button } from "@/components/button/index";
 import { Container } from "../container";
 import { useWindowSize } from "../../utils/hooks";
 import { calcClientSliderItemsCount } from "../../utils/helpers";
+import Link from "next/link";
+import {
+    SlideNextButton,
+    SlidePrevButton,
+    StudioPrevButton,
+    StudioNextButton,
+    TrainingPrevButton,
+    TrainingNextButton,
+    TrainerPrevButton,
+    TrainerNextButton,
+} from "@/components";
 
 export const Main = (props) => {
     const { width: windowWidth } = useWindowSize();
     const slidesCount = calcClientSliderItemsCount(windowWidth);
+    const prevBtn = useRef<HTMLButtonElement>(null);
+    const nextBtn = useRef<HTMLButtonElement>(null);
+    const studioPrevBtn = useRef<HTMLButtonElement>(null);
+    const studioNextBtn = useRef<HTMLButtonElement>(null);
+    const trainingPrevBtn = useRef<HTMLButtonElement>(null);
+    const trainingNextBtn = useRef<HTMLButtonElement>(null);
+    const trainerPrevBtn = useRef<HTMLButtonElement>(null);
+    const trainerNextBtn = useRef<HTMLButtonElement>(null);
 
     return (
         <main>
@@ -152,19 +171,41 @@ export const Main = (props) => {
                 >
                     Эффективные направления для твоих целей
                 </p>
-                <div className="hidden lg:block absolute lg:top-[250px] lg:right-[176px]">
-                    <div className="flex">
-                        <button className="swiper-button-next bg-[url('/images/main/next_btn.svg')] bg-contain bg-no-repeat w-[60px] h-[60px] outline-none mr-[8px]"></button>
-                        <button className="swiper-button-prev bg-[url('/images/main/prev_btn.svg')] w-[60px] h-[60px] outline-none"></button>
-                    </div>
-                </div>
             </Container>
-            <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px]">
+            <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px] relative">
+                <div
+                    className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
+                >
+                    <TrainingPrevButton
+                        className={`h-[48px] w-[48px]`}
+                        ref={trainingPrevBtn}
+                    />
+                    <TrainingNextButton
+                        className={`ml-[8px] h-[48px] w-[48px]`}
+                        ref={trainingNextBtn}
+                    />
+                </div>
                 <Swiper
+                    loop={true}
                     slidesPerView={slidesCount}
                     spaceBetween={40}
                     modules={[Navigation]}
-                    className="mySwiper"
+                    navigation={{
+                        prevEl: trainingPrevBtn.current,
+                        nextEl: trainingNextBtn.current,
+                    }}
+                    onBeforeInit={(swiper) => {
+                        if (
+                            swiper?.params?.navigation &&
+                            typeof swiper?.params?.navigation != "boolean"
+                        ) {
+                            swiper.params.navigation.prevEl =
+                                trainingPrevBtn.current;
+                            swiper.params.navigation.nextEl =
+                                trainingNextBtn.current;
+                        }
+                    }}
+                    className=""
                 >
                     <SwiperSlide>
                         <img
@@ -264,119 +305,147 @@ export const Main = (props) => {
                 >
                     Выбери свой Academy
                 </p>
-                <div className="hidden lg:block absolute lg:top-[250px] lg:right-[176px]">
-                    <div className="flex">
-                        <button className="swiper-button-next bg-[url('/images/main/next_btn.svg')] bg-contain bg-no-repeat w-[60px] h-[60px] outline-none mr-[8px]"></button>
-                        <button className="swiper-button-prev bg-[url('/images/main/prev_btn.svg')] w-[60px] h-[60px] outline-none"></button>
-                    </div>
-                </div>
             </Container>
-            <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px]">
+
+            <div className="lg:mb-[48px] mb-[24px] pl-[16px] lg:pl-[176px] relative">
+                <div
+                    className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
+                >
+                    <StudioPrevButton
+                        className={`h-[48px] w-[48px]`}
+                        ref={studioPrevBtn}
+                    />
+                    <StudioNextButton
+                        className={`ml-[8px] h-[48px] w-[48px]`}
+                        ref={studioNextBtn}
+                    />
+                </div>
                 <Swiper
+                    loop={true}
                     slidesPerView={slidesCount}
-                    spaceBetween={200}
+                    spaceBetween={40}
                     modules={[Navigation]}
-                    className="mySwiper"
+                    navigation={{
+                        prevEl: studioPrevBtn.current,
+                        nextEl: studioNextBtn.current,
+                    }}
+                    onBeforeInit={(swiper) => {
+                        if (
+                            swiper?.params?.navigation &&
+                            typeof swiper?.params?.navigation != "boolean"
+                        ) {
+                            swiper.params.navigation.prevEl =
+                                studioPrevBtn.current;
+                            swiper.params.navigation.nextEl =
+                                studioNextBtn.current;
+                        }
+                    }}
+                    className=""
                 >
                     <SwiperSlide>
-                        <div
-                            className={`bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_1.jpg')] lg:w-[616px] lg:h-[480px] lg:mr-[30px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/studio_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                                }
-                            >
-                                Нур-Султан
-                            </span>
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Studio Name
-                            </span>
-                        </div>
+                            Нур-Султан
+                        </span>
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Studio Name
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            className={`bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_1.jpg')] lg:w-[616px] lg:h-[480px] lg:mr-[30px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/studio_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                                }
-                            >
-                                Нур-Султан
-                            </span>
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Studio Name
-                            </span>
-                        </div>
+                            Нур-Султан
+                        </span>
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Studio Name
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            className={`bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_1.jpg')] lg:w-[616px] lg:h-[480px] lg:mr-[30px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/studio_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                                }
-                            >
-                                Нур-Султан
-                            </span>
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Studio Name
-                            </span>
-                        </div>
+                            Нур-Султан
+                        </span>
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Studio Name
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            className={`bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_1.jpg')] lg:w-[616px] lg:h-[480px] lg:mr-[30px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/studio_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                                }
-                            >
-                                Нур-Султан
-                            </span>
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Studio Name
-                            </span>
-                        </div>
+                            Нур-Султан
+                        </span>
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Studio Name
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            className={`bg-[url('/images/main/studio_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/studio_1.jpg')] lg:w-[616px] lg:h-[480px] lg:mr-[30px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/studio_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                                }
-                            >
-                                Нур-Султан
-                            </span>
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Studio Name
-                            </span>
-                        </div>
+                            Нур-Султан
+                        </span>
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
+                        >
+                            Studio Name
+                        </span>
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -414,97 +483,126 @@ export const Main = (props) => {
                     Тренеры, Которые приведут тебя к результату
                 </h2>
             </Container>
-            <div className="lg:mb-[48px] mb-[24px] pl-[16px] lg:pl-[176px]">
+
+            <div className="lg:mb-[48px] mb-[24px] pl-[16px] lg:pl-[176px] relative">
+                <div
+                    className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
+                >
+                    <TrainerPrevButton
+                        className={`h-[48px] w-[48px]`}
+                        ref={trainerPrevBtn}
+                    />
+                    <TrainerNextButton
+                        className={`ml-[8px] h-[48px] w-[48px]`}
+                        ref={trainerNextBtn}
+                    />
+                </div>
                 <Swiper
+                    loop={true}
                     slidesPerView={slidesCount}
-                    spaceBetween={310}
+                    spaceBetween={40}
                     modules={[Navigation]}
-                    className="mySwiper"
+                    navigation={{
+                        prevEl: trainerPrevBtn.current,
+                        nextEl: trainerNextBtn.current,
+                    }}
+                    onBeforeInit={(swiper) => {
+                        if (
+                            swiper?.params?.navigation &&
+                            typeof swiper?.params?.navigation != "boolean"
+                        ) {
+                            swiper.params.navigation.prevEl =
+                                trainerPrevBtn.current;
+                            swiper.params.navigation.nextEl =
+                                trainerNextBtn.current;
+                        }
+                    }}
+                    className=""
                 >
                     <SwiperSlide>
-                        <div
-                            style={{}}
-                            className={`bg-[url('/images/main/trener_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/trener_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/trener_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Васильева Софья
-                            </span>
-                        </div>
+                            Васильева Софья
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            style={{}}
-                            className={`bg-[url('/images/main/trener_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/trener_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/trener_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Васильева Софья
-                            </span>
-                        </div>
+                            Васильева Софья
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            style={{}}
-                            className={`bg-[url('/images/main/trener_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/trener_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/trener_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Васильева Софья
-                            </span>
-                        </div>
+                            Васильева Софья
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            style={{}}
-                            className={`bg-[url('/images/main/trener_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/trener_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/trener_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Васильева Софья
-                            </span>
-                        </div>
+                            Васильева Софья
+                        </span>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div
-                            style={{}}
-                            className={`bg-[url('/images/main/trener_mob.jpg')] w-[308px] h-[332px] rounded-xl lg:bg-[url('/images/main/trener_1.jpg')] lg:w-[616px] lg:h-[480px] relative`}
+                        <img
+                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
+                            src="/images/main/trener_1.jpg"
+                            alt=""
+                        />
+                        <span
+                            className={
+                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                            }
                         >
-                            <span
-                                className={
-                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                                }
-                            >
-                                Васильева Софья
-                            </span>
-                        </div>
+                            Васильева Софья
+                        </span>
                     </SwiperSlide>
                 </Swiper>
             </div>
+
             <div className="flex px-[16px] pb-[40px] lg:px-[176px] lg:pb-[140px]">
                 <img
                     className="lg:h-[40px] lg:w-[40px]"
                     src="../../../images/main/all_treners_icon.svg"
                     alt=""
                 />
-                <a
-                    className="ml-[12px] uppercase text-[#292929] text-h4 underline"
-                    href="#"
-                >
-                    Все тренеры
-                </a>
+                <Link href="/trainer_quiz_page2">
+                    <a className="ml-[12px] uppercase text-[#292929] text-h4 underline">
+                        Все тренеры
+                    </a>
+                </Link>
             </div>
 
             <section className="bg-[#292929] px-[20px] py-[60px] lg:px-[148px] lg:py-[160px]">
