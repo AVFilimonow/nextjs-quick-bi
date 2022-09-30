@@ -177,11 +177,11 @@ export const Main = (props) => {
                     className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
                 >
                     <TrainingPrevButton
-                        className={`h-[48px] w-[48px]`}
+                        className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                         ref={trainingPrevBtn}
                     />
                     <TrainingNextButton
-                        className={`ml-[8px] h-[48px] w-[48px]`}
+                        className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                         ref={trainingNextBtn}
                     />
                 </div>
@@ -312,11 +312,11 @@ export const Main = (props) => {
                     className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
                 >
                     <StudioPrevButton
-                        className={`h-[48px] w-[48px]`}
+                        className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                         ref={studioPrevBtn}
                     />
                     <StudioNextButton
-                        className={`ml-[8px] h-[48px] w-[48px]`}
+                        className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                         ref={studioNextBtn}
                     />
                 </div>
@@ -489,11 +489,11 @@ export const Main = (props) => {
                     className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
                 >
                     <TrainerPrevButton
-                        className={`h-[48px] w-[48px]`}
+                        className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                         ref={trainerPrevBtn}
                     />
                     <TrainerNextButton
-                        className={`ml-[8px] h-[48px] w-[48px]`}
+                        className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                         ref={trainerNextBtn}
                     />
                 </div>

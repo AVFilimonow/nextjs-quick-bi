@@ -12,7 +12,7 @@ const Training: React.FC<{ title?: string }> = () => {
         <div>
             <div className="hidden lg:block">
                 <div className="hidden lg:block lg:px-[176px]">
-                    <HeaderWhite />
+                    <HeaderWhite className="relative" />
                 </div>
                 <div className="hidden lg:block bg-[url('/images/training/training_mainbg_1.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                 <Container className="bg-gray hidden lg:block lg:flex">
@@ -94,7 +94,7 @@ const Training: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/training_types")}
                         className="w-[370px]"
                     >
-                        <div className="bg-[#D08884] p-[40px] rounded-[16px] drop-shadow-xl h-full flex flex-col justify-between">
+                        <div className="bg-[#D08884] p-[40px] rounded-[16px] drop-shadow-xl h-full flex flex-col justify-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500">
                             <img
                                 className="block mb-[16px] w-[64px] h-[64px]"
                                 src="../../../images/training/arrow_right.svg"
@@ -370,7 +370,7 @@ const Training: React.FC<{ title?: string }> = () => {
             </div>
             <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col lg:hidden">
                 <div className="flex mb-[32px]">
-                    <button className="mr-[16px]">
+                    <button onClick={() => router.back()} className="mr-[16px]">
                         <img
                             src="../../../images/modal/arrow_left.svg"
                             alt=""
@@ -535,7 +535,7 @@ const Training: React.FC<{ title?: string }> = () => {
             </div>
             <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col lg:hidden">
                 <div className="flex mb-[32px]">
-                    <button className="mr-[16px]">
+                    <button onClick={() => router.back()} className="mr-[16px]">
                         <img
                             src="../../../images/modal/arrow_left.svg"
                             alt=""
@@ -609,7 +609,10 @@ const Training: React.FC<{ title?: string }> = () => {
                             интенсивность
                         </span>
                     </div>
-                    <button className="w-[48%]">
+                    <button
+                        onClick={() => router.push("./training_types")}
+                        className="w-[48%]"
+                    >
                         <div className="bg-[#D08884] p-[16px] rounded-[16px]">
                             <img
                                 className="mb-[16px]"

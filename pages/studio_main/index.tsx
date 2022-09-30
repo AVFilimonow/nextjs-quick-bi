@@ -208,11 +208,11 @@ const StudioMain: React.FC<{ title?: string }> = () => {
                         className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
                     >
                         <SlidePrevButton
-                            className={`h-[48px] w-[48px]`}
+                            className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                             ref={prevBtn}
                         />
                         <SlideNextButton
-                            className={`ml-[8px] h-[48px] w-[48px]`}
+                            className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                             ref={nextBtn}
                         />
                     </div>

@@ -40,7 +40,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                 <div className="lg:flex lg:justify-between w-full ">
                     <Link href="/training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
+                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884] transition-color ease-in-out duration-200">
                                 <img
                                     className="mr-[20px]"
                                     src="../../../images/training/training_1.png"
@@ -58,7 +58,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </Link>
                     <Link href="/training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
+                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884] transition-color ease-in-out duration-200">
                                 <img
                                     className="mr-[20px]"
                                     src="../../../images/training/training_2.png"
@@ -78,7 +78,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                 <div className="lg:flex lg:justify-between w-full">
                     <Link href="/training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
+                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884] transition-color ease-in-out duration-200">
                                 <img
                                     className="mr-[20px]"
                                     src="../../../images/training/training_3.png"
@@ -96,7 +96,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </Link>
                     <Link href="/training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884]">
+                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:mr-[32px] hover:border-[#D08884] hover:border-[4px] hover:text-[#D08884] transition-color ease-in-out duration-200">
                                 <img
                                     className="mr-[20px]"
                                     src="../../../images/training/training_4.png"

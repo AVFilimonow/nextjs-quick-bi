@@ -28,9 +28,10 @@ const Home: React.FC = () => {
     const pagination = {
         clickable: true,
         renderBullet: function (index, className) {
-            return '<span class="' + className + '">' + "</span>";
+            return '<span class=" ' + className + '">' + "</span>";
         },
     };
+
     return (
         <div>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
@@ -82,7 +83,7 @@ const Home: React.FC = () => {
                                     className={`hidden lg:block absolute z-[10] left-[32%] top-[68%] text-primary hidden sm:block`}
                                 >
                                     <MainNextButton
-                                        className={`ml-5 rounded-full p-3 border border-white bg-white`}
+                                        className={`ml-5 rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                         ref={nextBtn}
                                     />
                                 </div>

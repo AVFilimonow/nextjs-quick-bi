@@ -20,3 +20,4 @@ export {
     TrainerNextButton,
 } from "./slider";
 export { MainNextButton } from "./main_slider";
+export { PageLayout } from "./page_layout";

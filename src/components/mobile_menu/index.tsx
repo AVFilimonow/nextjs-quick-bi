@@ -23,16 +23,16 @@ export const MobMenu = (props) => {
                         </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <Link href="/training_types">
+                        <Link href="/studio_quiz_page1">
                             <a>Студии</a>
                         </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <Link href="/training_types">
+                        <Link href="/trainer_quiz_page1">
                             <a>Тренеры</a>
                         </Link>
                     </li>
-                    <li className="">
+                    <li className="/training_types">
                         <a href="#">Контакты</a>
                     </li>
                 </ul>

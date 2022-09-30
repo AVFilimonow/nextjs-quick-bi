@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Button, Container, Input, Checkbox } from "@/components";
-import { Footer, StudioQuiz } from "@/components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper";
 import "swiper/css";
