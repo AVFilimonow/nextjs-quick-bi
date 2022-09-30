@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Button, Container, Footer, HeaderWhite } from "@/components";
+import { Button, Container, Footer, Header } from "@/components";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -65,8 +65,13 @@ const Trainer: React.FC<{ title?: string }> = () => {
                 </div>
             </div>
             <div className="hidden lg:block">
-                <div className="hidden lg:block lg:px-[176px]">
-                    <HeaderWhite />
+                <div className="hidden lg:block lg:px-[176px] bg-gray">
+                    <Header
+                        logo={"/images/training/logo_black.svg"}
+                        text={"[#292929]"}
+                        border={"[#292929]"}
+                        bg_hover={"white"}
+                    />
                 </div>
                 <div className="hidden lg:block bg-[url('/images/trainer/trainer_bg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                 <Container className="bg-gray hidden lg:block">

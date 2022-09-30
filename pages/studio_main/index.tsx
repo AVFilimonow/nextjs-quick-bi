@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { useWindowSize } from "../../src/utils/hooks";
 import { calcClientSliderItemsCount } from "../../src/utils/helpers";
 import { useRouter } from "next/router";
-import { SlideNextButton, SlidePrevButton, HeaderWhite } from "@/components";
+import { SlideNextButton, SlidePrevButton, Header } from "@/components";
 
 const StudioMain: React.FC<{ title?: string }> = () => {
     const { width: windowWidth } = useWindowSize();
@@ -19,8 +19,13 @@ const StudioMain: React.FC<{ title?: string }> = () => {
     return (
         <div>
             <div className="hidden lg:block">
-                <div className="hidden lg:block lg:px-[176px]">
-                    <HeaderWhite />
+                <div className="hidden lg:block lg:px-[176px] bg-gray">
+                    <Header
+                        logo={"/images/training/logo_black.svg"}
+                        text={"[#292929]"}
+                        border={"[#292929]"}
+                        bg_hover={"white"}
+                    />
                 </div>
                 <div className="hidden lg:block bg-[url('/images/studio/desktop_bg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
                 <Container className="bg-gray hidden lg:block">

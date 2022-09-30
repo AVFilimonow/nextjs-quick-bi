@@ -9,7 +9,7 @@ import { Navigation, A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { MobMenu, TrialForm, Button, Footer } from "@/components";
-import { MainNextButton, HeaderTransparent } from "@/components";
+import { MainNextButton, Header } from "@/components";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -48,14 +48,19 @@ const Home: React.FC = () => {
                         <div className={"lg:relative"}>
                             <div
                                 className={
-                                    "absolute top-[32px] w-full h-full z-20 px-[16px] lg:px-[176px]"
+                                    "absolute w-full h-full z-20 px-[16px] lg:px-[176px]"
                                 }
                             >
                                 <div
-                                    className={`flex flex-col justify-between relative z-30 left-[0px] top-[0px]`}
+                                    className={`flex flex-col justify-between relative z-30`}
                                 >
-                                    <HeaderTransparent
-                                        setOpenModal={setOpenModal}
+                                    <Header
+                                        logo={"/images/main/logo.svg"}
+                                        text={"white"}
+                                        border={"white"}
+                                        text_hover={"[#292929]"}
+                                        bg_hover={"white"}
+                                        border_hover={"white"}
                                     />
                                     <button
                                         className="absolute top-[3%] right-[5%]"

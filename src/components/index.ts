@@ -1,7 +1,6 @@
 export { Button } from "./button";
 export { Main } from "./main";
-export { HeaderWhite } from "./header_white";
-export { HeaderTransparent } from "./header_transparent";
+export { Header } from "./header";
 export { Footer } from "./footer";
 export { Container } from "./container";
 export { Select } from "./select";

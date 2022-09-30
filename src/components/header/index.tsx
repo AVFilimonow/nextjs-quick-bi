@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { TrialForm, Button } from "@/components";
 
-export const HeaderWhite = (props) => {
+export const Header = (props) => {
     const router = useRouter();
     const [openModal, setOpenModal] = useState(false);
 
@@ -23,13 +23,15 @@ export const HeaderWhite = (props) => {
                             <a className={`mx-auto lg:mx-0 lg:block`}>
                                 <img
                                     className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                    src="/images/training/logo_black.svg"
+                                    src={props.logo}
                                     alt=""
                                 />
                             </a>
                         </Link>
                     </div>
-                    <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
+                    <ul
+                        className={`hidden lg:flex lg:mb-[32px] lg:justify-between text-${props.text} text-[20px] uppercase font-familyBold`}
+                    >
                         <li className="lg:mr-[40px] hover:underline">
                             <Link href="/training_types">
                                 <a>Направления</a>
@@ -55,7 +57,7 @@ export const HeaderWhite = (props) => {
                         onClick={() => {
                             setOpenModal(true);
                         }}
-                        className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
+                        className={`hidden lg:block lg:mb-[32px] text-${props.text} border-2 border-${props.border} px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-${props.bg_hover} hover:text-${props.text_hover} hover:border-${props.border_hover} hover:border-2`}
                     >
                         Присоединиться
                     </Button>
