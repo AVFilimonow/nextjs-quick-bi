@@ -1,19 +1,18 @@
 import { GetStaticProps } from "next";
 import { PostData } from "@/types/postdata";
 import { PostsApi } from "@/lib/api";
-import { Button } from "@/components/button/index";
+import Link from "next/link";
 import dynamic from "next/dynamic";
-import React, { useState } from "react";
-import {
-    MobMenu,
-    StudioOnMap,
-    StudioQuiz,
-    Thankyou,
-    Trainer,
-    TrainerQuiz,
-    Training,
-    TrainingQuiz,
-} from "@/components";
+import React, { useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, A11y, Autoplay, Pagination } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import { MobMenu, TrialForm, Button, Footer } from "@/components";
+import { MainNextButton, HeaderTransparent } from "@/components";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const Main = dynamic<any>(
     () => import("@/components/main").then((mod) => mod.Main),
@@ -22,110 +21,154 @@ const Main = dynamic<any>(
     },
 );
 
-const Footer = dynamic<any>(
-    () => import("@/components/footer").then((mod) => mod.Footer),
-    {
-        ssr: false,
-    },
-);
-
-const TrialForm = dynamic<any>(
-    () => import("@/components/trial_form").then((mod) => mod.TrialForm),
-    {
-        ssr: false,
-    },
-);
-
 const Home: React.FC = () => {
     const [openMenu, setOpenMenu] = useState(false);
+    const [openModal, setOpenModal] = useState(false);
+    const nextBtn = useRef<HTMLButtonElement>(null);
+    const pagination = {
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class=" ' + className + '">' + "</span>";
+        },
+    };
+
     return (
-        <div className="">
-            {openMenu && <MobMenu setOpenMenu={setOpenMenu} />}
+        <div>
+            {openModal && <TrialForm setOpenModal={setOpenModal} />}
+            {!openModal && (
+                <div className="">
+                    {openMenu && (
+                        <MobMenu
+                            setOpenMenu={setOpenMenu}
+                            setOpenModal={setOpenModal}
+                        />
+                    )}
 
-            {!openMenu && (
-                <div
-                    className={`bg-center h-screen bg-no-repeat px-[23px] lg:px-[176px] pt-[37px] relative`}
-                    style={{
-                        backgroundImage: `url("/images/main-bg.jpg")`,
-                        backgroundSize: `cover`,
-                        backgroundPosition: `top center`,
-                    }}
-                >
-                    <div className={`flex flex-col justify-between`}>
-                        <div
-                            className={`flex items-center justify-between mb-[260px] lg:mb-[230px]`}
-                        >
-                            <a href="#" className={`mx-auto lg:mx-0`}>
+                    {!openMenu && (
+                        <div className={"lg:relative"}>
+                            <div
+                                className={
+                                    "absolute top-[32px] w-full h-full z-20 px-[16px] lg:px-[176px]"
+                                }
+                            >
+                                <div
+                                    className={`flex flex-col justify-between relative z-30 left-[0px] top-[0px]`}
+                                >
+                                    <HeaderTransparent
+                                        setOpenModal={setOpenModal}
+                                    />
+                                    <button
+                                        className="absolute top-[3%] right-[5%]"
+                                        onClick={() => {
+                                            setOpenMenu(true);
+                                        }}
+                                    >
+                                        <img
+                                            className={`lg:hidden`}
+                                            src="/images/main/mob_menu.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                                <h1 className="absolute left-[10%] top-[58%] lg:left-[7%] lg:top-[45%] text-white uppercase text-h1 text-left">
+                                    Бесконечная <br />
+                                    энергия Фитнеса
+                                </h1>
                                 <img
-                                    className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                    src="/images/main/logo.svg"
+                                    src="/images/main/ellipse.svg"
+                                    className="absolute left-[21%] top-[52%] lg:left-[14%] lg:top-[35%] w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] "
                                     alt=""
                                 />
-                            </a>
-                            <ul className="hidden lg:flex text-white text-p4 uppercase font-familyBold">
-                                <li className="mr-[40px]">
-                                    <a href="#">Направления</a>
-                                </li>
-                                <li className="mr-[40px]">
-                                    <a href="#">Студии</a>
-                                </li>
-                                <li className="mr-[40px]">
-                                    <a href="#">Тренеры</a>
-                                </li>
-                                <li>
-                                    <a href="#">Контакты</a>
-                                </li>
-                            </ul>
-                            <Button
-                                className={`hidden lg:block text-white border-2 border-white px-[60px]`}
-                            >
-                                Присоединиться
-                            </Button>
-                            <button
-                                onClick={() => {
-                                    setOpenMenu(true);
-                                    console.log(openMenu);
+                                <div
+                                    className={`hidden lg:block absolute z-[10] left-[32%] top-[68%] text-primary hidden sm:block`}
+                                >
+                                    <MainNextButton
+                                        className={`ml-5 rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                        ref={nextBtn}
+                                    />
+                                </div>
+                                <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[176px] bottom-[15%]">
+                                    <li className="mb-[30px]">
+                                        <a href="#">
+                                            <img
+                                                src="/images/main/telegram.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                    </li>
+                                    <li className="mb-[30px]">
+                                        <a href="#">
+                                            <img
+                                                src="/images/main/instagram.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img
+                                                src="/images/main/youtube.png"
+                                                alt=""
+                                            />
+                                        </a>
+                                    </li>
+                                </u>
+                            </div>
+                            <Swiper
+                                navigation={{
+                                    nextEl: nextBtn.current,
                                 }}
+                                onBeforeInit={(swiper) => {
+                                    if (
+                                        swiper?.params?.navigation &&
+                                        typeof swiper?.params?.navigation !=
+                                            "boolean"
+                                    ) {
+                                        swiper.params.navigation.nextEl =
+                                            nextBtn.current;
+                                    }
+                                }}
+                                slidesPerView={1}
+                                spaceBetween={0}
+                                autoplay={{
+                                    delay: 3000,
+                                    disableOnInteraction: false,
+                                }}
+                                pagination={pagination}
+                                loop={true}
+                                modules={[
+                                    Navigation,
+                                    A11y,
+                                    Autoplay,
+                                    Pagination,
+                                ]}
+                                className="lg:absolute lg:top-[0px] lg:left-[0px] lg:w-full lg:h-full z-10"
                             >
-                                <img
-                                    className={`lg:hidden`}
-                                    src="/images/main/mob_menu.svg"
-                                    alt=""
-                                />
-                            </button>
+                                <SwiperSlide>
+                                    <div
+                                        className="lg:bg-[url('/images/main-bg_1.jpg')] bg-[url('/images/mob-bg_1.jpg')] bg-no-repeat bg-cover bg-top-center h-screen
+"
+                                    ></div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div
+                                        className="lg:bg-[url('/images/main-bg_2.jpg')] bg-[url('/images/mob-bg_2.jpg')] bg-no-repeat bg-cover bg-top-center h-screen
+"
+                                    ></div>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <div
+                                        className="lg:bg-[url('/images/main-bg_3.jpg')] bg-[url('/images/mob-bg_3.jpg')] bg-no-repeat bg-cover bg-top-center h-screen
+"
+                                    ></div>
+                                </SwiperSlide>
+                            </Swiper>
                         </div>
-                        <h1 className="absolute left-[10%] top-[58%] lg:left-[176px] lg:top-[425px] text-white uppercase text-h1 text-left">
-                            Бесконечная <br />
-                            энергия Фитнеса
-                        </h1>
-                    </div>
-                    <img
-                        src="/images/main/ellipse.svg"
-                        className="w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] absolute left-[21%] top-[52%] lg:left-[17%] lg:top-[35%]"
-                        alt=""
-                    />
-
-                    <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[180px] bottom-[150px]">
-                        <li className="mb-[30px]">
-                            <a href="#">
-                                <img src="/images/main/telegram.png" alt="" />
-                            </a>
-                        </li>
-                        <li className="mb-[30px]">
-                            <a href="#">
-                                <img src="/images/main/instagram.png" alt="" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <img src="/images/main/youtube.png" alt="" />
-                            </a>
-                        </li>
-                    </u>
+                    )}
+                    <Main setOpenModal={setOpenModal} />
+                    <Footer setOpenModal={setOpenModal} />
                 </div>
             )}
-            <Main />
-            <Footer />
         </div>
     );
 };

@@ -1,17 +1,23 @@
 export { Button } from "./button";
 export { Main } from "./main";
+export { HeaderWhite } from "./header_white";
+export { HeaderTransparent } from "./header_transparent";
 export { Footer } from "./footer";
 export { Container } from "./container";
 export { Select } from "./select";
 export { Input } from "./input";
 export { Checkbox } from "./checkbox";
 export { TrialForm } from "./trial_form";
-export { Thankyou } from "./thank_you";
-export { TrainingTypes } from "./training_types";
-export { Training } from "./training";
-export { Trainer } from "./trainer";
-export { TrainingQuiz } from "./training_quiz";
-export { StudioQuiz } from "./studio_quiz";
-export { TrainerQuiz } from "./trainer_quiz";
-export { StudioOnMap } from "./studio_on_map";
 export { MobMenu } from "./mobile_menu";
+export {
+    SlideNextButton,
+    SlidePrevButton,
+    StudioPrevButton,
+    StudioNextButton,
+    TrainingPrevButton,
+    TrainingNextButton,
+    TrainerPrevButton,
+    TrainerNextButton,
+} from "./slider";
+export { MainNextButton } from "./main_slider";
+export { PageLayout } from "./page_layout";

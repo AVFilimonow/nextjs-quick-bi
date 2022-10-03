@@ -12,7 +12,7 @@ export const Button: React.FC<IButton> = ({
 }) => {
     return (
         <button
-            className={`text-p2 lg:text-[20px] uppercase rounded-xl font-bold py-[12px] lg:py-[15px] lg:px-[48px] font-['PT-Root-UI'] lg:font-['Arsenal'] lg:min-w-[260px]
+            className={`text-p2 lg:text-p4 uppercase rounded-xl font-bold py-[12px] lg:py-[15px] lg:px-[48px] font-['PT-Root-UI'] lg:font-['Arsenal'] transition-all duration-500 
              ${className}`}
             {...rest}
             data-testid="btn"
