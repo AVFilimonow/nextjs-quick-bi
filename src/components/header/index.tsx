@@ -12,11 +12,11 @@ export const Header = (props) => {
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
                 <div
-                    className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full lg:pt-[32px]`}
+                    className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full pt-[16px] lg:pt-[32px]`}
                 >
                     <div
                         className={
-                            "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
+                            "min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
                         }
                     >
                         <Link href="/">
@@ -30,24 +30,24 @@ export const Header = (props) => {
                         </Link>
                     </div>
                     <ul
-                        className={`hidden lg:flex lg:mb-[32px] lg:justify-between text-${props.text} text-[20px] uppercase font-familyBold`}
+                        className={`hidden min-w-[35%] lg:flex lg:mb-[32px] lg:justify-between text-${props.text} text-[20px] uppercase font-familyBold`}
                     >
-                        <li className="lg:mr-[40px] hover:underline">
-                            <Link href="/training_types">
+                        <li className="lg:mr-[20px] hover:underline">
+                            <Link href="/training_main">
                                 <a>Направления</a>
                             </Link>
                         </li>
-                        <li className="lg:mr-[40px] hover:underline">
+                        <li className="lg:mr-[20px] hover:underline">
                             <Link href="/studio_quiz_page1">
                                 <a>Студии</a>
                             </Link>
                         </li>
-                        <li className="lg:mr-[40px] hover:underline">
+                        <li className="lg:mr-[20px] hover:underline">
                             <Link href="/trainer_quiz_page1">
                                 <a>Тренеры</a>
                             </Link>
                         </li>
-                        <li className="hover:underline">
+                        <li className="lg:mr-[20px] hover:underline">
                             <Link href="/training_types">
                                 <a>Контакты</a>
                             </Link>

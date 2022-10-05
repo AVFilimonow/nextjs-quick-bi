@@ -8,6 +8,7 @@ import { Container } from "../container";
 import { useWindowSize } from "../../utils/hooks";
 import { calcClientSliderItemsCount } from "../../utils/helpers";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import {
     SlideNextButton,
     SlidePrevButton,
@@ -30,6 +31,7 @@ export const Main = (props) => {
     const trainingNextBtn = useRef<HTMLButtonElement>(null);
     const trainerPrevBtn = useRef<HTMLButtonElement>(null);
     const trainerNextBtn = useRef<HTMLButtonElement>(null);
+    const router = useRouter();
 
     return (
         <main>
@@ -47,13 +49,13 @@ export const Main = (props) => {
             <div className="bg-gray-100 pb-[40px] lg:pb-[120px] pl-[16px] lg:pl-[176px]">
                 <Swiper
                     slidesPerView={slidesCount}
-                    spaceBetween={20}
+                    spaceBetween={40}
                     modules={[Navigation]}
                     className="mySwiper"
                 >
                     <SwiperSlide>
                         <div
-                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
+                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] h-[103px] lg:w-full lg:max-w-[344px] lg:h-[195px] lg:mb-[32px]
 "
                         >
                             <div className="flex flex-col items-start justify-between h-full">
@@ -70,7 +72,7 @@ export const Main = (props) => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div
-                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
+                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
 "
                         >
                             <div className="flex flex-col items-start justify-between h-full">
@@ -87,7 +89,7 @@ export const Main = (props) => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div
-                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
+                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
 "
                         >
                             <div className="flex flex-col items-start justify-between h-full">
@@ -104,7 +106,7 @@ export const Main = (props) => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div
-                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
+                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
 "
                         >
                             <div className="flex flex-col items-start justify-between h-full">
@@ -121,7 +123,7 @@ export const Main = (props) => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div
-                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
+                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
 "
                         >
                             <div className="flex flex-col items-start justify-between h-full">
@@ -138,7 +140,7 @@ export const Main = (props) => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div
-                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
+                            className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px] lg:mb-[32px]
 "
                         >
                             <div className="flex flex-col items-start justify-between h-full">
@@ -208,46 +210,130 @@ export const Main = (props) => {
                     className=""
                 >
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/stretching.jpg"
-                            alt=""
-                        />
+                        <button onClick={() => router.push("/training_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                src="/images/main/stretching.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                src="/images/main/yoga_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                }
+                            >
+                                Stretching
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/yoga.jpg"
-                            alt=""
-                        />
+                        <button onClick={() => router.push("/training_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                src="/images/main/yoga.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                src="/images/main/yoga_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                }
+                            >
+                                Stretching
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/stretching.jpg"
-                            alt=""
-                        />
+                        <button onClick={() => router.push("/training_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                src="/images/main/stretching.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                src="/images/main/yoga_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                }
+                            >
+                                Stretching
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/yoga.jpg"
-                            alt=""
-                        />
+                        <button onClick={() => router.push("/training_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                src="/images/main/yoga.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                src="/images/main/yoga_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                }
+                            >
+                                Stretching
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/stretching.jpg"
-                            alt=""
-                        />
+                        <button onClick={() => router.push("/training_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                src="/images/main/stretching.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                src="/images/main/yoga_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                }
+                            >
+                                Stretching
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/yoga.jpg"
-                            alt=""
-                        />
+                        <button onClick={() => router.push("/training_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                src="/images/main/yoga.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                src="/images/main/yoga_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                }
+                            >
+                                Stretching
+                            </span>
+                        </button>
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -343,109 +429,144 @@ export const Main = (props) => {
                     className=""
                 >
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/studio_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                            }
-                        >
-                            Нур-Султан
-                        </span>
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Studio Name
-                        </span>
+                        <button onClick={() => router.push("/studio_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/studio_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/studio_1_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                                }
+                            >
+                                Нур-Султан
+                            </span>
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Studio Name
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/studio_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                            }
-                        >
-                            Нур-Султан
-                        </span>
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Studio Name
-                        </span>
+                        <button onClick={() => router.push("/studio_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/studio_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/studio_1_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                                }
+                            >
+                                Нур-Султан
+                            </span>
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Studio Name
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/studio_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                            }
-                        >
-                            Нур-Султан
-                        </span>
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Studio Name
-                        </span>
+                        <button onClick={() => router.push("/studio_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/studio_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/studio_1_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                                }
+                            >
+                                Нур-Султан
+                            </span>
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Studio Name
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/studio_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                            }
-                        >
-                            Нур-Султан
-                        </span>
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Studio Name
-                        </span>
+                        <button onClick={() => router.push("/studio_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/studio_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/studio_1_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                                }
+                            >
+                                Нур-Султан
+                            </span>
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Studio Name
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/studio_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
-                            }
-                        >
-                            Нур-Султан
-                        </span>
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Studio Name
-                        </span>
+                        <button onClick={() => router.push("/studio_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/studio_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/studio_1_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[45px] text-p4 text-white font-['PT-Root-UI'] lg:hidden"
+                                }
+                            >
+                                Нур-Султан
+                            </span>
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Studio Name
+                            </span>
+                        </button>
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -520,74 +641,109 @@ export const Main = (props) => {
                     className=""
                 >
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/trener_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Васильева Софья
-                        </span>
+                        <button onClick={() => router.push("/trainer_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/trener_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/trener_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Васильева Софья
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/trener_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Васильева Софья
-                        </span>
+                        <button onClick={() => router.push("/trainer_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/trener_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/trener_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Васильева Софья
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/trener_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Васильева Софья
-                        </span>
+                        <button onClick={() => router.push("/trainer_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/trener_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/trener_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Васильева Софья
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/trener_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Васильева Софья
-                        </span>
+                        <button onClick={() => router.push("/trainer_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/trener_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/trener_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Васильева Софья
+                            </span>
+                        </button>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img
-                            className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                            src="/images/main/trener_1.jpg"
-                            alt=""
-                        />
-                        <span
-                            className={
-                                "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
-                            }
-                        >
-                            Васильева Софья
-                        </span>
+                        <button onClick={() => router.push("/trainer_main")}>
+                            <img
+                                className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                src="/images/main/trener_1.jpg"
+                                alt=""
+                            />
+                            <img
+                                className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                src="/images/main/trener_mob.jpg"
+                                alt=""
+                            />
+                            <span
+                                className={
+                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase lg:hidden"
+                                }
+                            >
+                                Васильева Софья
+                            </span>
+                        </button>
                     </SwiperSlide>
                 </Swiper>
             </div>

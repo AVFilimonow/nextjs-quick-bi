@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/button/index";
-import { Thankyou } from "@/components";
 import { Input, Checkbox } from "@/components";
 import { useRouter } from "next/router";
 
@@ -61,9 +60,14 @@ const TrainerQuiz_4: React.FC<{ title?: string }> = () => {
                     </span>
                 </div>
                 <Button
-                    className={`hidden lg:block lg:w-[300px] bg-[#D08884] text-white`}
+                    className={`hidden lg:block lg:w-[300px] bg-[#D08884] text-white hover:bg-[#AC6A66]`}
                 >
                     ДАЛЕЕ
+                </Button>
+                <Button
+                    className={`block lg:hidden lg:w-[300px] bg-[#D08884] text-white hover:bg-[#AC6A66]`}
+                >
+                    Отправить
                 </Button>
             </div>
         </div>

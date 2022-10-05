@@ -26,10 +26,7 @@ const Trainer: React.FC<{ title?: string }> = () => {
                         </h2>
                     </div>
                 </div>
-                <div
-                    className="flex flex-col items-center items-center
-                "
-                >
+                <div className="flex flex-col items-center">
                     <img
                         className="mb-[24px]"
                         src="../../../images/trainer/trainer_1.jpg"
@@ -53,12 +50,12 @@ const Trainer: React.FC<{ title?: string }> = () => {
                     </div>
                     <Button
                         onClick={() => router.push("/trainer_quiz_page3")}
-                        className={`w-[100%] bg-[#D08884] text-white mb-[16px]`}
+                        className={`w-[100%] max-w-[400px] bg-[#D08884] text-white mb-[16px]`}
                     >
                         Присоединиться
                     </Button>
                     <Button
-                        className={`w-[100%] bg-transparent border-[1px] border-[#292929] text-[#292929]`}
+                        className={`w-[100%] max-w-[400px] bg-transparent border-[1px] border-[#292929] text-[#292929]`}
                     >
                         Написать whatsapp
                     </Button>

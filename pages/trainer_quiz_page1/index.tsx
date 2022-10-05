@@ -59,25 +59,25 @@ const TrainerQuiz_1: React.FC<{ title?: string }> = () => {
                 </div>
                 <div className="flex flex-col grow">
                     <button onClick={() => router.push("/trainer_quiz_page2")}>
-                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px] transition ease-in-out duration-200">
+                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:p-[30px] hover:border-[#D08884] hover:border-[3px] transition ease-in-out duration-200">
                             <img
                                 className="mr-[16px] lg:mr-[32px] lg:h-[24px] lg:w-[24px]"
                                 src="../../../images/modal/location.svg"
                                 alt=""
                             />
-                            <h3 className="text-h3 uppercase text-[#424242] lg:text-h5 font-bold">
+                            <h3 className="block text-h3 uppercase text-[#424242] lg:text-h5 font-bold hover:text-[#D08884] ">
                                 Алматы
                             </h3>
                         </div>
                     </button>
                     <button onClick={() => router.push("/trainer_quiz_page2")}>
-                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px] transition ease-in-out duration-200">
+                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:p-[30px] hover:border-[#D08884] hover:border-[3px] transition ease-in-out duration-200">
                             <img
                                 className="mr-[16px] lg:mr-[32px] lg:h-[24px] lg:w-[24px]"
                                 src="../../../images/modal/location.svg"
                                 alt=""
                             />
-                            <h3 className="text-h3 uppercase text-[#424242] lg:text-h5 font-bold">
+                            <h3 className="text-h3 uppercase text-[#424242] lg:text-h5 font-bold hover:text-[#D08884] ">
                                 Нур-Султан
                             </h3>
                         </div>

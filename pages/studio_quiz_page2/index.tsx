@@ -62,7 +62,7 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
@@ -117,7 +117,7 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
@@ -172,7 +172,7 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
@@ -227,7 +227,7 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
@@ -282,7 +282,7 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[20px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
@@ -335,7 +335,7 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                 </div>
                 <Button
-                    className={`w-[100%] mb-[16px] py-[10px] bg-transparent border-[1px] border-[#292929] text-[#292929] flex items-center justify-center lg:text-p4 lg:w-[350px] lg:block lg:ml-auto lg:flex lg:mr-[32px]`}
+                    className={`w-[100%] mb-[16px] py-[10px] bg-transparent border-[1px] border-[#292929] text-[#292929] flex items-center justify-center lg:text-p4 lg:w-[350px] lg:block lg:ml-auto lg:flex lg:mr-[32px] hover:bg-white`}
                 >
                     <img
                         className="mr-[16px]"

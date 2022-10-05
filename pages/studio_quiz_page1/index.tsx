@@ -1,6 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Button, Container, Input, Checkbox } from "@/components";
-import { Footer, StudioQuiz } from "@/components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y } from "swiper";
 import "swiper/css";
@@ -60,7 +58,7 @@ const StudioQuiz_1: React.FC<{ title?: string }> = () => {
                 </div>
                 <div className="flex flex-col grow">
                     <button onClick={() => router.push("/studio_quiz_page2")}>
-                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:p-[30px] hover:border-[#D08884] hover:border-[3px]">
                             <img
                                 className="mr-[16px] lg:mr-[32px] lg:h-[24px] lg:w-[24px]"
                                 src="../../../images/modal/location.svg"
@@ -72,7 +70,7 @@ const StudioQuiz_1: React.FC<{ title?: string }> = () => {
                         </div>
                     </button>
                     <button onClick={() => router.push("/studio_quiz_page2")}>
-                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:p-[30px] hover:border-[#D08884] hover:border-[3px]">
                             <img
                                 className="mr-[16px] lg:mr-[32px] lg:h-[24px] lg:w-[24px]"
                                 src="../../../images/modal/location.svg"

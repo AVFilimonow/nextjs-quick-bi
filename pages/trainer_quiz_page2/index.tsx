@@ -52,7 +52,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                 >
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="lg:w-[368px] lg:block mb-[16px] relative"
+                        className="lg:w-[368px] lg:block mb-[16px] relative transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"
@@ -69,7 +69,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="lg:w-[368px] lg:block mb-[16px] relative"
+                        className="lg:w-[368px] lg:block mb-[16px] relative transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"
@@ -86,7 +86,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="lg:w-[368px] lg:block mb-[16px] relative"
+                        className="lg:w-[368px] lg:block mb-[16px] relative ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"
@@ -103,7 +103,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="lg:w-[368px] lg:block mb-[16px] relative"
+                        className="lg:w-[368px] lg:block mb-[16px] relative ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"
@@ -120,7 +120,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="hidden lg:w-[368px] lg:block mb-[16px] relative"
+                        className="hidden lg:w-[368px] lg:block mb-[16px] relative ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"
@@ -137,7 +137,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="hidden lg:w-[368px] lg:block mb-[16px] relative"
+                        className="hidden lg:w-[368px] lg:block mb-[16px] relative ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"
@@ -154,7 +154,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="hidden lg:w-[368px] lg:block mb-[16px] relative"
+                        className="hidden lg:w-[368px] lg:block mb-[16px] relative ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"
@@ -171,7 +171,7 @@ const TrainerQuiz_2: React.FC<{ title?: string }> = () => {
                     </button>
                     <button
                         onClick={() => router.push("/trainer_main")}
-                        className="hidden lg:w-[368px] lg:block mb-[16px] relative"
+                        className="hidden lg:w-[368px] lg:block mb-[16px] relative ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
                     >
                         <img
                             className="lg:w-full"

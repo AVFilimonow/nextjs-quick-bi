@@ -244,46 +244,142 @@ const StudioMain: React.FC<{ title?: string }> = () => {
                         className=""
                     >
                         <SwiperSlide>
-                            <img
-                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                                src="/images/main/stretching.jpg"
-                                alt=""
-                            />
+                            <button
+                                onClick={() => router.push("/training_main")}
+                            >
+                                <img
+                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                    src="/images/main/yoga.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                    src="/images/main/yoga_mob.jpg"
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                    }
+                                >
+                                    Stretching
+                                </span>
+                            </button>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img
-                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                                src="/images/main/yoga.jpg"
-                                alt=""
-                            />
+                            <button
+                                onClick={() => router.push("/training_main")}
+                            >
+                                <img
+                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                    src="/images/main/stretching.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                    src="/images/main/yoga_mob.jpg"
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                    }
+                                >
+                                    Stretching
+                                </span>
+                            </button>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img
-                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                                src="/images/main/stretching.jpg"
-                                alt=""
-                            />
+                            <button
+                                onClick={() => router.push("/training_main")}
+                            >
+                                <img
+                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                    src="/images/main/yoga.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                    src="/images/main/yoga_mob.jpg"
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                    }
+                                >
+                                    Stretching
+                                </span>
+                            </button>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img
-                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                                src="/images/main/yoga.jpg"
-                                alt=""
-                            />
+                            <button
+                                onClick={() => router.push("/training_main")}
+                            >
+                                <img
+                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                    src="/images/main/stretching.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                    src="/images/main/yoga_mob.jpg"
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                    }
+                                >
+                                    Stretching
+                                </span>
+                            </button>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img
-                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                                src="/images/main/stretching.jpg"
-                                alt=""
-                            />
+                            <button
+                                onClick={() => router.push("/training_main")}
+                            >
+                                <img
+                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                    src="/images/main/yoga.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                    src="/images/main/yoga_mob.jpg"
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                    }
+                                >
+                                    Stretching
+                                </span>
+                            </button>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <img
-                                className="w-[308px] h-[332px] lg:w-[616px] lg:h-[auto]"
-                                src="/images/main/yoga.jpg"
-                                alt=""
-                            />
+                            <button
+                                onClick={() => router.push("/training_main")}
+                            >
+                                <img
+                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                    src="/images/main/stretching.jpg"
+                                    alt=""
+                                />
+                                <img
+                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                    src="/images/main/yoga_mob.jpg"
+                                    alt=""
+                                />
+                                <span
+                                    className={
+                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                    }
+                                >
+                                    Stretching
+                                </span>
+                            </button>
                         </SwiperSlide>
                     </Swiper>
                 </div>

@@ -63,7 +63,7 @@ const Home: React.FC = () => {
                                         border_hover={"white"}
                                     />
                                     <button
-                                        className="absolute top-[3%] right-[5%]"
+                                        className="absolute top-[7%] right-[5%]"
                                         onClick={() => {
                                             setOpenMenu(true);
                                         }}
@@ -75,23 +75,25 @@ const Home: React.FC = () => {
                                         />
                                     </button>
                                 </div>
-                                <h1 className="absolute left-[10%] top-[58%] lg:left-[7%] lg:top-[45%] text-white uppercase text-h1 text-left">
-                                    Бесконечная <br />
-                                    энергия Фитнеса
-                                </h1>
+                                <div className="absolute left-[10%] top-[58%] lg:left-[7%] lg:top-[45%] text-white uppercase text-h1 text-left">
+                                    <h1 className="">
+                                        Бесконечная <br />
+                                        энергия Фитнеса
+                                    </h1>
+                                    <div
+                                        className={`hidden lg:block absolute z-[10] left-[63%] -bottom-[40%] text-primary hidden sm:block`}
+                                    >
+                                        <MainNextButton
+                                            className={`ml-5 rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                            ref={nextBtn}
+                                        />
+                                    </div>
+                                </div>
                                 <img
                                     src="/images/main/ellipse.svg"
                                     className="absolute left-[21%] top-[52%] lg:left-[14%] lg:top-[35%] w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] "
                                     alt=""
                                 />
-                                <div
-                                    className={`hidden lg:block absolute z-[10] left-[32%] top-[68%] text-primary hidden sm:block`}
-                                >
-                                    <MainNextButton
-                                        className={`ml-5 rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
-                                        ref={nextBtn}
-                                    />
-                                </div>
                                 <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[176px] bottom-[15%]">
                                     <li className="mb-[30px]">
                                         <a href="#">

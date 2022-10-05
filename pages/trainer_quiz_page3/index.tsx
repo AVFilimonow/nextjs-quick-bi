@@ -40,10 +40,10 @@ const TrainerQuiz_3: React.FC<{ title?: string }> = () => {
                 </div>
                 <div className="flex flex-col lg:flex-row lg:justify-between">
                     <button
-                        onClick={() => router.push("/studio_quiz_page4")}
+                        onClick={() => router.push("/trainer_quiz_page4")}
                         className="lg:w-[30%]"
                     >
-                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:p-[38px] hover:border-[#D08884] hover:border-[3px] transition ease-in-out duration-200">
                             <h4 className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
                                 Пробное занятие
                             </h4>
@@ -56,10 +56,10 @@ const TrainerQuiz_3: React.FC<{ title?: string }> = () => {
                         </div>
                     </button>
                     <button
-                        onClick={() => router.push("/studio_quiz_page4")}
+                        onClick={() => router.push("/trainer_quiz_page4")}
                         className="lg:w-[30%]"
                     >
-                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:p-[38px] hover:border-[#D08884] hover:border-[3px] transition ease-in-out duration-200">
                             <h4 className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
                                 Безлимит на месяц
                             </h4>
@@ -72,10 +72,10 @@ const TrainerQuiz_3: React.FC<{ title?: string }> = () => {
                         </div>
                     </button>
                     <button
-                        onClick={() => router.push("/studio_quiz_page4")}
+                        onClick={() => router.push("/trainer_quiz_page4")}
                         className="lg:w-[30%]"
                     >
-                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[3px]">
+                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:p-[38px] hover:border-[#D08884] hover:border-[3px] transition ease-in-out duration-200">
                             <h4 className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
                                 Безлимит на год
                             </h4>

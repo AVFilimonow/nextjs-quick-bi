@@ -16,35 +16,41 @@ export const Footer = (props) => {
                         <div
                             className={`flex flex-wrap items-start justify-between mb-[40px] lg:mb-[48px]`}
                         >
-                            <Link href="/">
-                                <a
-                                    className={`mr-auto lg:mx-0 lg:block lg:mb-[32px]`}
-                                >
-                                    <img
-                                        className="w-[194px] h-[52px] lg:w-[195px] lg:h-[52px]"
-                                        src="/images/main/logo.svg"
-                                        alt=""
-                                    />
-                                </a>
-                            </Link>
+                            <div
+                                className={
+                                    "min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
+                                }
+                            >
+                                <Link href="/">
+                                    <a
+                                        className={`mr-auto lg:mx-0 lg:block lg:mb-[32px]`}
+                                    >
+                                        <img
+                                            className="w-[194px] h-[52px] lg:w-[195px] lg:h-[52px]"
+                                            src="/images/main/logo.svg"
+                                            alt=""
+                                        />
+                                    </a>
+                                </Link>
+                            </div>
 
                             <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-p4 font-familyBold uppercase ">
-                                <li className="lg:mr-[40px] hover:underline">
-                                    <Link href="/training_types">
+                                <li className="lg:mr-[20px] hover:underline">
+                                    <Link href="/training_main">
                                         <a>Направления</a>
                                     </Link>
                                 </li>
-                                <li className="lg:mr-[40px] hover:underline">
+                                <li className="lg:mr-[20px] hover:underline">
                                     <Link href="/studio_quiz_page1">
                                         <a>Студии</a>
                                     </Link>
                                 </li>
-                                <li className="lg:mr-[40px] hover:underline">
+                                <li className="lg:mr-[20px] hover:underline">
                                     <Link href="/trainer_quiz_page1">
                                         <a>Тренеры</a>
                                     </Link>
                                 </li>
-                                <li className="hover:underline">
+                                <li className="lg:mr-[20px] hover:underline">
                                     <Link href="/training_types">
                                         <a>Контакты</a>
                                     </Link>
