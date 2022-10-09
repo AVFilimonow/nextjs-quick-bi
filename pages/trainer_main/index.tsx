@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Button, Container, Footer, Header } from "@/components";
+import { Button, Container, Footer, Header, Section } from "@/components";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -8,6 +8,81 @@ const Trainer: React.FC<{ title?: string }> = () => {
 
     return (
         <div>
+            <div className="hidden lg:block">
+                <div className="hidden lg:block bg-gray">
+                    <Header
+                        logo={"/images/training/logo_black.svg"}
+                        text={"[#292929]"}
+                        border={"[#292929]"}
+                        bg_hover={"white"}
+                    />
+                </div>
+                <div className="hidden lg:block bg-[url('/images/trainer/trainer_bg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
+                <section className="bg-gray w-full hidden lg:block">
+                    <Container>
+                        <Section>
+                            <div className="lg:flex lg:items-start lg:justify-between mb-[184px] lg:flex-wrap">
+                                <div className="flex items-start justify-start mb-[32px] lg:w-[500px] lg:mr-[32px]">
+                                    <button
+                                        onClick={() => router.back()}
+                                        className="mr-[16px]"
+                                    >
+                                        <img
+                                            className="lg:h-[64px] lg:w-[64px]"
+                                            src="/images/modal/arrow_left.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                    <div>
+                                        <h2
+                                            className={
+                                                "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
+                                            }
+                                        >
+                                            Васильева Софья
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div className="lg:flex lg:justify-between font-['PT-Root-UI'] w-[45%] text-[18px]">
+                                    <span>
+                                        Комплексная растяжка всего тела без
+                                        интенсивной аэробной нагрузки.
+                                        Тренировка проходит в спокойном темпе, с
+                                        преобладающим количеством статических
+                                        упражнений.
+                                        <br />
+                                        <br />
+                                        Уровень LITE - был создан специально для
+                                        новичков и для тех, кто совсем без
+                                        опыта, имел большой перерыв между
+                                        занятиями спортом или просто любит
+                                        спокойные, размеренные тренировки.
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="flex justify-end">
+                                <Button
+                                    onClick={() =>
+                                        router.push("/trainer_quiz_page3")
+                                    }
+                                    className={`lg:w-[350px] py-[20px] mb-[24px] bg-[#D08884] text-white mr-[64px] hover:bg-[#AC6A66] hover:border-2 hover:border-[#AC6A66]`}
+                                >
+                                    присоединиться
+                                </Button>
+                                <Button
+                                    className={`lg:w-[350px] py-[20px] mb-[24px] bg-transparent text-[#292929] border-[#292929] border-[2px] hover:bg-white`}
+                                >
+                                    написать whatsapp
+                                </Button>
+                            </div>
+                        </Section>
+                    </Container>
+                </section>
+                <Footer />
+            </div>
+
+            {/* Мобильная версия */}
+
             <div className="bg-gray h-screen lg:hidden px-[16px] pt-[16px] pb-[20px] flex flex-col">
                 <div className="flex mb-[28px]">
                     <button onClick={() => router.back()} className="mr-[16px]">
@@ -60,70 +135,6 @@ const Trainer: React.FC<{ title?: string }> = () => {
                         Написать whatsapp
                     </Button>
                 </div>
-            </div>
-            <div className="hidden lg:block">
-                <div className="hidden lg:block lg:px-[176px] bg-gray">
-                    <Header
-                        logo={"/images/training/logo_black.svg"}
-                        text={"[#292929]"}
-                        border={"[#292929]"}
-                        bg_hover={"white"}
-                    />
-                </div>
-                <div className="hidden lg:block bg-[url('/images/trainer/trainer_bg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
-                <Container className="bg-gray hidden lg:block">
-                    <div className="lg:flex lg:items-start lg:justify-between mb-[184px] lg:flex-wrap">
-                        <div className="flex items-center justify-start mb-[32px] lg:w-[500px] lg:mr-[32px]">
-                            <button
-                                onClick={() => router.back()}
-                                className="mr-[16px]"
-                            >
-                                <img
-                                    className="lg:h-[64px] lg:w-[64px]"
-                                    src="/images/modal/arrow_left.svg"
-                                    alt=""
-                                />
-                            </button>
-                            <div>
-                                <h2
-                                    className={
-                                        "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
-                                    }
-                                >
-                                    Васильева Софья
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="lg:flex lg:justify-between font-['PT-Root-UI'] w-[45%] text-[18px]">
-                            <span>
-                                Комплексная растяжка всего тела без интенсивной
-                                аэробной нагрузки. Тренировка проходит в
-                                спокойном темпе, с преобладающим количеством
-                                статических упражнений.
-                                <br />
-                                <br />
-                                Уровень LITE - был создан специально для
-                                новичков и для тех, кто совсем без опыта, имел
-                                большой перерыв между занятиями спортом или
-                                просто любит спокойные, размеренные тренировки.
-                            </span>
-                        </div>
-                    </div>
-                    <div className="flex justify-end">
-                        <Button
-                            onClick={() => router.push("/trainer_quiz_page3")}
-                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-[#D08884] text-white mr-[64px] hover:bg-[#AC6A66] hover:border-2 hover:border-[#AC6A66]`}
-                        >
-                            присоединиться
-                        </Button>
-                        <Button
-                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-transparent text-[#292929] border-[#292929] border-[2px] hover:bg-white`}
-                        >
-                            написать whatsapp
-                        </Button>
-                    </div>
-                </Container>
-                <Footer />
             </div>
         </div>
     );

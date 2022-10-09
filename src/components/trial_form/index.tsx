@@ -23,6 +23,9 @@ export const TrialForm = (props) => {
                         <img src="../../../images/modal/close_btn.svg" alt="" />
                     </button>
                 </div>
+
+                {/* Мобильная версия заголовка*/}
+
                 <div className="lg:hidden pt-[64px] ml-auto mb-[32px]">
                     <button
                         onClick={() => {
@@ -40,7 +43,10 @@ export const TrialForm = (props) => {
                 >
                     Форма записи <br /> на пробное занятие
                 </h2>
-                <div className="lg:flex lg:flex-col lg:justify-between lg:h-full">
+
+                {/* Форма с полями*/}
+
+                <form className="lg:flex lg:flex-col lg:justify-between lg:h-full">
                     <div className="flex flex-col lg:flex lg:flex-row lg:justify-between">
                         <Select className="mb-[16px] lg:w-[45%]" name="city">
                             <option value="Almaty">Алматы</option>
@@ -53,7 +59,6 @@ export const TrialForm = (props) => {
                             <option value="st_4">Студия 4</option>
                         </Select>
                     </div>
-
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:mb-[32px]">
                         <Input
                             className="mb-[16px] w-[100%] lg:w-[45%]"
@@ -66,11 +71,11 @@ export const TrialForm = (props) => {
                             placeholder="Телефон"
                         />
                     </div>
-                    <div className="mb-[32px] flex items-start relative lg:justify-start lg:flex-grow">
+                    <div className="mb-[32px] flex items-start relative lg:ml-auto lg:flex-grow lg:max-w-[50%]">
                         <Checkbox />
                         <span
                             className={
-                                "text-p2 text-black font-['PT-Root-UI'] block ml-[36px] lg:max-w-[38%] lg:text-p4"
+                                "text-p2 text-black font-['PT-Root-UI'] lg:text-p4"
                             }
                         >
                             Нажимая кнопку “Отправить”, я даю свое согласие на
@@ -82,7 +87,7 @@ export const TrialForm = (props) => {
                     >
                         Отправить
                     </Button>
-                </div>
+                </form>
             </div>
             <div className="hidden lg:block lg:absolute lg:top-[0px] lg:left-[0px] lg:bg-[#000000] opacity-50 lg:w-full lg:h-full z-10"></div>
         </div>

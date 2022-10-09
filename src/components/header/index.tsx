@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { TrialForm, Button } from "@/components";
+import { TrialForm, Button, Section, Container } from "@/components";
 
 export const Header = (props) => {
     const router = useRouter();
@@ -11,8 +11,8 @@ export const Header = (props) => {
         <div>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
-                <div
-                    className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full pt-[16px] lg:pt-[32px]`}
+                <header
+                    className={`px-[16px] py-[40px] lg:px-[176px] lg:pt-[37px] flex flex-wrap items-center justify-between lg:mb-[0px] lg:h-full lg:w-full pt-[16px] lg:pt-[32px] lg:pb-[0px] lg:max-w-[1920px] mx-auto`}
                 >
                     <div
                         className={
@@ -61,7 +61,7 @@ export const Header = (props) => {
                     >
                         Присоединиться
                     </Button>
-                </div>
+                </header>
             )}
         </div>
     );

@@ -3,6 +3,7 @@ export { Main } from "./main";
 export { Header } from "./header";
 export { Footer } from "./footer";
 export { Container } from "./container";
+export { Section } from "./section";
 export { Select } from "./select";
 export { Input } from "./input";
 export { Checkbox } from "./checkbox";

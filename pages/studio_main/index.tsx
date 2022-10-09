@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Button, Container, Footer } from "@/components";
+import { Button, Container, Footer, Section } from "@/components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import { useWindowSize } from "../../src/utils/hooks";
 import { calcClientSliderItemsCount } from "../../src/utils/helpers";
 import { useRouter } from "next/router";
+import Link from "next/link";
 import { SlideNextButton, SlidePrevButton, Header } from "@/components";
 
 const StudioMain: React.FC<{ title?: string }> = () => {
@@ -19,7 +20,7 @@ const StudioMain: React.FC<{ title?: string }> = () => {
     return (
         <div>
             <div className="hidden lg:block">
-                <div className="hidden lg:block lg:px-[176px] bg-gray">
+                <div className="hidden lg:block bg-gray">
                     <Header
                         logo={"/images/training/logo_black.svg"}
                         text={"[#292929]"}
@@ -28,363 +29,378 @@ const StudioMain: React.FC<{ title?: string }> = () => {
                     />
                 </div>
                 <div className="hidden lg:block bg-[url('/images/studio/desktop_bg.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
-                <Container className="bg-gray hidden lg:block">
-                    <div className="lg:flex lg:items-start lg:justify-between lg:flex-wrap mb-[136px]">
-                        <div className="flex items-center justify-start mb-[32px] w-[25%] lg:w-[390px] lg:mr-[32px]">
-                            <button
-                                onClick={() => router.back()}
-                                className="mr-[16px]"
-                            >
-                                <img
-                                    className="lg:h-[64px] lg:w-[64px]"
-                                    src="/images/modal/arrow_left.svg"
-                                    alt=""
-                                />
-                            </button>
-                            <div>
-                                <h2
-                                    className={
-                                        "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
-                                    }
-                                >
-                                    Studio name
-                                </h2>
-                            </div>
-                        </div>
-                        <div className="lg:flex lg:justify-between font-['PT-Root-UI'] w-[40%] lg:w-[500px] lg:mr-[32px]">
-                            <div className="">
-                                <div className="flex items-center mb-[32px] lg:items-start">
-                                    <img
-                                        className="mr-[24px] lg:w-[24px] lg:h-[24px]"
-                                        src="../../../images/studio/studio_location_red.svg"
-                                        alt=""
-                                    />
-                                    <span className="text-p2 text-left text-[#525252] font-['PT-Root-UI'] lg:text-[24px] lg:leading-[26px]">
-                                        ЖК Эмират, ул. Жанайдара Жирентаева 10
-                                    </span>
+                <section className="bg-gray w-full hidden lg:block">
+                    <Container>
+                        <Section className="hidden lg:block">
+                            <div className="lg:flex lg:items-start lg:justify-between lg:flex-wrap mb-[136px]">
+                                <div className="flex items-start justify-start mb-[32px] w-[25%] lg:w-[390px] lg:mr-[32px]">
+                                    <button
+                                        onClick={() => router.back()}
+                                        className="mr-[16px]"
+                                    >
+                                        <img
+                                            className="lg:h-[64px] lg:w-[64px]"
+                                            src="/images/modal/arrow_left.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                    <div>
+                                        <h2
+                                            className={
+                                                "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3"
+                                            }
+                                        >
+                                            Studio name
+                                        </h2>
+                                    </div>
                                 </div>
-                                <div className="flex items-center mb-[32px]">
+                                <div className="lg:flex lg:justify-between font-['PT-Root-UI'] w-[40%] lg:w-[500px] lg:mr-[32px]">
+                                    <div className="">
+                                        <div className="flex items-center mb-[32px] lg:items-start">
+                                            <img
+                                                className="mr-[24px] lg:w-[24px] lg:h-[24px]"
+                                                src="../../../images/studio/studio_location_red.svg"
+                                                alt=""
+                                            />
+                                            <span className="text-p2 text-left text-[#525252] font-['PT-Root-UI'] lg:text-[24px] lg:leading-[26px]">
+                                                ЖК Эмират, ул. Жанайдара
+                                                Жирентаева 10
+                                            </span>
+                                        </div>
+                                        <div className="flex items-center mb-[32px]">
+                                            <img
+                                                className="mr-[24px] lg:w-[24px] lg:h-[24px]"
+                                                src="../../../images/studio/studio_phone_red.svg"
+                                                alt=""
+                                            />
+                                            <a
+                                                className="text-p2 text-left text-[#525252] font-['PT-Root-UI'] lg:text-[24px] lg:leading-[26px]"
+                                                href="tel:+ 77776543210"
+                                            >
+                                                + 7 (777) 654 32 10
+                                            </a>
+                                        </div>
+                                        <div className="flex items-start">
+                                            <img
+                                                className="mr-[24px] lg:w-[24px] lg:h-[24px]"
+                                                src="../../../images/studio/studio_calendar_red.svg"
+                                                alt=""
+                                            />
+                                            <span className="text-p2 text-left text-[#525252] font-['PT-Root-UI'] lg:text-[24px] lg:leading-[26px]">
+                                                пн-вт: 8:00 - 23:00
+                                                <br />
+                                                сб-вс: 9:00 - 22:00
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center">
                                     <img
-                                        className="mr-[24px] lg:w-[24px] lg:h-[24px]"
-                                        src="../../../images/studio/studio_phone_red.svg"
+                                        className="block mr-[16px] lg:w-[24px] lg:h-[24px]"
+                                        src="../../../images/studio/studio_map_red.svg"
                                         alt=""
                                     />
                                     <a
-                                        className="text-p2 text-left text-[#525252] font-['PT-Root-UI'] lg:text-[24px] lg:leading-[26px]"
-                                        href="tel:+ 77776543210"
+                                        href="#"
+                                        className="block text-h5 text-left uppercase text-[#737373] font-bold"
                                     >
-                                        + 7 (777) 654 32 10
+                                        На карте
                                     </a>
                                 </div>
-                                <div className="flex items-start">
-                                    <img
-                                        className="mr-[24px] lg:w-[24px] lg:h-[24px]"
-                                        src="../../../images/studio/studio_calendar_red.svg"
-                                        alt=""
-                                    />
-                                    <span className="text-p2 text-left text-[#525252] font-['PT-Root-UI'] lg:text-[24px] lg:leading-[26px]">
-                                        пн-вт: 8:00 - 23:00
-                                        <br />
-                                        сб-вс: 9:00 - 22:00
-                                    </span>
+                            </div>
+                            <div className="flex justify-end">
+                                <Button
+                                    onClick={() =>
+                                        router.push("/studio_quiz_page3")
+                                    }
+                                    className={`lg:w-[350px] py-[20px] mb-[24px] bg-[#D08884] text-white mr-[64px] hover:bg-[#AC6A66] hover:border-2 hover:border-[#AC6A66]`}
+                                >
+                                    присоединиться
+                                </Button>
+                                <Button
+                                    className={`lg:w-[350px] py-[20px] mb-[24px] bg-transparent text-[#292929] border-[#292929] border-[2px] hover:bg-white`}
+                                >
+                                    написать whatsapp
+                                </Button>
+                            </div>
+                        </Section>
+                    </Container>
+                </section>
+                <section className="bg-gray-100 w-full">
+                    <Container>
+                        <Section>
+                            <div className="bg-gray-100 lg:pb-[0px] lg:mb-[80px] mr-auto max-w-[1920px] relative">
+                                <h2
+                                    className={
+                                        "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3 mb-[80px]"
+                                    }
+                                >
+                                    У нас есть всё для
+                                    <br />
+                                    эффективной тренировки
+                                </h2>
+                            </div>
+                            <div className="flex justify-start lg:justify-start lg:flex-wrap gap-x-[50px] font-familyBold">
+                                <div
+                                    className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px] lg:mb-[32px]
+"
+                                >
+                                    <div className="">
+                                        <img
+                                            className="w-[64px] h-[64px]"
+                                            src="/images/studio/towel.svg"
+                                            alt="features"
+                                        />
+                                        <span className="text-p2 uppercase block mt-[16px] lg:mt-[40px]">
+                                            Полотенца
+                                        </span>
+                                    </div>
+                                </div>
+                                <div
+                                    className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px] lg:mb-[32px]
+"
+                                >
+                                    <div className="">
+                                        <img
+                                            className="w-[64px] h-[64px]"
+                                            src="/images/studio/wi-fi.svg"
+                                            alt="features"
+                                        />
+                                        <span className="text-p2 uppercase block mt-[16px] lg:mt-[40px]">
+                                            free wi-fi
+                                        </span>
+                                    </div>
+                                </div>
+                                <div
+                                    className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px] lg:mb-[32px]
+"
+                                >
+                                    <div>
+                                        <img
+                                            className="w-[64px] h-[64px]"
+                                            src="/images/studio/towel.svg"
+                                            alt="features"
+                                        />
+                                        <span className="text-p2 uppercase block mt-[40px]">
+                                            Полотенца
+                                        </span>
+                                    </div>
+                                </div>
+                                <div
+                                    className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px] lg:mb-[32px]
+"
+                                >
+                                    <div>
+                                        <img
+                                            className="w-[64px] h-[64px]"
+                                            src="/images/studio/wi-fi.svg"
+                                            alt="features"
+                                        />
+                                        <span className="text-p2 uppercase block mt-[40px]">
+                                            free wi-fi
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div className="flex items-center">
-                            <img
-                                className="block mr-[16px] lg:w-[24px] lg:h-[24px]"
-                                src="../../../images/studio/studio_map_red.svg"
-                                alt=""
-                            />
-                            <a
-                                href="#"
-                                className="block text-h5 text-left uppercase text-[#737373] font-bold"
+                        </Section>
+                    </Container>
+                </section>
+                <section className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative">
+                    <Container>
+                        <div className="px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] mr-auto relative">
+                            <h2
+                                className={
+                                    "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3 mb-[80px]"
+                                }
                             >
-                                На карте
-                            </a>
-                        </div>
-                    </div>
-                    <div className="flex justify-end">
-                        <Button
-                            onClick={() => router.push("/studio_quiz_page3")}
-                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-[#D08884] text-white mr-[64px] hover:bg-[#AC6A66] hover:border-2 hover:border-[#AC6A66]`}
-                        >
-                            присоединиться
-                        </Button>
-                        <Button
-                            className={`lg:w-[350px] py-[20px] mb-[24px] bg-transparent text-[#292929] border-[#292929] border-[2px] hover:bg-white`}
-                        >
-                            написать whatsapp
-                        </Button>
-                    </div>
-                </Container>
-                <Container className="bg-gray-100 lg:h-full">
-                    <h2
-                        className={
-                            "text-h2 uppercase font-familyBold font-bold text-[#292929] lg:text-h3 mb-[80px]"
-                        }
-                    >
-                        У нас есть всё для
-                        <br />
-                        эффективной тренировки
-                    </h2>
-
-                    <div className="flex justify-start lg:justify-between lg:flex-wrap gap-x-[50px] font-familyBold">
-                        <div
-                            className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px] lg:mb-[32px]
-"
-                        >
-                            <div className="">
-                                <img
-                                    className="w-[64px] h-[64px]"
-                                    src="/images/studio/towel.svg"
-                                    alt="features"
+                                У нас есть всё для
+                                <br />
+                                эффективной тренировки
+                            </h2>
+                            <div
+                                className={`hidden lg:block absolute z-[10] top-[240px] right-[8%] text-primary hidden sm:block`}
+                            >
+                                <SlidePrevButton
+                                    className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                    ref={prevBtn}
                                 />
-                                <span className="text-p2 uppercase block mt-[16px] lg:mt-[40px]">
-                                    Полотенца
-                                </span>
+                                <SlideNextButton
+                                    className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                    ref={nextBtn}
+                                />
                             </div>
                         </div>
-                        <div
-                            className="bg-white p-[16px] lg:p-[40px] rounded-[16px] lg:rounded-[40px] w-[141px] h-[103px] lg:w-[344px] lg:h-[244px] lg:mb-[32px]
-"
-                        >
-                            <div className="">
-                                <img
-                                    className="w-[64px] h-[64px]"
-                                    src="/images/studio/wi-fi.svg"
-                                    alt="features"
-                                />
-                                <span className="text-p2 uppercase block mt-[16px] lg:mt-[40px]">
-                                    free wi-fi
-                                </span>
-                            </div>
+                        <div className="max-w-[1920px] lg:pl-[176px] mr-auto lg:mb-[0px] mb-[24px]">
+                            <Swiper
+                                loop={true}
+                                slidesPerView={slidesCount}
+                                spaceBetween={40}
+                                modules={[Navigation]}
+                                navigation={{
+                                    prevEl: prevBtn.current,
+                                    nextEl: nextBtn.current,
+                                }}
+                                onBeforeInit={(swiper) => {
+                                    if (
+                                        swiper?.params?.navigation &&
+                                        typeof swiper?.params?.navigation !=
+                                            "boolean"
+                                    ) {
+                                        swiper.params.navigation.prevEl =
+                                            prevBtn.current;
+                                        swiper.params.navigation.nextEl =
+                                            nextBtn.current;
+                                    }
+                                }}
+                                className=""
+                            >
+                                <SwiperSlide>
+                                    <Link href="/training_main">
+                                        <a>
+                                            <img
+                                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                                src="/images/main/yoga.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                                src="/images/main/yoga_mob.jpg"
+                                                alt=""
+                                            />
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <Link href="/training_main">
+                                        <a>
+                                            <img
+                                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                                src="/images/main/yoga.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                                src="/images/main/yoga_mob.jpg"
+                                                alt=""
+                                            />
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <Link href="/training_main">
+                                        <a>
+                                            <img
+                                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                                src="/images/main/yoga.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                                src="/images/main/yoga_mob.jpg"
+                                                alt=""
+                                            />
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <Link href="/training_main">
+                                        <a>
+                                            <img
+                                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                                src="/images/main/yoga.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                                src="/images/main/yoga_mob.jpg"
+                                                alt=""
+                                            />
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <Link href="/training_main">
+                                        <a>
+                                            <img
+                                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                                src="/images/main/yoga.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                                src="/images/main/yoga_mob.jpg"
+                                                alt=""
+                                            />
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </SwiperSlide>
+                                <SwiperSlide>
+                                    <Link href="/training_main">
+                                        <a>
+                                            <img
+                                                className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                                src="/images/main/yoga.jpg"
+                                                alt=""
+                                            />
+                                            <img
+                                                className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                                src="/images/main/yoga_mob.jpg"
+                                                alt=""
+                                            />
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </a>
+                                    </Link>
+                                </SwiperSlide>
+                            </Swiper>
                         </div>
-                        <div
-                            className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px] lg:mb-[32px]
-"
-                        >
-                            <div>
-                                <img
-                                    className="w-[64px] h-[64px]"
-                                    src="/images/studio/towel.svg"
-                                    alt="features"
-                                />
-                                <span className="text-p2 uppercase block mt-[40px]">
-                                    Полотенца
-                                </span>
-                            </div>
-                        </div>
-                        <div
-                            className="hidden lg:block bg-white p-[40px] rounded-[40px] w-[344px] h-[244px] lg:mb-[32px]
-"
-                        >
-                            <div>
-                                <img
-                                    className="w-[64px] h-[64px]"
-                                    src="/images/studio/wi-fi.svg"
-                                    alt="features"
-                                />
-                                <span className="text-p2 uppercase block mt-[40px]">
-                                    free wi-fi
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </Container>
-                <Container className="bg-white pb-[0px] lg:pb-[0px] lg:relative lg:mb-[64px]">
-                    <h2
-                        className={
-                            "text-h2 uppercase font-familyBold text-black mb-[6px] lg:mb-[28px]"
-                        }
-                    >
-                        Фитнес направления
-                    </h2>
-                    <p
-                        className={
-                            "text-p4 lg:text-p1 text-black mb-[24px] font-['PT-Root-UI']"
-                        }
-                    >
-                        Эффективные направления для твоих целей
-                    </p>
-                </Container>
-                <div className="lg:mb-[140px] mb-[40px] pl-[16px] lg:pl-[176px] relative">
-                    <div
-                        className={`hidden lg:block absolute z-[10] -top-[100px] right-[8%] text-primary hidden sm:block`}
-                    >
-                        <SlidePrevButton
-                            className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
-                            ref={prevBtn}
-                        />
-                        <SlideNextButton
-                            className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
-                            ref={nextBtn}
-                        />
-                    </div>
-                    <Swiper
-                        loop={true}
-                        slidesPerView={slidesCount}
-                        spaceBetween={40}
-                        modules={[Navigation]}
-                        navigation={{
-                            prevEl: prevBtn.current,
-                            nextEl: nextBtn.current,
-                        }}
-                        onBeforeInit={(swiper) => {
-                            if (
-                                swiper?.params?.navigation &&
-                                typeof swiper?.params?.navigation != "boolean"
-                            ) {
-                                swiper.params.navigation.prevEl =
-                                    prevBtn.current;
-                                swiper.params.navigation.nextEl =
-                                    nextBtn.current;
-                            }
-                        }}
-                        className=""
-                    >
-                        <SwiperSlide>
-                            <button
-                                onClick={() => router.push("/training_main")}
-                            >
-                                <img
-                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
-                                    src="/images/main/yoga.jpg"
-                                    alt=""
-                                />
-                                <img
-                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
-                                    src="/images/main/yoga_mob.jpg"
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
-                                    }
-                                >
-                                    Stretching
-                                </span>
-                            </button>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <button
-                                onClick={() => router.push("/training_main")}
-                            >
-                                <img
-                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
-                                    src="/images/main/stretching.jpg"
-                                    alt=""
-                                />
-                                <img
-                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
-                                    src="/images/main/yoga_mob.jpg"
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
-                                    }
-                                >
-                                    Stretching
-                                </span>
-                            </button>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <button
-                                onClick={() => router.push("/training_main")}
-                            >
-                                <img
-                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
-                                    src="/images/main/yoga.jpg"
-                                    alt=""
-                                />
-                                <img
-                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
-                                    src="/images/main/yoga_mob.jpg"
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
-                                    }
-                                >
-                                    Stretching
-                                </span>
-                            </button>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <button
-                                onClick={() => router.push("/training_main")}
-                            >
-                                <img
-                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
-                                    src="/images/main/stretching.jpg"
-                                    alt=""
-                                />
-                                <img
-                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
-                                    src="/images/main/yoga_mob.jpg"
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
-                                    }
-                                >
-                                    Stretching
-                                </span>
-                            </button>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <button
-                                onClick={() => router.push("/training_main")}
-                            >
-                                <img
-                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
-                                    src="/images/main/yoga.jpg"
-                                    alt=""
-                                />
-                                <img
-                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
-                                    src="/images/main/yoga_mob.jpg"
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
-                                    }
-                                >
-                                    Stretching
-                                </span>
-                            </button>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <button
-                                onClick={() => router.push("/training_main")}
-                            >
-                                <img
-                                    className="lg:block rounded-xl hidden w-[616px] h-[auto]"
-                                    src="/images/main/stretching.jpg"
-                                    alt=""
-                                />
-                                <img
-                                    className="lg:hidden rounded-xl block w-[308px] h-[332px]"
-                                    src="/images/main/yoga_mob.jpg"
-                                    alt=""
-                                />
-                                <span
-                                    className={
-                                        "absolute left-[10px] bottom-[14px] text-[20px] font-bold uppercase text-white lg:hidden"
-                                    }
-                                >
-                                    Stretching
-                                </span>
-                            </button>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
+                    </Container>
+                </section>
                 <Footer />
             </div>
+
+            {/* Мобильная версия */}
+
             <div className="lg:hidden">
                 <div className="bg-gray px-[16px] pt-[20px] flex flex-col">
                     <div className="flex items-center justify-start mb-[32px]">
@@ -509,82 +525,106 @@ const StudioMain: React.FC<{ title?: string }> = () => {
                             className="mySwiper"
                         >
                             <SwiperSlide>
-                                <div
-                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
-                                >
-                                    <span
-                                        className={
-                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
-                                        }
-                                    >
-                                        Stretching
-                                    </span>
-                                </div>
+                                <Link href="/training_main">
+                                    <a>
+                                        <div
+                                            className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                        >
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </div>
+                                    </a>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div
-                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
-                                >
-                                    <span
-                                        className={
-                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
-                                        }
-                                    >
-                                        Stretching
-                                    </span>
-                                </div>
+                                <Link href="/training_main">
+                                    <a>
+                                        <div
+                                            className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                        >
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </div>
+                                    </a>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div
-                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
-                                >
-                                    <span
-                                        className={
-                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
-                                        }
-                                    >
-                                        Stretching
-                                    </span>
-                                </div>
+                                <Link href="/training_main">
+                                    <a>
+                                        <div
+                                            className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                        >
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </div>
+                                    </a>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div
-                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
-                                >
-                                    <span
-                                        className={
-                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
-                                        }
-                                    >
-                                        Stretching
-                                    </span>
-                                </div>
+                                <Link href="/training_main">
+                                    <a>
+                                        <div
+                                            className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                        >
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </div>
+                                    </a>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div
-                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
-                                >
-                                    <span
-                                        className={
-                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
-                                        }
-                                    >
-                                        Stretching
-                                    </span>
-                                </div>
+                                <Link href="/training_main">
+                                    <a>
+                                        <div
+                                            className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                        >
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </div>
+                                    </a>
+                                </Link>
                             </SwiperSlide>
                             <SwiperSlide>
-                                <div
-                                    className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
-                                >
-                                    <span
-                                        className={
-                                            "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
-                                        }
-                                    >
-                                        Stretching
-                                    </span>
-                                </div>
+                                <Link href="/training_main">
+                                    <a>
+                                        <div
+                                            className={`bg-[url('/images/main/stretching_mob.jpg')] w-[308px] h-[332px] rounded-xl relative mb-[38px] mt-[32px]`}
+                                        >
+                                            <span
+                                                className={
+                                                    "absolute left-[10px] bottom-[15px] text-h3 text-white uppercase"
+                                                }
+                                            >
+                                                Stretching
+                                            </span>
+                                        </div>
+                                    </a>
+                                </Link>
                             </SwiperSlide>
                         </Swiper>
                     </div>

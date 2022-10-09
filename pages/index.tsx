@@ -8,8 +8,14 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { MobMenu, TrialForm, Button, Footer } from "@/components";
-import { MainNextButton, Header } from "@/components";
+import {
+    MobMenu,
+    TrialForm,
+    Button,
+    Footer,
+    MainNextButton,
+    Header,
+} from "@/components";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -46,11 +52,7 @@ const Home: React.FC = () => {
 
                     {!openMenu && (
                         <div className={"lg:relative"}>
-                            <div
-                                className={
-                                    "absolute w-full h-full z-20 px-[16px] lg:px-[176px]"
-                                }
-                            >
+                            <div className={"absolute w-full h-full z-20"}>
                                 <div
                                     className={`flex flex-col justify-between relative z-30`}
                                 >
@@ -63,7 +65,7 @@ const Home: React.FC = () => {
                                         border_hover={"white"}
                                     />
                                     <button
-                                        className="absolute top-[7%] right-[5%]"
+                                        className="absolute top-[25%] right-[5%]"
                                         onClick={() => {
                                             setOpenMenu(true);
                                         }}
@@ -75,26 +77,23 @@ const Home: React.FC = () => {
                                         />
                                     </button>
                                 </div>
-                                <div className="absolute left-[10%] top-[58%] lg:left-[7%] lg:top-[45%] text-white uppercase text-h1 text-left">
-                                    <h1 className="">
+                                <div className="relative left-[10%] top-[48%] lg:left-[7%] lg:top-[26%] w-[75%] lg:w-[90%] lg:max-w-[1000px] text-white uppercase text-h1 text-left">
+                                    <h1 className="lg:w-full mb-[24px] lg:mb-[64px]">
                                         Бесконечная <br />
                                         энергия Фитнеса
                                     </h1>
-                                    <div
-                                        className={`hidden lg:block absolute z-[10] left-[63%] -bottom-[40%] text-primary hidden sm:block`}
-                                    >
-                                        <MainNextButton
-                                            className={`ml-5 rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
-                                            ref={nextBtn}
-                                        />
-                                    </div>
+                                    <MainNextButton
+                                        className={`z-10 absolute lg:left-[50%] left-[50%] rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                        ref={nextBtn}
+                                    />
+                                    <img
+                                        src="/images/main/ellipse.svg"
+                                        className="absolute left-[20%] -top-[30%] lg:left-[18%] lg:-top-[35%] w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] "
+                                        alt=""
+                                    />
                                 </div>
-                                <img
-                                    src="/images/main/ellipse.svg"
-                                    className="absolute left-[21%] top-[52%] lg:left-[14%] lg:top-[35%] w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] "
-                                    alt=""
-                                />
-                                <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[176px] bottom-[15%]">
+
+                                <u className="hidden lg:flex flex-col list-none w-full items-end absolute right-[5%] bottom-[10%]">
                                     <li className="mb-[30px]">
                                         <a href="#">
                                             <img
