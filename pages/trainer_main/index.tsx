@@ -83,8 +83,8 @@ const Trainer: React.FC<{ title?: string }> = () => {
 
             {/* Мобильная версия */}
 
-            <div className="bg-gray h-screen lg:hidden px-[16px] pt-[16px] pb-[20px] flex flex-col">
-                <div className="flex mb-[28px]">
+            <div className="bg-gray h-screen lg:hidden px-[16px] pt-[16px] pb-[20px] flex flex-col overflow-x-hidden">
+                <section className="flex mb-[28px]">
                     <button onClick={() => router.back()} className="mr-[16px]">
                         <img
                             src="../../../images/modal/arrow_left.svg"
@@ -100,8 +100,8 @@ const Trainer: React.FC<{ title?: string }> = () => {
                             Васильева Софья
                         </h2>
                     </div>
-                </div>
-                <div className="flex flex-col items-center">
+                </section>
+                <section className="flex flex-col items-center">
                     <img
                         className="mb-[24px]"
                         src="../../../images/trainer/trainer_1.jpg"
@@ -134,7 +134,7 @@ const Trainer: React.FC<{ title?: string }> = () => {
                     >
                         Написать whatsapp
                     </Button>
-                </div>
+                </section>
             </div>
         </div>
     );

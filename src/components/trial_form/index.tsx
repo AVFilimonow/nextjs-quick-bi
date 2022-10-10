@@ -5,7 +5,7 @@ import { Select, Checkbox } from "@/components";
 
 export const TrialForm = (props) => {
     return (
-        <div className="block lg:flex lg:items-center lg:justify-center lg:fixed lg:top-[0px] lg:left-[0px] w-full lg:h-full h-screen z-50">
+        <div className="block lg:flex lg:items-center lg:justify-center lg:fixed lg:top-[0px] lg:left-[0px] w-full lg:h-full h-full z-50">
             <div className="lg:relative z-50 bg-gray lg:w-[80%] lg:rounded-[20px] px-[20px] h-full lg:max-h-[80%] flex flex-col justify-start lg:px-[171px] lg:py-[81px]">
                 <div className="hidden lg:flex items-start justify-between ">
                     <h2
@@ -26,7 +26,7 @@ export const TrialForm = (props) => {
 
                 {/* Мобильная версия заголовка*/}
 
-                <div className="lg:hidden pt-[64px] ml-auto mb-[32px]">
+                <div className="lg:hidden pt-[24px] ml-auto mb-[32px]">
                     <button
                         onClick={() => {
                             props.setOpenModal(false);
@@ -46,7 +46,7 @@ export const TrialForm = (props) => {
 
                 {/* Форма с полями*/}
 
-                <form className="lg:flex lg:flex-col lg:justify-between lg:h-full">
+                <form className="lg:flex lg:flex-col lg:justify-between lg:h-full mb-[32px] lg:mb-[0px]">
                     <div className="flex flex-col lg:flex lg:flex-row lg:justify-between">
                         <Select className="mb-[16px] lg:w-[45%]" name="city">
                             <option value="Almaty">Алматы</option>
@@ -71,16 +71,20 @@ export const TrialForm = (props) => {
                             placeholder="Телефон"
                         />
                     </div>
-                    <div className="mb-[32px] flex items-start relative lg:ml-auto lg:flex-grow lg:max-w-[50%]">
-                        <Checkbox />
-                        <span
-                            className={
-                                "text-p2 text-black font-['PT-Root-UI'] lg:text-p4"
-                            }
-                        >
-                            Нажимая кнопку “Отправить”, я даю свое согласие на
-                            обработку моих персональных данных
-                        </span>
+                    <div className="mb-[32px] flex items-start relative lg:ml-auto lg:flex-grow lg:max-w-[45%]">
+                        <div className="lg:mr-[32px] mr-[12px]">
+                            <Checkbox className="w-full" />
+                        </div>
+                        <div>
+                            <span
+                                className={
+                                    "text-p2 text-black font-['PT-Root-UI'] lg:text-[16px] lg:leading-[21px]"
+                                }
+                            >
+                                Нажимая кнопку “Отправить”, я даю свое согласие
+                                на обработку моих персональных данных
+                            </span>
+                        </div>
                     </div>
                     <Button
                         className={`w-[100%] lg:max-w-[480px] bg-[#DADADA] text-p[#A3A3A3] lg:mx-auto`}

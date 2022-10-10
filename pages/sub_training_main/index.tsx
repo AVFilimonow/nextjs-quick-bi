@@ -200,7 +200,7 @@ const Training: React.FC<{ title?: string }> = () => {
 
             {/* Мобильная версия */}
 
-            <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col lg:hidden">
+            <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col lg:hidden overflow-x-hidden">
                 <div className="flex mb-[32px]">
                     <button onClick={() => router.back()} className="mr-[16px]">
                         <img

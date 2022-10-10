@@ -22,10 +22,6 @@ import {
 } from "@/components";
 
 export const Main = (props) => {
-    const { width: windowWidth } = useWindowSize();
-    const slidesCount = calcClientSliderItemsCount(windowWidth);
-    const prevBtn = useRef<HTMLButtonElement>(null);
-    const nextBtn = useRef<HTMLButtonElement>(null);
     const studioPrevBtn = useRef<HTMLButtonElement>(null);
     const studioNextBtn = useRef<HTMLButtonElement>(null);
     const trainingPrevBtn = useRef<HTMLButtonElement>(null);
@@ -51,14 +47,14 @@ export const Main = (props) => {
                     </div>
                     <div className="max-w-[1920px] lg:pl-[176px] mr-auto">
                         <Swiper
-                            slidesPerView={slidesCount}
+                            slidesPerView={"auto"}
                             spaceBetween={40}
                             modules={[Navigation]}
                             className=""
                         >
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[344px] max-w-[141px]">
                                 <div
-                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] h-[103px] lg:w-full lg:max-w-[344px] lg:h-[195px]
+                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] 
 "
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
@@ -73,9 +69,9 @@ export const Main = (props) => {
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[344px] max-w-[141px]">
                                 <div
-                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px]
+                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] 
 "
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
@@ -85,14 +81,14 @@ export const Main = (props) => {
                                             alt="features"
                                         />
                                         <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
-                                            Free wi-fi
+                                            free wi-fi
                                         </span>
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[344px] max-w-[141px]">
                                 <div
-                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px]
+                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] 
 "
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
@@ -107,9 +103,9 @@ export const Main = (props) => {
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[344px] max-w-[141px]">
                                 <div
-                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px]
+                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] 
 "
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
@@ -119,14 +115,14 @@ export const Main = (props) => {
                                             alt="features"
                                         />
                                         <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
-                                            Free wi-fi
+                                            free wi-fi
                                         </span>
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[344px] max-w-[141px]">
                                 <div
-                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px]
+                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] 
 "
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
@@ -141,9 +137,9 @@ export const Main = (props) => {
                                     </div>
                                 </div>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[344px] max-w-[141px]">
                                 <div
-                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] w-[50%] lg:w-full lg:max-w-[344px] h-[103px] lg:h-[195px]
+                                    className="bg-white p-[16px] lg:p-[32px] rounded-[16px] lg:rounded-[20px] 
 "
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
@@ -153,7 +149,7 @@ export const Main = (props) => {
                                             alt="features"
                                         />
                                         <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
-                                            Free wi-fi
+                                            free wi-fi
                                         </span>
                                     </div>
                                 </div>
@@ -181,14 +177,14 @@ export const Main = (props) => {
                             Эффективные направления для твоих целей
                         </p>
                         <div
-                            className={`hidden lg:block absolute z-[10] top-[240px] right-[100px] text-primary hidden sm:block`}
+                            className={`hidden lg:block absolute z-[10] lg:bottom-[0%] bottom-[20%] right-[100px] text-primary hidden sm:block`}
                         >
                             <TrainingPrevButton
-                                className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                className={`lg:h-[48px] lg:w-[48px] h-[24px] w-[24px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                 ref={trainingPrevBtn}
                             />
                             <TrainingNextButton
-                                className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                className={`ml-[8px] lg:h-[48px] lg:w-[48px] h-[24px] w-[24px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                 ref={trainingNextBtn}
                             />
                         </div>
@@ -196,7 +192,7 @@ export const Main = (props) => {
                     <div className="max-w-[1920px] lg:pl-[176px] mr-auto">
                         <Swiper
                             loop={true}
-                            slidesPerView={slidesCount}
+                            slidesPerView={"auto"}
                             spaceBetween={40}
                             modules={[Navigation]}
                             navigation={{
@@ -217,16 +213,16 @@ export const Main = (props) => {
                             }}
                             className=""
                         >
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/training_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/stretching.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/yoga_mob.jpg"
                                             alt=""
                                         />
@@ -240,16 +236,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/training_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/yoga.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/yoga_mob.jpg"
                                             alt=""
                                         />
@@ -263,16 +259,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/training_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/stretching.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/yoga_mob.jpg"
                                             alt=""
                                         />
@@ -286,16 +282,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/training_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/yoga.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/yoga_mob.jpg"
                                             alt=""
                                         />
@@ -309,16 +305,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/training_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/stretching.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/yoga_mob.jpg"
                                             alt=""
                                         />
@@ -332,16 +328,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/training_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden w-[616px] h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/yoga.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px]"
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/yoga_mob.jpg"
                                             alt=""
                                         />
@@ -421,14 +417,14 @@ export const Main = (props) => {
                             Выбери свой Academy
                         </p>
                         <div
-                            className={`hidden lg:block absolute z-[10] top-[240px] right-[100px] text-primary hidden sm:block`}
+                            className={`hidden lg:block absolute z-[10] lg:bottom-[0%] bottom-[20%] right-[100px] text-primary hidden sm:block`}
                         >
                             <StudioPrevButton
-                                className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                className={`lg:h-[48px] lg:w-[48px] h-[24px] w-[24px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                 ref={studioPrevBtn}
                             />
                             <StudioNextButton
-                                className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                className={`ml-[8px] lg:h-[48px] lg:w-[48px] h-[24px] w-[24px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                 ref={studioNextBtn}
                             />
                         </div>
@@ -436,7 +432,7 @@ export const Main = (props) => {
                     <div className="max-w-[1920px] lg:pl-[176px] mr-auto">
                         <Swiper
                             loop={true}
-                            slidesPerView={slidesCount}
+                            slidesPerView={"auto"}
                             spaceBetween={40}
                             modules={[Navigation]}
                             navigation={{
@@ -457,16 +453,16 @@ export const Main = (props) => {
                             }}
                             className=""
                         >
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/studio_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/studio_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/studio_1_mob.jpg"
                                             alt=""
                                         />
@@ -487,16 +483,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/studio_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/studio_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/studio_1_mob.jpg"
                                             alt=""
                                         />
@@ -517,16 +513,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/studio_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/studio_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/studio_1_mob.jpg"
                                             alt=""
                                         />
@@ -547,16 +543,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/studio_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/studio_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/studio_1_mob.jpg"
                                             alt=""
                                         />
@@ -577,16 +573,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/studio_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/studio_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/studio_1_mob.jpg"
                                             alt=""
                                         />
@@ -642,20 +638,21 @@ export const Main = (props) => {
                     <div className="px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] mr-auto relative">
                         <h2
                             className={
-                                "text-h2 uppercase font-familyBold font-bold text-black mb-[0px] lg:mb-[48px]"
+                                "text-h2 uppercase font-familyBold font-bold text-black mb-[0px] lg:mb-[48px] lg:max-w-[1500px] max-w-[500px]"
                             }
                         >
-                            Тренеры, Которые приведут тебя к результату
+                            Тренеры, Которые
+                            <br /> приведут тебя к результату
                         </h2>
                         <div
-                            className={`hidden lg:block absolute z-[10] top-[240px] right-[100px] text-primary hidden sm:block`}
+                            className={`hidden lg:block absolute z-[10] lg:bottom-[0%] bottom-[20%] right-[100px] text-primary hidden sm:block`}
                         >
                             <TrainerPrevButton
-                                className={`h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                className={`lg:h-[48px] lg:w-[48px] h-[24px] w-[24px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                 ref={trainerPrevBtn}
                             />
                             <TrainerNextButton
-                                className={`ml-[8px] h-[48px] w-[48px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                className={`ml-[8px] lg:h-[48px] lg:w-[48px] h-[24px] w-[24px] transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                 ref={trainerNextBtn}
                             />
                         </div>
@@ -663,7 +660,7 @@ export const Main = (props) => {
                     <div className="max-w-[1920px] lg:pl-[176px] mr-auto lg:mb-[48px] mb-[24px]">
                         <Swiper
                             loop={true}
-                            slidesPerView={slidesCount}
+                            slidesPerView={"auto"}
                             spaceBetween={40}
                             modules={[Navigation]}
                             navigation={{
@@ -684,16 +681,16 @@ export const Main = (props) => {
                             }}
                             className=""
                         >
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/trainer_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/trener_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/trener_mob.jpg"
                                             alt=""
                                         />
@@ -707,16 +704,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/trainer_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/trener_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/trener_mob.jpg"
                                             alt=""
                                         />
@@ -730,16 +727,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/trainer_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/trener_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/trener_mob.jpg"
                                             alt=""
                                         />
@@ -753,16 +750,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/trainer_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/trener_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/trener_mob.jpg"
                                             alt=""
                                         />
@@ -776,16 +773,16 @@ export const Main = (props) => {
                                     </a>
                                 </Link>
                             </SwiperSlide>
-                            <SwiperSlide>
+                            <SwiperSlide className="lg:max-w-[616px] max-w-[308px] lg:h-[480px] h-[332px]">
                                 <Link href="/trainer_main">
                                     <a>
                                         <img
-                                            className="lg:block rounded-xl hidden lg:w-[616px] lg:h-[auto]"
+                                            className="lg:block rounded-xl hidden"
                                             src="/images/main/trener_1.jpg"
                                             alt=""
                                         />
                                         <img
-                                            className="lg:hidden rounded-xl block w-[308px] h-[332px] "
+                                            className="lg:hidden rounded-xl block"
                                             src="/images/main/trener_mob.jpg"
                                             alt=""
                                         />
