@@ -62,14 +62,14 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
+                        <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
                                 alt=""
                             />
                             <div className="p-[16px] flex flex-col items-start">
-                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5">
+                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5 group-hover:text-[#D08884]">
                                     Studio name
                                 </h3>
                                 <div>
@@ -117,14 +117,14 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
+                        <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
                                 alt=""
                             />
                             <div className="p-[16px] flex flex-col items-start">
-                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5">
+                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5 group-hover:text-[#D08884]">
                                     Studio name
                                 </h3>
                                 <div>
@@ -172,14 +172,14 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
+                        <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
                                 alt=""
                             />
                             <div className="p-[16px] flex flex-col items-start">
-                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5">
+                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5 group-hover:text-[#D08884]">
                                     Studio name
                                 </h3>
                                 <div>
@@ -227,14 +227,14 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
+                        <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
                                 alt=""
                             />
                             <div className="p-[16px] flex flex-col items-start">
-                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5">
+                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5 group-hover:text-[#D08884]">
                                     Studio name
                                 </h3>
                                 <div>
@@ -282,14 +282,14 @@ const StudioQuiz_2: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/studio_main")}
                         className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                     >
-                        <div className="w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500">
+                        <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                             <img
                                 className="w-[343px] lg:w-full"
                                 src="../../../images/studio/studio_1.png"
                                 alt=""
                             />
                             <div className="p-[16px] flex flex-col items-start">
-                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5">
+                                <h3 className="text-h3 uppercase font-familyBold text-[#292929] mb-[16px] lg:text-h5 group-hover:text-[#D08884]">
                                     Studio name
                                 </h3>
                                 <div>

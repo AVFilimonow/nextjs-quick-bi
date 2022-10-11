@@ -58,26 +58,74 @@ const StudioQuiz_1: React.FC<{ title?: string }> = () => {
                 </div>
                 <div className="flex flex-col grow">
                     <button onClick={() => router.push("/studio_quiz_page2")}>
-                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:p-[30px] hover:border-[#D08884] hover:border-[3px]">
-                            <img
-                                className="mr-[16px] lg:mr-[32px] lg:h-[24px] lg:w-[24px]"
-                                src="../../../images/modal/location.svg"
-                                alt=""
-                            />
-                            <h3 className="text-h3 uppercase text-[#424242] lg:text-h5 font-bold">
+                        <div className="group rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px] hover:transition-all duration-500">
+                            <svg
+                                className="mr-[16px] lg:mr-[32px]"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    className="mr-[16px] lg:mr-[32px] group-hover:stroke-[#D08884]"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z"
+                                    stroke="#424242"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    className="mr-[16px] lg:mr-[32px] group-hover:stroke-[#D08884]"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z"
+                                    stroke="#424242"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <h3 className="text-h3 uppercase text-[#424242] lg:text-h5 font-bold group-hover:text-[#D08884]">
                                 Алматы
                             </h3>
                         </div>
                     </button>
                     <button onClick={() => router.push("/studio_quiz_page2")}>
-                        <div className="rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:p-[30px] hover:border-[#D08884] hover:border-[3px]">
-                            <img
-                                className="mr-[16px] lg:mr-[32px] lg:h-[24px] lg:w-[24px]"
-                                src="../../../images/modal/location.svg"
-                                alt=""
-                            />
-                            <h3 className="text-h3 uppercase text-[#424242] lg:text-h5 font-bold">
-                                Нур-Султан
+                        <div className="group rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px] hover:transition-all duration-500">
+                            <svg
+                                className="mr-[16px] lg:mr-[32px]"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    className="mr-[16px] lg:mr-[32px] group-hover:stroke-[#D08884]"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M14.5 10.5005C14.5 9.11924 13.3808 8 12.0005 8C10.6192 8 9.5 9.11924 9.5 10.5005C9.5 11.8808 10.6192 13 12.0005 13C13.3808 13 14.5 11.8808 14.5 10.5005Z"
+                                    stroke="#424242"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    className="mr-[16px] lg:mr-[32px] group-hover:stroke-[#D08884]"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M11.9995 21C10.801 21 4.5 15.8984 4.5 10.5633C4.5 6.38664 7.8571 3 11.9995 3C16.1419 3 19.5 6.38664 19.5 10.5633C19.5 15.8984 13.198 21 11.9995 21Z"
+                                    stroke="#424242"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                            <h3 className="text-h3 uppercase text-[#424242] lg:text-h5 font-bold group-hover:text-[#D08884]">
+                                Астана
                             </h3>
                         </div>
                     </button>

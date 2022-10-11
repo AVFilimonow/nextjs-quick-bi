@@ -5,9 +5,10 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import React, { useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, A11y, Autoplay, Pagination } from "swiper";
+import SwiperCore, { Navigation, A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import {
     MobMenu,
     TrialForm,
@@ -16,9 +17,6 @@ import {
     MainNextButton,
     Header,
 } from "@/components";
-
-import "swiper/css";
-import "swiper/css/pagination";
 
 const Main = dynamic<any>(
     () => import("@/components/main").then((mod) => mod.Main),
@@ -31,15 +29,43 @@ const Home: React.FC = () => {
     const [openMenu, setOpenMenu] = useState(false);
     const [openModal, setOpenModal] = useState(false);
     const nextBtn = useRef<HTMLButtonElement>(null);
+    SwiperCore.use([Pagination]);
     const pagination = {
+        el: ".swiper-pagination",
         clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class=" ' + className + '">' + "</span>";
+        renderBullet: (index, className) => {
+            return '<div class="' + className + '">' + "</div>";
         },
     };
 
     return (
         <div>
+            <style jsx>
+                {`
+                    .swiper-pagination {
+                        width: 100px;
+                        display: flex;
+                        align-items: center;
+                    }
+                    .swiper-pagination-bullet {
+                        width: 16px;
+                        height: 16px;
+                        background: #ffffff;
+                        opacity: 0.9;
+                    }
+                    .swiper-pagination-horizontal {
+                        bottom: 0;
+                        left: 0;
+                        position: relative;
+                    }
+
+                    @media (max-width: 1024px) {
+                        .swiper-pagination {
+                            width: auto;
+                        }
+                    }
+                `}
+            </style>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
                 <div className="">
@@ -77,15 +103,22 @@ const Home: React.FC = () => {
                                         />
                                     </button>
                                 </div>
-                                <div className="relative left-[10%] top-[48%] lg:left-[7%] lg:top-[26%] w-[75%] lg:w-[90%] lg:max-w-[1000px] text-white uppercase text-h1 text-left">
-                                    <h1 className="lg:w-full mb-[24px] lg:mb-[64px]">
+                                <div className="relative left-[10%] top-[48%] lg:left-[7%] lg:top-[26%] w-[75%] lg:w-[90%] h-[100px] lg:h-[300px] lg:max-w-[1000px] text-white uppercase text-h1 text-left">
+                                    <h1 className="absolute lg:left-[0%] left-[0%] lg:top-[0%] top-[0%] lg:w-full">
                                         Бесконечная <br />
                                         энергия Фитнеса
                                     </h1>
-                                    <MainNextButton
-                                        className={`z-10 absolute lg:left-[50%] left-[50%] rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
-                                        ref={nextBtn}
-                                    />
+                                    <div
+                                        className={
+                                            "absolute lg:left-[50%] md:left-[40%] left-[55%] lg:top-[80%] top-[80%] flex justify-between items-center"
+                                        }
+                                    >
+                                        <MainNextButton
+                                            className={`z-10 block lg:mr-[20px] mr-[10px] rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                            ref={nextBtn}
+                                        />
+                                        <div className="swiper-pagination swiper-pagination-bullets"></div>
+                                    </div>
                                     <img
                                         src="/images/main/ellipse.svg"
                                         className="absolute left-[20%] -top-[30%] lg:left-[18%] lg:-top-[35%] w-[200px] h-[200px] lg:w-[456px] lg:h-[456px] "

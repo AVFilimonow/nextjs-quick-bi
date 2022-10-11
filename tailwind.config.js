@@ -6,6 +6,10 @@ module.exports = {
         extend: {
             colors: colors,
             fontSize: fonts,
+            screens: {
+                md: "800px",
+                // => @media (min-width: 992px) { ... }
+            },
         },
     },
     variants: {

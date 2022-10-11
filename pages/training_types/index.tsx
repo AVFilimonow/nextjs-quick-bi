@@ -40,15 +40,15 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                 <div className="lg:flex lg:justify-between w-full ">
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out duration-200">
+                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                                 <img
-                                    className="mr-[20px]"
+                                    className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_1.png"
                                     alt=""
                                 />
                                 <h4
                                     className={
-                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5"
+                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5 group-hover:text-[#D08884]"
                                     }
                                 >
                                     Stretching Lite
@@ -58,15 +58,15 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </Link>
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out duration-200">
+                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                                 <img
-                                    className="mr-[20px]"
+                                    className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_2.png"
                                     alt=""
                                 />
                                 <h4
                                     className={
-                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5"
+                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5 group-hover:text-[#D08884]"
                                     }
                                 >
                                     Hot Stretching
@@ -78,15 +78,15 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                 <div className="lg:flex lg:justify-between w-full">
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out duration-200">
+                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                                 <img
-                                    className="mr-[20px]"
+                                    className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_3.png"
                                     alt=""
                                 />
                                 <h4
                                     className={
-                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5"
+                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5 group-hover:text-[#D08884]"
                                     }
                                 >
                                     Aerostretching в гамаках
@@ -96,15 +96,15 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </Link>
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#E5E5E5] hover:border-[2px] hover:text-[#D08884] transition-color ease-in-out duration-200">
+                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
                                 <img
-                                    className="mr-[20px]"
+                                    className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_4.png"
                                     alt=""
                                 />
                                 <h4
                                     className={
-                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5"
+                                        "text-h4 text-left text-[#292929] uppercase lg:text-h5 group-hover:text-[#D08884]"
                                     }
                                 >
                                     Aerostretching на полотнах
