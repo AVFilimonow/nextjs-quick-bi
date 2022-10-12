@@ -53,10 +53,10 @@ export const TrialForm = (props) => {
                             <option value="Nur-Sultan">Нур-Султан</option>
                         </Select>
                         <Select className="mb-[16px] lg:w-[45%]" name="studio">
-                            <option value="st_1">Студия 1</option>
-                            <option value="st_2">Студия 2</option>
-                            <option value="st_3">Студия 3</option>
-                            <option value="st_4">Студия 4</option>
+                            <option value="studio_1">Студия 1</option>
+                            <option value="studio_2">Студия 2</option>
+                            <option value="studio_3">Студия 3</option>
+                            <option value="studio_4">Студия 4</option>
                         </Select>
                     </div>
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:mb-[32px]">

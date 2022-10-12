@@ -59,11 +59,11 @@ export const Main = (props) => {
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
                                         <img
-                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]"
+                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px] lg:mb-[32px] mb-[16px]"
                                             src="../../../images/main/feat_1.svg"
                                             alt="features"
                                         />
-                                        <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
+                                        <span className="text-[14px] leading-[15px] lg:text-[32px] lg:leading-[35px] font-bold uppercase block">
                                             Полотенца
                                         </span>
                                     </div>
@@ -76,11 +76,11 @@ export const Main = (props) => {
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
                                         <img
-                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]"
+                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px] lg:mb-[32px] mb-[16px]"
                                             src="../../../images/main/feat_2.svg"
                                             alt="features"
                                         />
-                                        <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
+                                        <span className="text-[14px] leading-[15px] lg:text-[32px] lg:leading-[35px] font-bold uppercase block">
                                             free wi-fi
                                         </span>
                                     </div>
@@ -93,11 +93,11 @@ export const Main = (props) => {
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
                                         <img
-                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]"
+                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px] lg:mb-[32px] mb-[16px]"
                                             src="../../../images/main/feat_1.svg"
                                             alt="features"
                                         />
-                                        <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
+                                        <span className="text-[14px] leading-[15px] lg:text-[32px] lg:leading-[35px] font-bold uppercase block">
                                             Полотенца
                                         </span>
                                     </div>
@@ -110,11 +110,11 @@ export const Main = (props) => {
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
                                         <img
-                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]"
+                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px] lg:mb-[32px] mb-[16px]"
                                             src="../../../images/main/feat_2.svg"
                                             alt="features"
                                         />
-                                        <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
+                                        <span className="text-[14px] leading-[15px] lg:text-[32px] lg:leading-[35px] font-bold uppercase block">
                                             free wi-fi
                                         </span>
                                     </div>
@@ -127,11 +127,11 @@ export const Main = (props) => {
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
                                         <img
-                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]"
+                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px] lg:mb-[32px] mb-[16px]"
                                             src="../../../images/main/feat_1.svg"
                                             alt="features"
                                         />
-                                        <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
+                                        <span className="text-[14px] leading-[15px] lg:text-[32px] lg:leading-[35px] font-bold uppercase block">
                                             Полотенца
                                         </span>
                                     </div>
@@ -144,11 +144,11 @@ export const Main = (props) => {
                                 >
                                     <div className="flex flex-col items-start justify-between h-full">
                                         <img
-                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]"
+                                            className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px] lg:mb-[32px] mb-[16px]"
                                             src="../../../images/main/feat_2.svg"
                                             alt="features"
                                         />
-                                        <span className="text-[14px] lg:text-[32px] font-bold uppercase block">
+                                        <span className="text-[14px] leading-[15px] lg:text-[32px] lg:leading-[35px] font-bold uppercase block">
                                             free wi-fi
                                         </span>
                                     </div>

@@ -40,32 +40,6 @@ const Home: React.FC = () => {
 
     return (
         <div>
-            <style jsx>
-                {`
-                    .swiper-pagination {
-                        width: 100px;
-                        display: flex;
-                        align-items: center;
-                    }
-                    .swiper-pagination-bullet {
-                        width: 16px;
-                        height: 16px;
-                        background: #ffffff;
-                        opacity: 0.9;
-                    }
-                    .swiper-pagination-horizontal {
-                        bottom: 0;
-                        left: 0;
-                        position: relative;
-                    }
-
-                    @media (max-width: 1024px) {
-                        .swiper-pagination {
-                            width: auto;
-                        }
-                    }
-                `}
-            </style>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
                 <div className="">
@@ -90,6 +64,7 @@ const Home: React.FC = () => {
                                         bg_hover={"white"}
                                         border_hover={"white"}
                                     />
+
                                     <button
                                         className="absolute top-[25%] right-[5%]"
                                         onClick={() => {
@@ -103,21 +78,91 @@ const Home: React.FC = () => {
                                         />
                                     </button>
                                 </div>
-                                <div className="relative left-[10%] top-[48%] lg:left-[7%] lg:top-[26%] w-[75%] lg:w-[90%] h-[100px] lg:h-[300px] lg:max-w-[1000px] text-white uppercase text-h1 text-left">
-                                    <h1 className="absolute lg:left-[0%] left-[0%] lg:top-[0%] top-[0%] lg:w-full">
+
+                                <div className="relative left-[10%] top-[45%] lg:left-[7%] lg:top-[26%] w-[75%] lg:w-[90%] h-[100px] lg:h-[300px] lg:max-w-[1000px] text-white uppercase text-h1 text-left">
+                                    <h1 className="absolute lg:left-[0%] left-[0%] lg:top-[0%] top-[0%] lg:w-full w-[280px]">
                                         Бесконечная <br />
                                         энергия Фитнеса
                                     </h1>
                                     <div
                                         className={
-                                            "absolute lg:left-[50%] md:left-[40%] left-[55%] lg:top-[80%] top-[80%] flex justify-between items-center"
+                                            "absolute lg:left-[50%] md:left-[40%] left-[60%] lg:top-[80%] top-[125%] flex justify-between items-center"
                                         }
                                     >
-                                        <MainNextButton
+                                        {/* <MainNextButton
                                             className={`z-10 block lg:mr-[20px] mr-[10px] rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
                                             ref={nextBtn}
-                                        />
-                                        <div className="swiper-pagination swiper-pagination-bullets"></div>
+                                        /> */}
+
+                                        <button
+                                            ref={nextBtn}
+                                            className={`z-10 block lg:mr-[20px] mr-[10px] rounded-full p-3 border border-white bg-white transition ease-in-out active:-translate-y-1 active:scale-110 duration-300`}
+                                        >
+                                            <svg
+                                                width="64"
+                                                height="64"
+                                                viewBox="0 0 64 64"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="w-[40px] h-[40px] lg:w-[64px] lg:h-[64px]"
+                                            >
+                                                <path
+                                                    d="M52.6666 31.2682L12.6666 31.2682"
+                                                    stroke="#737373"
+                                                    strokeWidth="1.5"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                                <path
+                                                    d="M36.5338 15.2033L52.6671 31.2673L36.5338 47.334"
+                                                    stroke="#737373"
+                                                    strokeWidth="1.5"
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                />
+                                            </svg>
+                                        </button>
+                                        <style>
+                                            {`
+                                            :root {
+                                                --swiper-theme-color: #c42020;
+                                                --swiper-pagination-bullet-inactive-opacity: .5;
+                                                --swiper-pagination-bullet-opacity: 1;
+                                                --swiper-pagination-bullet-inactive-color: #ffffff;
+                                                --swiper-pagination-bullet-width: 8px;
+                                                --swiper-pagination-bullet-height: 8px;
+                                                --swiper-pagination-bullet-size: 8px;
+                                            }                                           
+                                            .swiper-pagination{
+                                               width: 100px !important;
+                                               position: absolute;
+                                               transition: .3s opacity;
+                                                transform: translate3d(0, 0, 0);
+                                                z-index: 10;
+                                                left:100px !important;
+                                                bottom: 40px!important;
+                                            }                                          
+                                            .swiper-pagination-bullet {
+                                                display:block;
+                                                margin-right:12px;                                                
+                                                width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+                                                height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+                                                display: inline-block;
+                                                border-radius: 50%;
+                                                background: var(--swiper-pagination-bullet-inactive-color, #000);
+                                                opacity: var(--swiper-pagination-bullet-inactive-opacity, .2)
+                                            }                                                 
+                                            .swiper-pagination-bullet-active {
+                                                width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
+                                                height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+                                                display: inline-block;
+                                                border-radius: 50%;
+                                                opacity: var(--swiper-pagination-bullet-opacity, 1) !important;
+                                                background: var(--swiper-pagination-color, var(--swiper-theme-color))
+                                            }                   
+                                        `}
+                                        </style>
+                                        <div className="swiper-pagination flex justify-start"></div>
                                     </div>
                                     <img
                                         src="/images/main/ellipse.svg"
@@ -169,10 +214,10 @@ const Home: React.FC = () => {
                                 }}
                                 slidesPerView={1}
                                 spaceBetween={0}
-                                autoplay={{
-                                    delay: 3000,
-                                    disableOnInteraction: false,
-                                }}
+                                // autoplay={{
+                                //     delay: 3000,
+                                //     disableOnInteraction: false,
+                                // }}
                                 pagination={pagination}
                                 loop={true}
                                 modules={[
@@ -181,7 +226,7 @@ const Home: React.FC = () => {
                                     Autoplay,
                                     Pagination,
                                 ]}
-                                className="lg:absolute lg:top-[0px] lg:left-[0px] lg:w-full lg:h-full z-10"
+                                className="mySwiper1 lg:absolute lg:top-[0px] lg:left-[0px] lg:w-full lg:h-full z-10"
                             >
                                 <SwiperSlide>
                                     <div
