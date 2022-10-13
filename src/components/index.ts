@@ -21,3 +21,5 @@ export {
 } from "./slider";
 export { MainNextButton } from "./main_slider";
 export { PageLayout } from "./page_layout";
+export { WizardFormFirstPage } from "./training-firstpage";
+export { WizardFormSecondPage } from "./training-secondpage";

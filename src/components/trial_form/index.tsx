@@ -71,7 +71,7 @@ export const TrialForm = (props) => {
                             placeholder="Телефон"
                         />
                     </div>
-                    <div className="mb-[32px] flex items-start relative lg:ml-auto lg:flex-grow lg:max-w-[45%]">
+                    <label className="mb-[32px] flex items-start relative lg:ml-auto lg:flex-grow lg:max-w-[45%]">
                         <div className="lg:mr-[32px] mr-[12px]">
                             <Checkbox className="w-full" />
                         </div>
@@ -85,7 +85,7 @@ export const TrialForm = (props) => {
                                 на обработку моих персональных данных
                             </span>
                         </div>
-                    </div>
+                    </label>
                     <Button
                         className={`w-[100%] lg:max-w-[480px] bg-[#DADADA] text-p[#A3A3A3] lg:mx-auto`}
                     >

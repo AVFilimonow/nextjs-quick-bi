@@ -19,7 +19,8 @@
         "react-transition-group": "^4.4.5",
         "react-use": "^17.4.0",
         "serve": "^14.0.1",
-        "swiper": "^8.4.2"
+        "swiper": "^8.4.2",
+        "usetheform": "^3.4.1"
     },
     "devDependencies": {
         "@testing-library/react": "^11.2.3",

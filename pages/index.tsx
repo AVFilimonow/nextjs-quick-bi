@@ -9,6 +9,7 @@ import SwiperCore, { Navigation, A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import {
     MobMenu,
     TrialForm,
@@ -86,7 +87,7 @@ const Home: React.FC = () => {
                                     </h1>
                                     <div
                                         className={
-                                            "absolute lg:left-[50%] md:left-[40%] left-[60%] lg:top-[80%] top-[125%] flex justify-between items-center"
+                                            "absolute lg:left-[50%] lg:top-[80%] md:left-[40%] sm:left-[40%] left-[60%] top-[125%] flex justify-between items-center"
                                         }
                                     >
                                         {/* <MainNextButton
@@ -134,13 +135,13 @@ const Home: React.FC = () => {
                                                 --swiper-pagination-bullet-size: 8px;
                                             }                                           
                                             .swiper-pagination{
-                                               width: 100px !important;
+                                               width: auto !important;
                                                position: absolute;
                                                transition: .3s opacity;
                                                 transform: translate3d(0, 0, 0);
                                                 z-index: 10;
                                                 left:100px !important;
-                                                bottom: 40px!important;
+                                                bottom: 40px !important;
                                             }                                          
                                             .swiper-pagination-bullet {
                                                 display:block;
@@ -150,19 +151,26 @@ const Home: React.FC = () => {
                                                 display: inline-block;
                                                 border-radius: 50%;
                                                 background: var(--swiper-pagination-bullet-inactive-color, #000);
-                                                opacity: var(--swiper-pagination-bullet-inactive-opacity, .2)
+                                                opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
                                             }                                                 
                                             .swiper-pagination-bullet-active {
-                                                width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
-                                                height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 8px));
+                                                width: 24px !important;
+                                                height: 24px !important;
                                                 display: inline-block;
-                                                border-radius: 50%;
-                                                opacity: var(--swiper-pagination-bullet-opacity, 1) !important;
-                                                background: var(--swiper-pagination-color, var(--swiper-theme-color))
-                                            }                   
+                                                opacity: .8 !important;
+                                                background: none !important;
+                                                background-image: url(../../images/main/active-bullet.png)!important;
+                                            }                                          
+                                            @media (max-width: 1024px) {
+                                                .swiper-pagination {                                                                                                     
+                                                    left: 70px !important;
+                                                    bottom: 20px !important;
+                                                    overflow-x: hidden !important;
+                                                    }         
+                                            }                                                                                              
                                         `}
                                         </style>
-                                        <div className="swiper-pagination flex justify-start"></div>
+                                        <div className="swiper-pagination flex justify-start items-center"></div>
                                     </div>
                                     <img
                                         src="/images/main/ellipse.svg"
@@ -214,10 +222,10 @@ const Home: React.FC = () => {
                                 }}
                                 slidesPerView={1}
                                 spaceBetween={0}
-                                // autoplay={{
-                                //     delay: 3000,
-                                //     disableOnInteraction: false,
-                                // }}
+                                autoplay={{
+                                    delay: 3000,
+                                    disableOnInteraction: false,
+                                }}
                                 pagination={pagination}
                                 loop={true}
                                 modules={[
