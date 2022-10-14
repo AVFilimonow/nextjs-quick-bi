@@ -1,9 +1,9 @@
 export { Button } from "./button";
 export { Main } from "./main";
-export { HeaderWhite } from "./header_white";
-export { HeaderTransparent } from "./header_transparent";
+export { Header } from "./header";
 export { Footer } from "./footer";
 export { Container } from "./container";
+export { Section } from "./section";
 export { Select } from "./select";
 export { Input } from "./input";
 export { Checkbox } from "./checkbox";
@@ -21,3 +21,5 @@ export {
 } from "./slider";
 export { MainNextButton } from "./main_slider";
 export { PageLayout } from "./page_layout";
+export { WizardFormFirstPage } from "./training-firstpage";
+export { WizardFormSecondPage } from "./training-secondpage";

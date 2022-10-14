@@ -44,14 +44,14 @@ const TrainingQuiz_3: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/training_quiz_page4")}
                         className="lg:w-[30%]"
                     >
-                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[3px]">
-                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
+                        <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px] group-hover:text-[#D08884]">
                                 Пробное занятие
                             </p>
-                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
+                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px] group-hover:text-[#D08884]">
                                 Весь день в студии
                             </p>
-                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
+                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4 group-hover:text-[#D08884]">
                                 4 999 ₸
                             </p>
                         </div>
@@ -60,14 +60,14 @@ const TrainingQuiz_3: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/training_quiz_page4")}
                         className="lg:w-[30%]"
                     >
-                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[3px]">
-                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
+                        <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px] group-hover:text-[#D08884]">
                                 Безлимит на месяц
                             </p>
-                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
+                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px] group-hover:text-[#D08884]">
                                 Весь месяц в студии
                             </p>
-                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
+                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4 group-hover:text-[#D08884]">
                                 24 999 ₸
                             </p>
                         </div>
@@ -76,14 +76,14 @@ const TrainingQuiz_3: React.FC<{ title?: string }> = () => {
                         onClick={() => router.push("/training_quiz_page4")}
                         className="lg:w-[30%]"
                     >
-                        <div className="w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[3px]">
-                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px]">
+                        <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                            <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px] group-hover:text-[#D08884]">
                                 Безлимит на год
                             </p>
-                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px]">
+                            <p className="text-p4 text-left text-[#292929] font-['PT-Root-UI'] mb-[10px] lg:text-[18px] group-hover:text-[#D08884]">
                                 Весь год в студии
                             </p>
-                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4">
+                            <p className="text-h3 uppercase font-familyBold font-bold text-[#292929] lg:text-h4 group-hover:text-[#D08884]">
                                 249 999 ₸
                             </p>
                         </div>

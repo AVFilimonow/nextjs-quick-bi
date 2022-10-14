@@ -6,7 +6,7 @@ import Link from "next/link";
 export const MobMenu = (props) => {
     return (
         <div className="bg-white h-screen lg:hidden flex flex-col justify-between">
-            <div className="pt-[64px] px-[16px] ml-auto">
+            <div className="pt-[16px] px-[32px] ml-auto">
                 <button
                     onClick={() => {
                         props.setOpenMenu(false);
@@ -18,7 +18,7 @@ export const MobMenu = (props) => {
             <div className="px-[32px] pb-[20px] mt-auto flex flex-col justify-between h-[80%]">
                 <ul className="flex flex-col text-black text-[24px] uppercase font-familyBold">
                     <li className="mb-[40px]">
-                        <Link href="/training_types">
+                        <Link href="/training_main">
                             <a>Направления</a>
                         </Link>
                     </li>

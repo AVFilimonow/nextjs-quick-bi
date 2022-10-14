@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { TrialForm, Button } from "@/components";
+import { TrialForm, Button, Section, Container } from "@/components";
 
-export const HeaderWhite = (props) => {
+export const Header = (props) => {
     const router = useRouter();
     const [openModal, setOpenModal] = useState(false);
 
@@ -11,41 +11,43 @@ export const HeaderWhite = (props) => {
         <div>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
-                <div
-                    className={`flex flex-wrap items-center justify-between mb-[260px] lg:mb-[0px] lg:h-full lg:pt-[32px]`}
+                <header
+                    className={`px-[16px] py-[40px] lg:px-[176px] lg:pt-[37px] flex flex-wrap items-center justify-between lg:mb-[0px] lg:h-full lg:w-full pt-[16px] lg:pt-[32px] lg:pb-[0px] lg:max-w-[1920px] mx-auto`}
                 >
                     <div
                         className={
-                            "min-w-[15%] lg:min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
+                            "min-w-[15%] lg:h-[52px] lg:mb-[32px] lg:mr-[20px]"
                         }
                     >
                         <Link href="/">
                             <a className={`mx-auto lg:mx-0 lg:block`}>
                                 <img
                                     className="w-[150px] h-[40px] lg:w-[195px] lg:h-[52px]"
-                                    src="/images/training/logo_black.svg"
+                                    src={props.logo}
                                     alt=""
                                 />
                             </a>
                         </Link>
                     </div>
-                    <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-black text-[20px] uppercase font-familyBold">
-                        <li className="lg:mr-[40px] hover:underline">
-                            <Link href="/training_types">
+                    <ul
+                        className={`hidden min-w-[35%] lg:flex lg:mb-[32px] lg:justify-between text-${props.text} text-[20px] uppercase font-familyBold`}
+                    >
+                        <li className="lg:mr-[20px] hover:underline">
+                            <Link href="/training_main">
                                 <a>Направления</a>
                             </Link>
                         </li>
-                        <li className="lg:mr-[40px] hover:underline">
+                        <li className="lg:mr-[20px] hover:underline">
                             <Link href="/studio_quiz_page1">
                                 <a>Студии</a>
                             </Link>
                         </li>
-                        <li className="lg:mr-[40px] hover:underline">
+                        <li className="lg:mr-[20px] hover:underline">
                             <Link href="/trainer_quiz_page1">
                                 <a>Тренеры</a>
                             </Link>
                         </li>
-                        <li className="hover:underline">
+                        <li className="lg:mr-[20px] hover:underline">
                             <Link href="/training_types">
                                 <a>Контакты</a>
                             </Link>
@@ -55,11 +57,11 @@ export const HeaderWhite = (props) => {
                         onClick={() => {
                             setOpenModal(true);
                         }}
-                        className={`hidden lg:block lg:mb-[32px] text-black border-2 border-black px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-[#FCFCFC] hover:border-2 hover:border-[#E5E5E5]`}
+                        className={`hidden lg:block lg:mb-[32px] text-${props.text} border-2 border-${props.border} px-[48px] py-[20px] lg:text-[20px] lg:leading-[22px] hover:bg-${props.bg_hover} hover:text-${props.text_hover} hover:border-${props.border_hover} hover:border-2`}
                     >
                         Присоединиться
                     </Button>
-                </div>
+                </header>
             )}
         </div>
     );
