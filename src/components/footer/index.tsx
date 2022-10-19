@@ -37,22 +37,22 @@ export const Footer = (props) => {
 
                                 <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-p4 font-familyBold uppercase ">
                                     <li className="lg:mr-[20px] hover:underline">
-                                        <Link href="/training_main">
+                                        <Link href="#block2">
                                             <a>Направления</a>
                                         </Link>
                                     </li>
                                     <li className="lg:mr-[20px] hover:underline">
-                                        <Link href="/studio_quiz_page1">
+                                        <Link href="#block4">
                                             <a>Студии</a>
                                         </Link>
                                     </li>
                                     <li className="lg:mr-[20px] hover:underline">
-                                        <Link href="/trainer_quiz_page1">
+                                        <Link href="#block6">
                                             <a>Тренеры</a>
                                         </Link>
                                     </li>
                                     <li className="lg:mr-[20px] hover:underline">
-                                        <Link href="/training_types">
+                                        <Link href="#block7">
                                             <a>Контакты</a>
                                         </Link>
                                     </li>

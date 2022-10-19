@@ -18,22 +18,22 @@ export const MobMenu = (props) => {
             <div className="px-[32px] pb-[20px] mt-auto flex flex-col justify-between h-[80%]">
                 <ul className="flex flex-col text-black text-[24px] uppercase font-familyBold">
                     <li className="mb-[40px]">
-                        <Link href="/training_main">
+                        <Link href={props.link1}>
                             <a>Направления</a>
                         </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <Link href="/studio_quiz_page1">
+                        <Link href={props.link2}>
                             <a>Студии</a>
                         </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <Link href="/trainer_quiz_page1">
+                        <Link href={props.link3}>
                             <a>Тренеры</a>
                         </Link>
                     </li>
                     <li className="/training_types">
-                        <a href="#">Контакты</a>
+                        <a href={props.link4}>Контакты</a>
                     </li>
                 </ul>
                 <Button

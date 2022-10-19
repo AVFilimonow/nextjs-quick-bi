@@ -17,14 +17,8 @@ import {
     Footer,
     MainNextButton,
     Header,
+    Main,
 } from "@/components";
-
-const Main = dynamic<any>(
-    () => import("@/components/main").then((mod) => mod.Main),
-    {
-        ssr: false,
-    },
-);
 
 const Home: React.FC = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -48,6 +42,10 @@ const Home: React.FC = () => {
                         <MobMenu
                             setOpenMenu={setOpenMenu}
                             setOpenModal={setOpenModal}
+                            link1={"/#block2"}
+                            link2={"/#block4"}
+                            link3={"/#block6"}
+                            link4={"/#block8"}
                         />
                     )}
 
@@ -64,6 +62,10 @@ const Home: React.FC = () => {
                                         text_hover={"[#292929]"}
                                         bg_hover={"white"}
                                         border_hover={"white"}
+                                        link1={"/#block2"}
+                                        link2={"/#block4"}
+                                        link3={"/#block6"}
+                                        link4={"/#block8"}
                                     />
 
                                     <button

@@ -1,12 +1,48 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect } from "react";
 import { Button } from "@/components/button/index";
 import { Input } from "@/components/input/index";
 import { Select, Checkbox } from "@/components";
 
 export const TrialForm = (props) => {
+    const escFunction = useCallback((event) => {
+        if (event.key === "Escape") {
+            props.setOpenModal(false);
+        }
+    }, []);
+
+    useEffect(() => {
+        document.addEventListener("keydown", escFunction, false);
+
+        return () => {
+            document.removeEventListener("keydown", escFunction, false);
+        };
+    }, []);
+
+    // let cities = [
+    //     {
+    //         id: 1,
+    //         name: 'Алматы',
+    //         value: 'Almaty'
+    //     },
+    //     {
+    //         id: 2,
+    //         name: 'Астана',
+    //         value: 'Astana'
+    //     }
+    // ]
+
+    // let cityList = cities.map((city) =>
+    //     <option key={city.id} value={city.value}>{city.name}</option>
+    // )
+
+    const cities = {
+        Astana: "Астана",
+        Almaty: "Алматы",
+    };
+
     return (
-        <div className="block lg:flex lg:items-center lg:justify-center lg:fixed lg:top-[0px] lg:left-[0px] w-full lg:h-full h-full z-50">
-            <div className="lg:relative z-50 bg-gray lg:w-[80%] lg:rounded-[20px] px-[20px] h-full lg:max-h-[80%] flex flex-col justify-start lg:px-[171px] lg:py-[81px]">
+        <div className="block lg:py-[30px] lg:flex lg:items-center lg:justify-center lg:fixed lg:top-[0px] lg:left-[0px] w-full lg:min-h-screen h-screen z-50">
+            <div className="lg:relative lg:overflow-auto z-50 bg-gray lg:w-[80%] lg:rounded-[20px] px-[20px] h-full flex flex-col justify-start lg:px-[171px] lg:py-[81px]">
                 <div className="hidden lg:flex items-start justify-between ">
                     <h2
                         className={
@@ -49,15 +85,17 @@ export const TrialForm = (props) => {
                 <form className="lg:flex lg:flex-col lg:justify-between lg:h-full mb-[32px] lg:mb-[0px]">
                     <div className="flex flex-col lg:flex lg:flex-row lg:justify-between">
                         <Select className="mb-[16px] lg:w-[45%]" name="city">
-                            <option value="Almaty">Алматы</option>
-                            <option value="Nur-Sultan">Нур-Султан</option>
+                            <option value={cities.Almaty}>
+                                {cities.Almaty}
+                            </option>
+                            <option value={cities.Astana}>
+                                {cities.Astana}
+                            </option>
                         </Select>
-                        <Select className="mb-[16px] lg:w-[45%]" name="studio">
-                            <option value="studio_1">Студия 1</option>
-                            <option value="studio_2">Студия 2</option>
-                            <option value="studio_3">Студия 3</option>
-                            <option value="studio_4">Студия 4</option>
-                        </Select>
+                        <Select
+                            className="mb-[16px] lg:w-[45%]"
+                            name="studio"
+                        ></Select>
                     </div>
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:mb-[32px]">
                         <Input
@@ -93,7 +131,12 @@ export const TrialForm = (props) => {
                     </Button>
                 </form>
             </div>
-            <div className="hidden lg:block lg:absolute lg:top-[0px] lg:left-[0px] lg:bg-[#000000] opacity-50 lg:w-full lg:h-full z-10"></div>
+            <div
+                onClick={() => {
+                    props.setOpenModal(false);
+                }}
+                className="hidden lg:block lg:absolute lg:top-[0px] lg:left-[0px] lg:bg-[#000000] opacity-50 lg:w-full lg:h-full z-10"
+            ></div>
         </div>
     );
 };
