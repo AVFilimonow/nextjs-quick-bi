@@ -20,7 +20,7 @@ export {
     TrainerNextButton,
 } from "./slider";
 export { MainNextButton } from "./main_slider";
-export { PageLayout } from "./page_layout";
+export { PageOffer } from "./page_offer";
 export { TrainingPage_1 } from "./training_quiz_page1";
 export { TrainingPage_2 } from "./training_quiz_page2";
 export { TrainingPage_3 } from "./training_quiz_page3";

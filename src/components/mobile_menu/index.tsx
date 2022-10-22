@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "../button";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 export const MobMenu = (props) => {
+    useEffect(() => {
+        document.body.classList.toggle("overflow-hidden", props.openMenu);
+    }, [props.openMenu]);
+
     return (
         <div className="bg-white h-screen lg:hidden flex flex-col justify-between">
-            <div className="pt-[16px] px-[32px] ml-auto">
+            <div className="pt-[16px] px-[16px] ml-auto">
                 <button
                     onClick={() => {
                         props.setOpenMenu(false);

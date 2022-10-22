@@ -3,7 +3,7 @@ import { PostData } from "@/types/postdata";
 import { PostsApi } from "@/lib/api";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -33,6 +33,11 @@ const Home: React.FC = () => {
         },
     };
 
+    // useEffect(() => {
+    //     document.body.classList.toggle('overflow-hidden', openModal);
+
+    // }, [openModal])
+
     return (
         <div>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
@@ -40,6 +45,7 @@ const Home: React.FC = () => {
                 <div className="">
                     {openMenu && (
                         <MobMenu
+                            openMenu={openMenu}
                             setOpenMenu={setOpenMenu}
                             setOpenModal={setOpenModal}
                             link1={"/#block2"}
@@ -56,6 +62,8 @@ const Home: React.FC = () => {
                                     className={`flex flex-col justify-between relative z-30`}
                                 >
                                     <Header
+                                        openModal={openModal}
+                                        setOpenModal={setOpenModal}
                                         logo={"/images/main/logo.svg"}
                                         text={"white"}
                                         border={"white"}
@@ -260,7 +268,7 @@ const Home: React.FC = () => {
                         </div>
                     )}
                     <Main setOpenModal={setOpenModal} />
-                    <Footer setOpenModal={setOpenModal} />
+                    <Footer setOpenModal={setOpenModal} openModal={openModal} />
                 </div>
             )}
         </div>
