@@ -1,9 +1,8 @@
-import React, { useRef, useMemo } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Button } from "@/components/button/index";
 import { Container } from "../container";
 import { useWindowSize } from "../../utils/hooks";
 import { calcClientSliderItemsCount } from "../../utils/helpers";
@@ -19,6 +18,9 @@ import {
     TrainerPrevButton,
     TrainerNextButton,
     Section,
+    PageOffer,
+    Button,
+    Footer,
 } from "@/components";
 
 export const Main = (props) => {
@@ -32,7 +34,10 @@ export const Main = (props) => {
 
     return (
         <main>
-            <section className="bg-gray-100 w-full pb-[40px] lg:pb-[140px] pl-[16px] lg:pl-[0px]">
+            <section
+                id="block1"
+                className="bg-gray-100 w-full pb-[40px] lg:pb-[140px] pl-[16px] lg:pl-[0px]"
+            >
                 <Container>
                     <div className="bg-gray-100 px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] lg:mb-[80px] mr-auto max-w-[1920px] relative">
                         <h2
@@ -159,7 +164,10 @@ export const Main = (props) => {
                 </Container>
             </section>
 
-            <section className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative">
+            <section
+                id="block2"
+                className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative"
+            >
                 <Container>
                     <div className="px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] mr-auto max-w-[1920px] relative">
                         <h2
@@ -356,7 +364,10 @@ export const Main = (props) => {
                 </Container>
             </section>
 
-            <section className="bg-gray-100 w-full pl-[16px] lg:pl-[0px] relative">
+            <section
+                id="block3"
+                className="bg-gray-100 w-full z-10 pl-[16px] lg:pl-[0px] relative"
+            >
                 <Container>
                     <Section>
                         <h2
@@ -399,7 +410,10 @@ export const Main = (props) => {
                 </Container>
             </section>
 
-            <section className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative">
+            <section
+                id="block4"
+                className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative"
+            >
                 <Container>
                     <div className="px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] mr-auto max-w-[1920px] relative">
                         <h2
@@ -608,32 +622,14 @@ export const Main = (props) => {
                 </Container>
             </section>
 
-            <section className="bg-gray-100 lg:h-[666px]">
-                <div className="flex flex-col lg:flex-row lg:justify-start h-full">
-                    <div className="bg-[url('/images/main/join.jpg')] bg-cover lg:bg-no-repeat lg:bg-center lg:w-[792px] w-full h-[220px] lg:h-full"></div>
-                    <div className="lg:mr-auto px-[16px] lg:pl-[200px] lg:pr-[64px] pb-[40px] lg:pb-[0px]">
-                        <h2
-                            className={
-                                "block text-h2 uppercase font-familyBold font-bold text-black mb-[20px] lg:mb-[48px] mt-[24px] lg:mt-[102px] lg:max-w-[950px]"
-                            }
-                        >
-                            Получи Эксклюзивные Условия На Абонемент
-                        </h2>
-                        <Button
-                            onClick={() => {
-                                props.setOpenModal(true);
-                            }}
-                            className={
-                                "block px-[0px] w-[100%] max-w-[343px] lg:w-[335px] lg:px-[80px] bg-primary text-white hover:bg-[#AC6A66]"
-                            }
-                        >
-                            Присоединиться
-                        </Button>
-                    </div>
-                </div>
+            <section id="block5">
+                <PageOffer />
             </section>
 
-            <section className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative">
+            <section
+                id="block6"
+                className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative"
+            >
                 <Container>
                     <div className="px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] mr-auto relative">
                         <h2
@@ -813,7 +809,10 @@ export const Main = (props) => {
                 </Container>
             </section>
 
-            <section className="bg-[#292929] px-[20px] py-[60px] lg:px-[0px] lg:py-[0px]">
+            <section
+                id="block7"
+                className="bg-[#292929] px-[20px] py-[60px] lg:px-[0px] lg:py-[0px]"
+            >
                 <Container>
                     <Section>
                         <div className="lg:flex lg:justify-between items-center">
@@ -830,7 +829,7 @@ export const Main = (props) => {
                                         "lg:hidden block text-[16px] lg:text-[32px] text-white mb-[20px] font-['PT-Root-UI'] lg:font-['Arsenal']"
                                     }
                                 >
-                                    Оставь номер телефона и ...
+                                    Оставь номер телефона и мы перезвоним
                                 </span>
                             </div>
 

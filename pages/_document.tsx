@@ -6,13 +6,13 @@ import Document, {
     Main,
     NextScript,
 } from "next/document";
+import React, { useEffect, useState, useRef } from "react";
 
 class CustomDocument extends Document {
     static async getInitialProps(
         ctx: DocumentContext,
     ): Promise<DocumentInitialProps> {
         const initialProps = await Document.getInitialProps(ctx);
-
         return initialProps;
     }
 
@@ -35,7 +35,14 @@ class CustomDocument extends Document {
                         rel="stylesheet"
                     />
                 </Head>
-                <body>
+                <style>
+                    {`
+                        .overflow-hidden {
+                            overflow-y: hidden;
+                        }
+                         `}
+                </style>
+                <body className="">
                     <Main />
                     <NextScript />
                 </body>

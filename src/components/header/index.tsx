@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { TrialForm, Button, Section, Container } from "@/components";
@@ -6,6 +6,9 @@ import { TrialForm, Button, Section, Container } from "@/components";
 export const Header = (props) => {
     const router = useRouter();
     const [openModal, setOpenModal] = useState(false);
+    useEffect(() => {
+        document.body.classList.toggle("overflow-hidden", openModal);
+    }, [openModal]);
 
     return (
         <div>
@@ -33,22 +36,22 @@ export const Header = (props) => {
                         className={`hidden min-w-[35%] lg:flex lg:mb-[32px] lg:justify-between text-${props.text} text-[20px] uppercase font-familyBold`}
                     >
                         <li className="lg:mr-[20px] hover:underline">
-                            <Link href="/training_main">
+                            <Link href={props.link1}>
                                 <a>Направления</a>
                             </Link>
                         </li>
                         <li className="lg:mr-[20px] hover:underline">
-                            <Link href="/studio_quiz_page1">
+                            <Link href={props.link2}>
                                 <a>Студии</a>
                             </Link>
                         </li>
                         <li className="lg:mr-[20px] hover:underline">
-                            <Link href="/trainer_quiz_page1">
+                            <Link href={props.link3}>
                                 <a>Тренеры</a>
                             </Link>
                         </li>
                         <li className="lg:mr-[20px] hover:underline">
-                            <Link href="/training_types">
+                            <Link href={props.link4}>
                                 <a>Контакты</a>
                             </Link>
                         </li>

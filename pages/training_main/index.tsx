@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-import { Button, Header, Section } from "@/components";
+import { Button, Header, Section, TrialForm, TrainingQuiz } from "@/components";
 import { Footer } from "../../src/components/footer";
 import { Container } from "../../src/components/container";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import TrainingForm from "../training_modal";
 
 const Training: React.FC<{ title?: string }> = () => {
     const router = useRouter();
     const [openModal, setOpenModal] = useState(false);
     return (
         <div>
-            {openModal && <TrainingForm setOpenModal={setOpenModal} />}
+            {openModal && <TrainingQuiz setOpenModal={setOpenModal} />}
             {!openModal && (
                 <>
                     <div className="hidden lg:block">
@@ -21,6 +20,10 @@ const Training: React.FC<{ title?: string }> = () => {
                                 text={"[#292929]"}
                                 border={"[#292929]"}
                                 bg_hover={"white"}
+                                link1={"/#block2"}
+                                link2={"/#block4"}
+                                link3={"/#block6"}
+                                link4={"/#block8"}
                             />
                         </div>
                         <div className="hidden lg:block bg-[url('/images/training/training_mainbg_1.jpg')] bg-no-repeat bg-cover lg:h-[590px]"></div>
@@ -109,22 +112,21 @@ const Training: React.FC<{ title?: string }> = () => {
                                         </span>
                                     </div>
                                     <button
-                                        onClick={() => {
-                                            setOpenModal(true);
-                                        }}
+                                        className="bg-[#D08884] lg:p-[40px] rounded-[16px] lg:max-w-[350px] lg:mr-[16px] lg:mb-[16px] w-[370px] drop-shadow-lg h-full flex flex-col justify-start transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-105 duration-500"
+                                        onClick={() =>
+                                            router.push("/training_types")
+                                        }
                                     >
-                                        <a className="w-[370px] lg:max-w-[350px] lg:mr-[16px] lg:mb-[16px]">
-                                            <div className="bg-[#D08884] p-[40px] rounded-[16px] drop-shadow-lg h-full flex flex-col justify-between transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-500">
-                                                <img
-                                                    className="block mb-[16px] w-[64px] h-[64px]"
-                                                    src="../../../images/training/arrow_right.svg"
-                                                    alt=""
-                                                />
-                                                <span className="block text-h4 text-white text-left uppercase">
-                                                    Виды <br /> тренировок
-                                                </span>
-                                            </div>
-                                        </a>
+                                        <div className="">
+                                            <img
+                                                className="mb-[16px] lg:h-[64px] lg:w-[64px]"
+                                                src="../../../images/training/arrow_right.svg"
+                                                alt=""
+                                            />
+                                            <span className="block text-h4 text-white text-left uppercase">
+                                                Виды <br /> тренировок
+                                            </span>
+                                        </div>
                                     </button>
                                 </Section>
                             </Container>
@@ -266,7 +268,9 @@ const Training: React.FC<{ title?: string }> = () => {
                                 </span>
                             </div>
                             <button
-                                onClick={() => router.push("./training_types")}
+                                onClick={() => {
+                                    setOpenModal(true);
+                                }}
                                 className="w-[48%] drop-shadow-lg"
                             >
                                 <div className="bg-[#D08884] p-[16px] rounded-[16px]">
@@ -318,9 +322,9 @@ const Training: React.FC<{ title?: string }> = () => {
                         </section>
                         <section>
                             <Button
-                                onClick={() =>
-                                    router.push("/training_quiz_page1")
-                                }
+                                onClick={() => {
+                                    setOpenModal(true);
+                                }}
                                 className={`w-[100%] max-w-[400px] bg-[#D08884] text-white mb-[16px]`}
                             >
                                 Присоединиться

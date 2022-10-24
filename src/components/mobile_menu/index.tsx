@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "../button";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
 export const MobMenu = (props) => {
+    useEffect(() => {
+        document.body.classList.toggle("overflow-hidden", props.openMenu);
+    }, [props.openMenu]);
+
     return (
         <div className="bg-white h-screen lg:hidden flex flex-col justify-between">
-            <div className="pt-[16px] px-[32px] ml-auto">
+            <div className="pt-[16px] px-[16px] ml-auto">
                 <button
                     onClick={() => {
                         props.setOpenMenu(false);
@@ -18,22 +22,22 @@ export const MobMenu = (props) => {
             <div className="px-[32px] pb-[20px] mt-auto flex flex-col justify-between h-[80%]">
                 <ul className="flex flex-col text-black text-[24px] uppercase font-familyBold">
                     <li className="mb-[40px]">
-                        <Link href="/training_main">
+                        <Link href={props.link1}>
                             <a>Направления</a>
                         </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <Link href="/studio_quiz_page1">
+                        <Link href={props.link2}>
                             <a>Студии</a>
                         </Link>
                     </li>
                     <li className="mb-[40px]">
-                        <Link href="/trainer_quiz_page1">
+                        <Link href={props.link3}>
                             <a>Тренеры</a>
                         </Link>
                     </li>
                     <li className="/training_types">
-                        <a href="#">Контакты</a>
+                        <a href={props.link4}>Контакты</a>
                     </li>
                 </ul>
                 <Button

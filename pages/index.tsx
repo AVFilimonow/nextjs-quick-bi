@@ -3,7 +3,7 @@ import { PostData } from "@/types/postdata";
 import { PostsApi } from "@/lib/api";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation, A11y, Autoplay, Pagination } from "swiper";
 import "swiper/css";
@@ -17,14 +17,8 @@ import {
     Footer,
     MainNextButton,
     Header,
+    Main,
 } from "@/components";
-
-const Main = dynamic<any>(
-    () => import("@/components/main").then((mod) => mod.Main),
-    {
-        ssr: false,
-    },
-);
 
 const Home: React.FC = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -39,6 +33,11 @@ const Home: React.FC = () => {
         },
     };
 
+    // useEffect(() => {
+    //     document.body.classList.toggle('overflow-hidden', openModal);
+
+    // }, [openModal])
+
     return (
         <div>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
@@ -46,8 +45,13 @@ const Home: React.FC = () => {
                 <div className="">
                     {openMenu && (
                         <MobMenu
+                            openMenu={openMenu}
                             setOpenMenu={setOpenMenu}
                             setOpenModal={setOpenModal}
+                            link1={"/#block2"}
+                            link2={"/#block4"}
+                            link3={"/#block6"}
+                            link4={"/#block8"}
                         />
                     )}
 
@@ -58,12 +62,18 @@ const Home: React.FC = () => {
                                     className={`flex flex-col justify-between relative z-30`}
                                 >
                                     <Header
+                                        openModal={openModal}
+                                        setOpenModal={setOpenModal}
                                         logo={"/images/main/logo.svg"}
                                         text={"white"}
                                         border={"white"}
                                         text_hover={"[#292929]"}
                                         bg_hover={"white"}
                                         border_hover={"white"}
+                                        link1={"/#block2"}
+                                        link2={"/#block4"}
+                                        link3={"/#block6"}
+                                        link4={"/#block8"}
                                     />
 
                                     <button
@@ -258,7 +268,7 @@ const Home: React.FC = () => {
                         </div>
                     )}
                     <Main setOpenModal={setOpenModal} />
-                    <Footer setOpenModal={setOpenModal} />
+                    <Footer setOpenModal={setOpenModal} openModal={openModal} />
                 </div>
             )}
         </div>

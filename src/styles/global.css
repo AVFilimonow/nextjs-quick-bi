@@ -25,6 +25,11 @@ body {
         sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
     font-weight: 400;
+
+}
+
+.overflow {
+    overflow-y: hidden;
 }
 
 .text-h1,
