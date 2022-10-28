@@ -4,7 +4,6 @@ import Link from "next/link";
 import { TrialForm, Button, Section, Container } from "@/components";
 
 export const Header = (props) => {
-    const router = useRouter();
     const [openModal, setOpenModal] = useState(false);
     useEffect(() => {
         document.body.classList.toggle("overflow-hidden", openModal);

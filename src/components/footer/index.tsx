@@ -41,22 +41,22 @@ export const Footer = (props) => {
 
                                     <ul className="hidden lg:flex lg:mb-[32px] lg:justify-between text-white text-p4 font-familyBold uppercase ">
                                         <li className="lg:mr-[20px] hover:underline">
-                                            <Link href="#block2">
+                                            <Link href={props.link1}>
                                                 <a>Направления</a>
                                             </Link>
                                         </li>
                                         <li className="lg:mr-[20px] hover:underline">
-                                            <Link href="#block4">
+                                            <Link href={props.link2}>
                                                 <a>Студии</a>
                                             </Link>
                                         </li>
                                         <li className="lg:mr-[20px] hover:underline">
-                                            <Link href="#block6">
+                                            <Link href={props.link3}>
                                                 <a>Тренеры</a>
                                             </Link>
                                         </li>
                                         <li className="lg:mr-[20px] hover:underline">
-                                            <Link href="#block7">
+                                            <Link href={props.link4}>
                                                 <a>Контакты</a>
                                             </Link>
                                         </li>

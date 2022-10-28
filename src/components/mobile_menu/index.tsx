@@ -9,11 +9,14 @@ export const MobMenu = (props) => {
     }, [props.openMenu]);
 
     return (
-        <div className="bg-white h-screen lg:hidden flex flex-col justify-between">
+        <div
+            id="mainDiv"
+            className={`absolute top-0 bg-white h-screen w-screen z-50 lg:hidden flex flex-col justify-between ease-in-out duration-300 transition-colors`}
+        >
             <div className="pt-[16px] px-[16px] ml-auto">
                 <button
                     onClick={() => {
-                        props.setOpenMenu(false);
+                        props.setOpenMenu(!props.openMenu);
                     }}
                 >
                     <img src="../../../images/modal/close_btn.svg" alt="" />
@@ -23,17 +26,35 @@ export const MobMenu = (props) => {
                 <ul className="flex flex-col text-black text-[24px] uppercase font-familyBold">
                     <li className="mb-[40px]">
                         <Link href={props.link1}>
-                            <a>Направления</a>
+                            <a
+                                onClick={() => {
+                                    props.setOpenMenu(!props.openMenu);
+                                }}
+                            >
+                                Направления
+                            </a>
                         </Link>
                     </li>
                     <li className="mb-[40px]">
                         <Link href={props.link2}>
-                            <a>Студии</a>
+                            <a
+                                onClick={() => {
+                                    props.setOpenMenu(!props.openMenu);
+                                }}
+                            >
+                                Студии
+                            </a>
                         </Link>
                     </li>
                     <li className="mb-[40px]">
                         <Link href={props.link3}>
-                            <a>Тренеры</a>
+                            <a
+                                onClick={() => {
+                                    props.setOpenMenu(!props.openMenu);
+                                }}
+                            >
+                                Тренеры
+                            </a>
                         </Link>
                     </li>
                     <li className="/training_types">

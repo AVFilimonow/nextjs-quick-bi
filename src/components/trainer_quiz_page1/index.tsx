@@ -1,6 +1,4 @@
-import React, { useEffect, useCallback } from "react";
-import { Input, Checkbox, Button } from "@/components";
-import Link from "next/link";
+import React from "react";
 import { useRouter } from "next/router";
 
 export function TrainerPage_1({
@@ -48,7 +46,7 @@ export function TrainerPage_1({
                         });
                     }}
                 >
-                    <div className="group rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px] hover:transition-all duration-500">
+                    <div className="group rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:shadow-[0_0_0_3px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <svg
                             className="mr-[16px] lg:mr-[32px]"
                             width="24"
@@ -92,7 +90,7 @@ export function TrainerPage_1({
                         });
                     }}
                 >
-                    <div className="group rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:border-[#D08884] hover:border-[3px] hover:transition-all duration-500">
+                    <div className="group rounded-xl border-[1px] border-[#737373] p-[16px] mb-[16px] flex items-center lg:bg-white lg:max-w-[686px] lg:p-[32px] lg:mb-[32px] hover:shadow-[0_0_0_3px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <svg
                             className="mr-[16px] lg:mr-[32px]"
                             width="24"

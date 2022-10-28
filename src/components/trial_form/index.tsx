@@ -1,7 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Button } from "@/components/button/index";
-import { Input } from "@/components/input/index";
-import { Select, Checkbox } from "@/components";
+import { Select, Checkbox, Button, Input } from "@/components";
 
 export const TrialForm = (props) => {
     const escFunction = useCallback((event) => {
@@ -52,6 +50,38 @@ export const TrialForm = (props) => {
         name: "",
         phone: "",
     });
+
+    const [name, setName] = useState("");
+    const [phone, setPhone] = useState("");
+    const [check, setCheck] = useState(false);
+
+    const nameHandler = (e) => {
+        setName(e.target.value);
+    };
+
+    const phoneHandler = (e) => {
+        setPhone(e.target.value);
+    };
+
+    const checkHandler = () => {
+        setCheck(!check);
+    };
+
+    const [formValid, setFormValid] = useState(false);
+
+    useEffect(() => {
+        if (
+            name == "" ||
+            phone == "" ||
+            check == false ||
+            formData.city == "" ||
+            formData.studio == ""
+        ) {
+            setFormValid(false);
+        } else {
+            setFormValid(true);
+        }
+    }, [name, phone, check, formData.city, formData.studio]);
 
     return (
         <div className="block lg:py-[30px] lg:flex lg:items-center lg:justify-center lg:fixed lg:top-[0px] lg:left-[0px] w-full lg:min-h-screen h-screen z-50">
@@ -144,6 +174,7 @@ export const TrialForm = (props) => {
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:mb-[32px]">
                         <Input
                             className="mb-[16px] w-[100%] lg:w-[45%]"
+                            value={name}
                             type="name"
                             placeholder="Имя"
                             onChange={(e) => {
@@ -151,10 +182,12 @@ export const TrialForm = (props) => {
                                     ...formData,
                                     name: e.target.value,
                                 });
+                                nameHandler(e);
                             }}
                         />
                         <Input
                             className="mb-[16px] w-[100%] lg:w-[45%]"
+                            value={phone}
                             type="phone"
                             placeholder="Телефон"
                             onChange={(e) => {
@@ -162,12 +195,16 @@ export const TrialForm = (props) => {
                                     ...formData,
                                     phone: e.target.value,
                                 });
+                                phoneHandler(e);
                             }}
                         />
                     </div>
                     <label className="mb-[32px] flex items-start relative lg:ml-auto lg:flex-grow lg:max-w-[45%]">
                         <div className="lg:mr-[32px] mr-[12px]">
-                            <Checkbox className="w-full" />
+                            <Checkbox
+                                className="w-full"
+                                checkHandler={checkHandler}
+                            />
                         </div>
                         <div>
                             <span
@@ -185,7 +222,8 @@ export const TrialForm = (props) => {
                             e.preventDefault();
                             console.log(formData);
                         }}
-                        className={`w-[100%] lg:max-w-[480px] bg-[#DADADA] text-p[#A3A3A3] lg:mx-auto`}
+                        className={`disabled:bg-[#DADADA] disabled:text-[#A3A3A3] w-[100%] lg:max-w-[480px] bg-primary text-white lg:mx-auto`}
+                        disabled={!formValid}
                     >
                         Отправить
                     </Button>

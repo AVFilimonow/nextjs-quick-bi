@@ -10,15 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-import {
-    MobMenu,
-    TrialForm,
-    Button,
-    Footer,
-    MainNextButton,
-    Header,
-    Main,
-} from "@/components";
+import { MobMenu, TrialForm, Footer, Header, Main } from "@/components";
 
 const Home: React.FC = () => {
     const [openMenu, setOpenMenu] = useState(false);
@@ -33,27 +25,25 @@ const Home: React.FC = () => {
         },
     };
 
-    // useEffect(() => {
-    //     document.body.classList.toggle('overflow-hidden', openModal);
-
-    // }, [openModal])
-
     return (
         <div>
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
                 <div className="">
-                    {openMenu && (
-                        <MobMenu
-                            openMenu={openMenu}
-                            setOpenMenu={setOpenMenu}
-                            setOpenModal={setOpenModal}
-                            link1={"/#block2"}
-                            link2={"/#block4"}
-                            link3={"/#block6"}
-                            link4={"/#block8"}
-                        />
-                    )}
+                    <div className="relative">
+                        {openMenu && (
+                            <MobMenu
+                                openMenu={openMenu}
+                                setOpenMenu={setOpenMenu}
+                                setOpenModal={setOpenModal}
+                                link1={"/#block2"}
+                                link2={"/#block4"}
+                                link3={"/#block6"}
+                                link4={"/#block8"}
+                                className={""}
+                            />
+                        )}
+                    </div>
 
                     {!openMenu && (
                         <div className={"lg:relative"}>
@@ -62,8 +52,6 @@ const Home: React.FC = () => {
                                     className={`flex flex-col justify-between relative z-30`}
                                 >
                                     <Header
-                                        openModal={openModal}
-                                        setOpenModal={setOpenModal}
                                         logo={"/images/main/logo.svg"}
                                         text={"white"}
                                         border={"white"}
@@ -79,7 +67,7 @@ const Home: React.FC = () => {
                                     <button
                                         className="absolute top-[25%] right-[5%]"
                                         onClick={() => {
-                                            setOpenMenu(true);
+                                            setOpenMenu(!openMenu);
                                         }}
                                     >
                                         <img
@@ -268,7 +256,12 @@ const Home: React.FC = () => {
                         </div>
                     )}
                     <Main setOpenModal={setOpenModal} />
-                    <Footer setOpenModal={setOpenModal} openModal={openModal} />
+                    <Footer
+                        link1={"/#block2"}
+                        link2={"/#block4"}
+                        link3={"/#block6"}
+                        link4={"/#block8"}
+                    />
                 </div>
             )}
         </div>
