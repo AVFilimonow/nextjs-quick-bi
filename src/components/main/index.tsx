@@ -9,8 +9,6 @@ import { calcClientSliderItemsCount } from "../../utils/helpers";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
-    SlideNextButton,
-    SlidePrevButton,
     StudioPrevButton,
     StudioNextButton,
     TrainingPrevButton,
@@ -20,7 +18,8 @@ import {
     Section,
     PageOffer,
     Button,
-    Footer,
+    PageStart,
+    TrialForm,
 } from "@/components";
 
 export const Main = (props) => {
@@ -368,46 +367,54 @@ export const Main = (props) => {
                 id="block3"
                 className="bg-gray-100 w-full z-10 pl-[16px] lg:pl-[0px] relative"
             >
-                <Container>
-                    <Section>
-                        <h2
-                            className={
-                                "block text-h2 uppercase font-familyBold text-black mb-[6px] lg:mb-[28px] z-50 relative"
-                            }
-                        >
-                            Лучшее время,
-                            <br />
-                            чтобы начать - сейчас
-                        </h2>
-                        <p
-                            className={
-                                "text-p4 lg:text-p1 text-black mb-[24px] lg:mb-[48px] font-['PT-Root-UI'] z-50 relative"
-                            }
-                        >
-                            Начни с первой тренировки
-                        </p>
-                        <img
-                            className="hidden xl:block lg:absolute right-[30px] top-[35px] z-30"
-                            src="../../../images/main/a-logo.png"
-                            alt=""
-                        />
-                        <img
-                            className="hidden xl:block lg:absolute right-[0px] top-[0px] h-full z-20"
-                            src="../../../images/main/ellipse.png"
-                            alt=""
-                        />
-                        <Button
-                            onClick={() => {
-                                props.setOpenModal(true);
-                            }}
-                            className={
-                                "w-[100%] max-w-[343px] lg:max-w-[480px] bg-primary text-white z-50 relative hover:bg-[#AC6A66]"
-                            }
-                        >
-                            Присоединиться
-                        </Button>
-                    </Section>
-                </Container>
+                <PageStart className="" />
+                <div className="block lg:hidden bg-gray-100 lg:h-[666px]">
+                    {props.openModal && (
+                        <TrialForm setOpenModal={props.setOpenModal} />
+                    )}
+                    {!props.openModal && (
+                        <Container>
+                            <Section>
+                                <h2
+                                    className={
+                                        "block text-h2 uppercase font-familyBold text-black mb-[6px] lg:mb-[28px] z-50 relative"
+                                    }
+                                >
+                                    Лучшее время,
+                                    <br />
+                                    чтобы начать - сейчас
+                                </h2>
+                                <p
+                                    className={
+                                        "text-p4 lg:text-p1 text-black mb-[24px] lg:mb-[48px] font-['PT-Root-UI'] z-50 relative"
+                                    }
+                                >
+                                    Начни с первой тренировки
+                                </p>
+                                <img
+                                    className="hidden xl:block lg:absolute right-[30px] top-[35px] z-30"
+                                    src="../../../images/main/a-logo.png"
+                                    alt=""
+                                />
+                                <img
+                                    className="hidden xl:block lg:absolute right-[0px] top-[0px] h-full z-20"
+                                    src="../../../images/main/ellipse.png"
+                                    alt=""
+                                />
+                                <Button
+                                    onClick={() => {
+                                        props.setOpenModal(true);
+                                    }}
+                                    className={
+                                        "w-[100%] max-w-[343px] lg:max-w-[480px] bg-primary text-white z-50 relative hover:bg-[#AC6A66]"
+                                    }
+                                >
+                                    Присоединиться
+                                </Button>
+                            </Section>
+                        </Container>
+                    )}
+                </div>
             </section>
 
             <section
@@ -624,6 +631,35 @@ export const Main = (props) => {
 
             <section id="block5">
                 <PageOffer />
+                <div className="block lg:hidden bg-gray-100 lg:h-[666px]">
+                    {props.openModal && (
+                        <TrialForm setOpenModal={props.setOpenModal} />
+                    )}
+                    {!props.openModal && (
+                        <div className="flex flex-col lg:flex-row lg:justify-start h-full">
+                            <div className="bg-[url('/images/main/join.jpg')] bg-cover lg:bg-no-repeat lg:bg-center lg:w-[792px] w-full h-[220px] lg:h-full"></div>
+                            <div className="lg:mr-auto px-[16px] lg:pl-[200px] lg:pr-[64px] pb-[40px] lg:pb-[0px]">
+                                <h2
+                                    className={
+                                        "block text-h2 uppercase font-familyBold font-bold text-black mb-[20px] lg:mb-[48px] mt-[24px] lg:mt-[102px] lg:max-w-[950px]"
+                                    }
+                                >
+                                    Получи Эксклюзивные Условия На Абонемент
+                                </h2>
+                                <Button
+                                    onClick={() => {
+                                        props.setOpenModal(true);
+                                    }}
+                                    className={
+                                        "block px-[0px] w-[100%] max-w-[343px] lg:w-[335px] lg:px-[80px] bg-primary text-white hover:bg-[#AC6A66]"
+                                    }
+                                >
+                                    Присоединиться
+                                </Button>
+                            </div>
+                        </div>
+                    )}
+                </div>
             </section>
 
             <section

@@ -1,6 +1,5 @@
-import React, { useEffect, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { Input, Checkbox, Button } from "@/components";
-import Link from "next/link";
 import { useRouter } from "next/router";
 
 export function StudioPage_4({
@@ -12,6 +11,32 @@ export function StudioPage_4({
 }) {
     const router = useRouter();
     const { city, studio, pack, name, phone } = formData;
+
+    const [nameInput, setNameInput] = useState("");
+    const [phoneInput, setPhoneInput] = useState("");
+    const [check, setCheck] = useState(false);
+
+    const nameHandler = (e) => {
+        setNameInput(e.target.value);
+    };
+
+    const phoneHandler = (e) => {
+        setPhoneInput(e.target.value);
+    };
+
+    const checkHandler = () => {
+        setCheck(!check);
+    };
+
+    const [formValid, setFormValid] = useState(false);
+
+    useEffect(() => {
+        if (nameInput == "" || phoneInput == "" || check == false) {
+            setFormValid(false);
+        } else {
+            setFormValid(true);
+        }
+    }, [nameInput, phoneInput, check]);
 
     return (
         <div className="bg-gray px-[16px] pt-[20px] pb-[32px] h-screen lg:min-h-screen flex flex-col lg:px-[176px] lg:pt-[40px]">
@@ -54,6 +79,7 @@ export function StudioPage_4({
                             ...formData,
                             name: e.target.value,
                         });
+                        nameHandler(e);
                     }}
                 />
                 <Input
@@ -66,11 +92,12 @@ export function StudioPage_4({
                             ...formData,
                             phone: e.target.value,
                         });
+                        phoneHandler(e);
                     }}
                 />
             </div>
             <div className="mb-[32px] flex items-start relative lg:mb-[64px]">
-                <Checkbox />
+                <Checkbox checkHandler={checkHandler} />
                 <span
                     className={
                         "text-p2 text-black font-['PT-Root-UI'] block ml-[36px] lg:text-[16px] lg:w-[25%] lg:leading-[21px]"
@@ -84,7 +111,8 @@ export function StudioPage_4({
                 onClick={() => {
                     handleSubmit();
                 }}
-                className={`lg:w-[300px] bg-[#D08884] text-white`}
+                className={`disabled:bg-[#DADADA] disabled:text-[#A3A3A3] lg:w-[300px] bg-[#D08884] text-white`}
+                disabled={!formValid}
             >
                 ДАЛЕЕ
             </Button>

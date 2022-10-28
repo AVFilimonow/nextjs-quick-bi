@@ -176,7 +176,12 @@ const Training: React.FC<{ title?: string }> = () => {
                                 </Section>
                             </Container>
                         </section>
-                        <Footer />
+                        <Footer
+                            link1={"/#block2"}
+                            link2={"/#block4"}
+                            link3={"/#block6"}
+                            link4={"/#block8"}
+                        />
                     </div>
 
                     {/* Мобильная версия */}
@@ -325,7 +330,7 @@ const Training: React.FC<{ title?: string }> = () => {
                                 onClick={() => {
                                     setOpenModal(true);
                                 }}
-                                className={`w-[100%] max-w-[400px] bg-[#D08884] text-white mb-[16px]`}
+                                className={`w-[100%] max-w-[400px] bg-[#D08884] text-white mb-[16px] mr-[12px]`}
                             >
                                 Присоединиться
                             </Button>
@@ -333,7 +338,7 @@ const Training: React.FC<{ title?: string }> = () => {
                                 onClick={() =>
                                     router.push("/training_quiz_page1")
                                 }
-                                className={`w-[100%] max-w-[400px] bg-transparent border-[1px] border-[#292929] text-[#292929]`}
+                                className={`w-[100%] max-w-[400px] bg-transparent border-[1px] border-[#292929] text-[#292929] mr-[12px]`}
                             >
                                 Написать whatsapp
                             </Button>

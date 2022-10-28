@@ -1,6 +1,4 @@
-import React, { useEffect, useCallback } from "react";
-import { Input, Checkbox, Button } from "@/components";
-import Link from "next/link";
+import React from "react";
 import { useRouter } from "next/router";
 
 export function TrainingPage_3({
@@ -56,7 +54,7 @@ export function TrainingPage_3({
                     }}
                     className="lg:w-[30%]"
                 >
-                    <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px] group-hover:text-[#D08884]">
                             Пробное занятие
                         </p>
@@ -78,7 +76,7 @@ export function TrainingPage_3({
                     }}
                     className="lg:w-[30%]"
                 >
-                    <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px] group-hover:text-[#D08884]">
                             Безлимит на месяц
                         </p>
@@ -100,7 +98,7 @@ export function TrainingPage_3({
                     }}
                     className="lg:w-[30%]"
                 >
-                    <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-full flex flex-col items-start p-[16px] border-[1px] border-[#737373] rounded-[20px] mb-[16px] lg:p-[40px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <p className="text-h4 uppercase font-familyBold font-bold text-[#292929] mb-[10px] lg:text-h5 lg:mb-[8px] group-hover:text-[#D08884]">
                             Безлимит на год
                         </p>

@@ -210,10 +210,17 @@ const Training: React.FC<{ title?: string }> = () => {
                                     </Section>
                                 </Container>
                             </section>
-                            <Footer />
+                            <Footer
+                                link1={"/#block2"}
+                                link2={"/#block4"}
+                                link3={"/#block6"}
+                                link4={"/#block8"}
+                            />
                         </div>
                     </div>
-                    /* Мобильная версия */
+
+                    {/* Мобильная версия */}
+
                     <div className="bg-gray px-[16px] pt-[16px] pb-[20px] flex flex-col lg:hidden overflow-x-hidden">
                         <div className="flex mb-[32px]">
                             <button
@@ -263,10 +270,10 @@ const Training: React.FC<{ title?: string }> = () => {
                             </span>
                         </section>
                         <section className="flex justify-between mb-[32px]">
-                            <div className="bg-white p-[16px] rounded-[16px] w-[43%] drop-shadow-xl">
-                                <div className="flex justify-between items-center">
+                            <div className="bg-white p-[8px] rounded-[16px] w-[43%] drop-shadow-xl">
+                                <div className="flex justify-start items-center">
                                     <img
-                                        className="mb-[16px]"
+                                        className="mb-[16px] mr-[8px]"
                                         src="../../../images/training/feat_1.png"
                                         alt=""
                                     />
@@ -278,10 +285,10 @@ const Training: React.FC<{ title?: string }> = () => {
                                     продолжительность занятия
                                 </span>
                             </div>
-                            <div className="bg-white p-[16px] rounded-[16px] w-[53%] drop-shadow-xl">
-                                <div className="flex justify-between items-center">
+                            <div className="bg-white p-[8px] rounded-[16px] w-[53%] drop-shadow-xl">
+                                <div className="flex justify-start items-center">
                                     <img
-                                        className="mb-[16px]"
+                                        className="mb-[16px] mr-[8px]"
                                         src="../../../images/training/feat_2.png"
                                         alt=""
                                     />
@@ -377,7 +384,7 @@ const Training: React.FC<{ title?: string }> = () => {
                                 onClick={() =>
                                     router.push("/training_quiz_page1")
                                 }
-                                className={`w-[100%] max-w-[400px] bg-[#D08884] text-white mb-[16px]`}
+                                className={`w-[100%] max-w-[400px] bg-[#D08884] text-white mb-[16px] mr-[12px]`}
                             >
                                 Присоединиться
                             </Button>
@@ -385,7 +392,7 @@ const Training: React.FC<{ title?: string }> = () => {
                                 onClick={() =>
                                     router.push("/training_quiz_page1")
                                 }
-                                className={`w-[100%] max-w-[400px] bg-transparent border-[1px] border-[#292929] text-[#292929]`}
+                                className={`w-[100%] max-w-[400px] bg-transparent border-[1px] border-[#292929] text-[#292929] mr-[12px]`}
                             >
                                 Написать whatsapp
                             </Button>

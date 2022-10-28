@@ -1,15 +1,6 @@
 import React from "react";
 
-export type ICheckbox = React.DetailedHTMLProps<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
->;
-
-export const Checkbox: React.FC<ICheckbox> = ({
-    className = "",
-    children,
-    ...rest
-}) => {
+export const Checkbox = (props) => {
     return (
         <>
             <input
@@ -18,6 +9,7 @@ export const Checkbox: React.FC<ICheckbox> = ({
                 name="A3-confirmation"
                 value="yes"
                 className="opacity-0 absolute h-[32px] w-[32px]"
+                onClick={props.checkHandler}
             />
             <div className="bg-white border-2 rounded-md border-[#737373] lg:w-[32px] lg:h-[32px] w-[24px] h-[24px] flex flex-shrink-0 justify-center items-center">
                 <svg

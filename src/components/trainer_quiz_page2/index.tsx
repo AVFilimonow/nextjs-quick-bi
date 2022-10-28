@@ -1,6 +1,4 @@
-import React, { useEffect, useCallback } from "react";
-import { Input, Checkbox, Button } from "@/components";
-import Link from "next/link";
+import React from "react";
 import { useRouter } from "next/router";
 
 export function TrainerPage_2({

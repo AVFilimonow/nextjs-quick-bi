@@ -13,7 +13,7 @@ export const PageOffer = (props: IPageLayout) => {
     }, [openModal]);
 
     return (
-        <div className="bg-gray-100 lg:h-[666px]">
+        <div className="hidden lg:block bg-gray-100 lg:h-[666px]">
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
                 <div className="flex flex-col lg:flex-row lg:justify-start h-full">

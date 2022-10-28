@@ -1,6 +1,5 @@
-import React, { useEffect, useCallback } from "react";
-import { Input, Checkbox, Button } from "@/components";
-import Link from "next/link";
+import React from "react";
+import { Button } from "@/components";
 import { useRouter } from "next/router";
 
 export function StudioPage_2({
@@ -56,7 +55,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -116,7 +115,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -176,7 +175,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -236,7 +235,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -296,7 +295,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:border-[#D08884] hover:border-[2px] hover:transition-all duration-500">
+                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
