@@ -1,19 +1,21 @@
 import React, { useState } from "react";
 import {
-    TrainingPage_1,
-    TrainingPage_2,
-    TrainingPage_3,
-    TrainingPage_4,
-    TrainingPage_5,
+    QuizCity,
+    QuizPack,
+    QuizPersonal,
+    QuizCheck,
+    QuizStudio,
+    QuizTrainer,
 } from "@/components";
 
-export const TrainingQuiz = ({ setOpenModal }) => {
+export const QuizMain = ({ setOpenModal, studioModal }) => {
     const [page, setPage] = useState(0);
+
     const conditionalComponent = () => {
         switch (page) {
             case 0:
                 return (
-                    <TrainingPage_1
+                    <QuizCity
                         setOpenModal={setOpenModal}
                         formData={formData}
                         setFormData={setFormData}
@@ -23,17 +25,30 @@ export const TrainingQuiz = ({ setOpenModal }) => {
                 );
             case 1:
                 return (
-                    <TrainingPage_2
-                        setOpenModal={setOpenModal}
-                        formData={formData}
-                        setFormData={setFormData}
-                        handleSubmit={handleSubmit}
-                        goBack={goBack}
-                    />
+                    <>
+                        {studioModal && (
+                            <QuizStudio
+                                setOpenModal={setOpenModal}
+                                formData={formData}
+                                setFormData={setFormData}
+                                handleSubmit={handleSubmit}
+                                goBack={goBack}
+                            />
+                        )}
+                        {!studioModal && (
+                            <QuizTrainer
+                                setOpenModal={setOpenModal}
+                                formData={formData}
+                                setFormData={setFormData}
+                                handleSubmit={handleSubmit}
+                                goBack={goBack}
+                            />
+                        )}
+                    </>
                 );
             case 2:
                 return (
-                    <TrainingPage_3
+                    <QuizPack
                         setOpenModal={setOpenModal}
                         formData={formData}
                         setFormData={setFormData}
@@ -43,7 +58,7 @@ export const TrainingQuiz = ({ setOpenModal }) => {
                 );
             case 3:
                 return (
-                    <TrainingPage_4
+                    <QuizPersonal
                         setOpenModal={setOpenModal}
                         formData={formData}
                         setFormData={setFormData}
@@ -53,7 +68,7 @@ export const TrainingQuiz = ({ setOpenModal }) => {
                 );
             case 4:
                 return (
-                    <TrainingPage_5
+                    <QuizCheck
                         setOpenModal={setOpenModal}
                         formData={formData}
                         setFormData={setFormData}
@@ -63,7 +78,7 @@ export const TrainingQuiz = ({ setOpenModal }) => {
                 );
             default:
                 return (
-                    <TrainingPage_1
+                    <QuizCity
                         setOpenModal={setOpenModal}
                         formData={formData}
                         setFormData={setFormData}

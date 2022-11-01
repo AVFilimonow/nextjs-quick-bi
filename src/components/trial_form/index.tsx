@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Select, Checkbox, Button, Input } from "@/components";
+import { useRouter } from "next/router";
 
 export const TrialForm = (props) => {
+    const router = useRouter();
     const escFunction = useCallback((event) => {
         if (event.key === "Escape") {
             props.setOpenModal(false);
@@ -221,6 +223,7 @@ export const TrialForm = (props) => {
                         onClick={(e) => {
                             e.preventDefault();
                             console.log(formData);
+                            router.push("/thank_you");
                         }}
                         className={`disabled:bg-[#DADADA] disabled:text-[#A3A3A3] w-[100%] lg:max-w-[480px] bg-primary text-white lg:mx-auto`}
                         disabled={!formValid}

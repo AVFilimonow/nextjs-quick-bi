@@ -1,16 +1,27 @@
 import React, { useState } from "react";
-import { Button, Header, Section, TrialForm, TrainingQuiz } from "@/components";
-import { Footer } from "../../src/components/footer";
-import { Container } from "../../src/components/container";
-import Link from "next/link";
+import {
+    Button,
+    Header,
+    Section,
+    Footer,
+    QuizMain,
+    Container,
+} from "@/components";
 import { useRouter } from "next/router";
 
 const Training: React.FC<{ title?: string }> = () => {
     const router = useRouter();
     const [openModal, setOpenModal] = useState(false);
+    const [studioModal, setStudioModal] = useState(true);
+
     return (
         <div>
-            {openModal && <TrainingQuiz setOpenModal={setOpenModal} />}
+            {openModal && (
+                <QuizMain
+                    setOpenModal={setOpenModal}
+                    studioModal={studioModal}
+                />
+            )}
             {!openModal && (
                 <>
                     <div className="hidden lg:block">

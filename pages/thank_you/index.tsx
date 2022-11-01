@@ -1,7 +1,10 @@
 import React from "react";
 import { Button } from "@/components";
+import { useRouter } from "next/router";
 
 const Thankyou: React.FC<{ title?: string }> = () => {
+    const router = useRouter();
+
     return (
         <div className="bg-[#FAFAFA] px-[20px] lg:px-[94px] h-screen lg:h-screen flex flex-col justify-center items-center">
             <button className="hidden ml-auto">
@@ -33,6 +36,10 @@ const Thankyou: React.FC<{ title?: string }> = () => {
             </span>
             <Button
                 className={`w-[100%] max-w-[400px] bg-[#D08884] text-white lg:w-[400px]`}
+                onClick={(e) => {
+                    e.preventDefault();
+                    router.push("/");
+                }}
             >
                 Ок
             </Button>

@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Input, Checkbox, Button } from "@/components";
+import { useRouter } from "next/router";
 
-export function TrainingPage_4({
+export function QuizPersonal({
     formData,
     setFormData,
     handleSubmit,
     goBack,
     setOpenModal,
 }) {
+    const router = useRouter();
     const { city, studio, pack, name, phone } = formData;
 
     const [nameInput, setNameInput] = useState("");

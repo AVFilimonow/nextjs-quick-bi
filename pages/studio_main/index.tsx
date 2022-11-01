@@ -1,5 +1,14 @@
 import React, { useRef, useState } from "react";
-import { Button, Container, Footer, Section, StudioQuiz } from "@/components";
+import {
+    Button,
+    Container,
+    Footer,
+    Section,
+    QuizMain,
+    SlideNextButton,
+    SlidePrevButton,
+    Header,
+} from "@/components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
 import "swiper/css";
@@ -8,7 +17,6 @@ import { useWindowSize } from "../../src/utils/hooks";
 import { calcClientSliderItemsCount } from "../../src/utils/helpers";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { SlideNextButton, SlidePrevButton, Header } from "@/components";
 
 const StudioMain: React.FC<{ title?: string }> = () => {
     const { width: windowWidth } = useWindowSize();
@@ -17,10 +25,16 @@ const StudioMain: React.FC<{ title?: string }> = () => {
     const prevBtn = useRef<HTMLButtonElement>(null);
     const nextBtn = useRef<HTMLButtonElement>(null);
     const [openModal, setOpenModal] = useState(false);
+    const [studioModal, setStudioModal] = useState(true);
 
     return (
         <div>
-            {openModal && <StudioQuiz setOpenModal={setOpenModal} />}
+            {openModal && (
+                <QuizMain
+                    setOpenModal={setOpenModal}
+                    studioModal={studioModal}
+                />
+            )}
             {!openModal && (
                 <>
                     <div className="hidden lg:block">

@@ -8,7 +8,7 @@ export const PageStart = (props) => {
     }, [openModal]);
 
     return (
-        <div className="hidden lg:block bg-gray-100 lg:h-[666px]">
+        <div className="hidden lg:block bg-gray-100 lg:h-[629px]">
             {openModal && <TrialForm setOpenModal={setOpenModal} />}
             {!openModal && (
                 <Container>

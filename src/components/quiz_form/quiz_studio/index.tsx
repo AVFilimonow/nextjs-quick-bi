@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "@/components";
 import { useRouter } from "next/router";
+import { Button } from "@/components";
 
-export function StudioPage_2({
+export function QuizStudio({
     formData,
     setFormData,
     handleSubmit,
@@ -55,9 +55,9 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                    <div className="group overflow-hidden min-w-[295px] lg:w-full bg-transparent rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
-                            className="w-[343px] lg:w-full"
+                            className="block w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
                             alt=""
                         />
@@ -115,7 +115,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                    <div className="group overflow-hidden min-w-[295px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -175,7 +175,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                    <div className="group overflow-hidden min-w-[295px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -235,7 +235,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                    <div className="group overflow-hidden min-w-[295px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -295,7 +295,7 @@ export function StudioPage_2({
                     }}
                     className="block mx-auto lg:mx-[0px] lg:w-[368px] lg:mr-[32px] lg:mb-[32px]"
                 >
-                    <div className="group w-[343px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                    <div className="group overflow-hidden min-w-[295px] lg:w-full bg-white rounded-[24px] border-[1px] border-[#525252] mb-[16px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                         <img
                             className="w-[343px] lg:w-full"
                             src="../../../images/studio/studio_1.png"
@@ -347,7 +347,7 @@ export function StudioPage_2({
                 </button>
             </div>
             <Button
-                className={`w-[100%] mb-[16px] py-[10px] bg-transparent border-[1px] border-[#292929] text-[#292929] flex items-center justify-center lg:text-p4 lg:w-[350px] lg:block lg:ml-auto lg:flex lg:mr-[32px] hover:bg-white`}
+                className={`w-full max-w-[343px] mx-auto mb-[16px] py-[10px] bg-transparent border-[1px] border-[#292929] text-[#292929] flex items-center justify-center lg:text-p4 lg:w-[350px] lg:block lg:ml-auto lg:flex lg:mr-[32px] hover:bg-white`}
             >
                 <img
                     className="mr-[16px]"

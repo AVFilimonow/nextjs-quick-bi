@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-export function StudioPage_5({
+export function QuizCheck({
     formData,
     setFormData,
     handleSubmit,
@@ -9,7 +9,7 @@ export function StudioPage_5({
     setOpenModal,
 }) {
     const router = useRouter();
-    const { city, studio, pack, name, phone } = formData;
+    const { city, studio, pack, name, phone, trainer } = formData;
     return (
         <div>
             <div className="bg-gray px-[16px] pt-[20px] pb-[32px] h-screen lg:min-h-screen flex flex-col lg:px-[176px] lg:pt-[40px]">
@@ -54,6 +54,13 @@ export function StudioPage_5({
                     }
                 >
                     <strong>Студия :</strong> {studio}
+                </p>
+                <p
+                    className={
+                        "text-p2 uppercase font-familyBold font-bold text-[#292929] w-[60%] lg:text-p2"
+                    }
+                >
+                    <strong>Тренер :</strong> {trainer}
                 </p>
                 <p
                     className={

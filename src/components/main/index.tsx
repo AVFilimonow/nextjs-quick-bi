@@ -1,11 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Scrollbar } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Container } from "../container";
-import { useWindowSize } from "../../utils/hooks";
-import { calcClientSliderItemsCount } from "../../utils/helpers";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
@@ -20,6 +18,7 @@ import {
     Button,
     PageStart,
     TrialForm,
+    TrainerQuiz,
 } from "@/components";
 
 export const Main = (props) => {
@@ -30,6 +29,10 @@ export const Main = (props) => {
     const trainerPrevBtn = useRef<HTMLButtonElement>(null);
     const trainerNextBtn = useRef<HTMLButtonElement>(null);
     const router = useRouter();
+    const [openModal, setOpenModal] = useState(false);
+    useEffect(() => {
+        document.body.classList.toggle("overflow-hidden", openModal);
+    }, [openModal]);
 
     return (
         <main>
@@ -368,7 +371,7 @@ export const Main = (props) => {
                 className="bg-gray-100 w-full z-10 pl-[16px] lg:pl-[0px] relative"
             >
                 <PageStart className="" />
-                <div className="block lg:hidden bg-gray-100 lg:h-[666px]">
+                <div className="block lg:hidden bg-gray-100 lg:h-[629px]">
                     {props.openModal && (
                         <TrialForm setOpenModal={props.setOpenModal} />
                     )}
@@ -419,7 +422,7 @@ export const Main = (props) => {
 
             <section
                 id="block4"
-                className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative"
+                className="bg-white z-0 w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative"
             >
                 <Container>
                     <div className="px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] mr-auto max-w-[1920px] relative">
@@ -664,7 +667,7 @@ export const Main = (props) => {
 
             <section
                 id="block6"
-                className="bg-white w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative"
+                className="bg-white z-0 w-full lg:pb-[140px] pb-[40px] pl-[16px] lg:pl-[0px] lg:relative"
             >
                 <Container>
                     <div className="px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[0px] mr-auto relative">
@@ -836,11 +839,11 @@ export const Main = (props) => {
                             src="../../../images/main/all_treners_icon.svg"
                             alt=""
                         />
-                        <Link href="/trainer_quiz_page2">
+                        <button>
                             <a className="ml-[12px] uppercase text-[#292929] text-h4 underline">
                                 Все тренеры
                             </a>
-                        </Link>
+                        </button>
                     </div>
                 </Container>
             </section>

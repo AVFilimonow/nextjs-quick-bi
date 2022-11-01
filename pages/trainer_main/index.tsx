@@ -5,18 +5,24 @@ import {
     Footer,
     Header,
     Section,
-    TrainerQuiz,
+    QuizMain,
 } from "@/components";
 import { useRouter } from "next/router";
-import Link from "next/link";
 
 const Trainer: React.FC<{ title?: string }> = () => {
     const router = useRouter();
     const [openModal, setOpenModal] = useState(false);
+    const [studioModal, setStudioModal] = useState(false);
+    const page2 = "TrainerPage_2";
 
     return (
         <div>
-            {openModal && <TrainerQuiz setOpenModal={setOpenModal} />}
+            {openModal && (
+                <QuizMain
+                    studioModal={studioModal}
+                    setOpenModal={setOpenModal}
+                />
+            )}
             {!openModal && (
                 <>
                     <div className="hidden lg:block">

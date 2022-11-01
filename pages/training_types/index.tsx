@@ -40,7 +40,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                 <div className="lg:flex lg:justify-between w-full ">
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                            <div className="group overflow-hidden flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                                 <img
                                     className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_1.png"
@@ -58,7 +58,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </Link>
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                            <div className="group overflow-hidden flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                                 <img
                                     className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_2.png"
@@ -78,7 +78,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                 <div className="lg:flex lg:justify-between w-full">
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                            <div className="group overflow-hidden flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                                 <img
                                     className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_3.png"
@@ -96,7 +96,7 @@ const TrainingTypes: React.FC<{ title?: string }> = () => {
                     </Link>
                     <Link href="/sub_training_main">
                         <a className="block lg:w-[48%] lg:h-[87px] lg:mb-[32px]">
-                            <div className="group flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
+                            <div className="group overflow-hidden flex w-full items-center justify-start border-[1px] rounded-2xl border-[#737373] mb-[12px] lg:h-[86px] lg:mr-[32px] hover:shadow-[0_0_0_2px_rgba(208,136,132,1)] hover:border-[#D08884] hover:transition-all duration-500">
                                 <img
                                     className="mr-[20px] group-hover:h-[99%]"
                                     src="../../../images/training/training_4.png"

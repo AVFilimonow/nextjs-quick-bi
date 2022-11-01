@@ -1,7 +1,7 @@
 import React from "react";
 import { useRouter } from "next/router";
 
-export function TrainerPage_2({
+export function QuizTrainer({
     formData,
     setFormData,
     handleSubmit,
