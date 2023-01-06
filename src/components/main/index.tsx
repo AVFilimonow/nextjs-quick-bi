@@ -18,7 +18,6 @@ import {
     Button,
     PageStart,
     TrialForm,
-    TrainerQuiz,
 } from "@/components";
 
 export const Main = (props) => {

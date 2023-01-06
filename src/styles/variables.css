@@ -14,28 +14,20 @@
 
     --color-bg-header: rgb(14, 14, 16, 1);
 
-    --font-h1-size: 32px;
-    --font-h1-height: 35px;
-    --font-h2-size: 24px;
-    --font-h2-height: 34px;
-    --font-h3-size: 20px;
-    --font-h3-height: 30px;
-    --font-h4-size: 18px;
-    --font-h4-height: 21px;
-    --font-h5-size: 12px;
-    --font-h5-height: 20px;
-    --font-t2-size: 24px;
-    --font-t2-height: 34px;
-    --font-p1-size: 12px;
-    --font-p1-height: 14px;
+    --font-h1-size: 48px;
+    --font-h1-height: 64px;
+    --font-h2-size: 28px;
+    --font-h2-height: 32px;
+
+
+    --font-p1-size: 14px;
+    --font-p1-height: 18px;
     --font-p2-size: 14px;
-    --font-p2-height: 16px;
-    --font-p3-size: 18px;
-    --font-p3-height: 26px;
+    --font-p2-height: 18px;
+    --font-p3-size: 12px;
+    --font-p3-height: 16px;
     --font-p4-size: 16px;
-    --font-p4-height: 22px;
-    --font-p5-size: 24px;
-    --font-p5-height: 26px;
+    --font-p4-height: 20px;
 }
 
 .mode-dark {
@@ -43,27 +35,72 @@
     --color-current: currentColor;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 550px) {
+    :root {
+        --font-h1-size: 52px;
+        --font-h1-height: 52px;
+        --font-h2-size: 28px;
+        --font-h2-height: 32px;
+
+        --font-p1-size: 14px;
+        --font-p1-height: 18px;
+        --font-p2-size: 14px;
+        --font-p2-height: 18px;
+        --font-p3-size: 12px;
+        --font-p3-height: 16px;
+        --font-p4-size: 16px;
+        --font-p4-height: 20px;
+
+    }
+}
+
+@media screen and (min-width: 800px) {
+    :root {
+        --font-h1-size: 52px;
+        --font-h1-height: 52px;
+        --font-h2-size: 28px;
+        --font-h2-height: 32px;
+
+        --font-p1-size: 14px;
+        --font-p1-height: 18px;
+        --font-p2-size: 14px;
+        --font-p2-height: 18px;
+        --font-p3-size: 12px;
+        --font-p3-height: 16px;
+
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    :root {
+        --font-h1-size: 80px;
+        --font-h1-height: 85px;
+        --font-h2-size: 32px;
+        --font-h2-height: 38px;
+
+        --font-p1-size: 24px;
+        --font-p1-height: 32px;
+        --font-p2-size: 16px;
+        --font-p2-height: 18px;
+        --font-p3-size: 12px;
+        --font-p3-height: 16px;
+
+    }
+}
+
+@media screen and (min-width: 1600px) {
     :root {
         --font-h1-size: 100px;
-        --font-h1-height: 110px;
-        --font-h2-size: 80px;
-        --font-h2-height: 88px;
-        --font-h3-size: 48px;
-        --font-h3-height: 56px;
-        --font-h4-size: 32px;
-        --font-h4-height: 42px;
-        --font-h5-size: 24px;
-        --font-h5-height: 32px;
-        --font-t2-size: 80px;
-        --font-t2-height: 88px;
-        --font-p1-size: 32px;
-        --font-p1-height: 42px;
-        --font-p2-size: 40px;
-        --font-p2-height: 44px;
+        --font-h1-height: 105px;
+        --font-h2-size: 48px;
+        --font-h2-height: 57px;
+
+        --font-p1-size: 24px;
+        --font-p1-height: 32px;
+        --font-p2-size: 20px;
+        --font-p2-height: 28px;
         --font-p3-size: 32px;
-        --font-p3-height: 42px;
-        --font-p4-size: 20px;
-        --font-p4-height: 22x;
+        --font-p3-height: 40px;
+
     }
 }

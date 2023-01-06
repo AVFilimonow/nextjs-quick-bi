@@ -7,7 +7,7 @@ export const Section: FC<{ className?: string; children: ReactNode }> = ({
 }) => {
     return (
         <div
-            className={`px-[16px] pt-[40px] pb-[24px] lg:px-[176px] lg:pt-[120px] lg:pb-[140px]
+            className={`px-[32px] sm:px-[80px] md:px-[100px] lg:px-[200px]
              ${className}`}
         >
             {children}

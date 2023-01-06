@@ -1,32 +1,14 @@
 import React from "react";
 
-export type IInput = React.DetailedHTMLProps<
-    React.InputHTMLAttributes<HTMLInputElement>,
-    HTMLInputElement
->;
-
-export const Input: React.FC<IInput> = ({
-    className = "",
-    children,
-    ...rest
-}) => {
+export const Input: any = ({ className = "", children, ...rest }) => {
     return (
-        <>
-            <style>
-                {`
-                .no_round {
-                    -webkit-border-radius: 0;
-                }
-                `}
-            </style>
-            <input
-                className={`text-[#292929] text-p3 font-['PT-Root-UI'] outline-none pb-[8px] pt-[20px] bg-transparent rounded-none no_round border-b-[1px] border-b-black lg:text-[24px]
+        <input
+            className={`border-[1px] border-[#424242] lg:rounded-[12px] rounded-[8px] sm:p-[20px] p-[8px] mb-[24px] outline-none
              ${className}`}
-                {...rest}
-                data-testid="input"
-            >
-                {children}
-            </input>
-        </>
+            {...rest}
+            data-testid="input"
+        >
+            {children}
+        </input>
     );
 };

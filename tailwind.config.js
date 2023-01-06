@@ -7,8 +7,12 @@ module.exports = {
             colors: colors,
             fontSize: fonts,
             screens: {
+                sm: "550px",
+                // => @media (min-width: 800px) { ... }
                 md: "800px",
-                // => @media (min-width: 992px) { ... }
+                // => @media (min-width: 800px) { ... }
+                lg: "1600px",
+                // => @media (min-width: 1600px) { ... }
             },
         },
     },

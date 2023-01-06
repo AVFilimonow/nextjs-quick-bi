@@ -20,28 +20,12 @@ class CustomDocument extends Document {
         return (
             <Html>
                 <Head>
+                    {/* AOS Animation */}
                     <link
-                        rel="preconnect"
-                        href="https://fonts.googleapis.com"
-                    />
-                    <link
-                        rel="preconnect"
-                        href="https://fonts.gstatic.com"
-                        crossOrigin={"true"}
-                    />
-
-                    <link
-                        href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap"
                         rel="stylesheet"
+                        href="https://unpkg.com/aos@next/dist/aos.css"
                     />
                 </Head>
-                <style>
-                    {`
-                        .overflow-hidden {
-                            overflow-y: hidden;
-                        }
-                         `}
-                </style>
                 <body className="">
                     <Main />
                     <NextScript />
