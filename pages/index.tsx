@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useRouter } from "next/router";
 
 import {
     Container,
@@ -21,6 +22,8 @@ const Home: React.FC = () => {
         });
     }, []);
 
+    const router = useRouter();
+
     return (
         <div className="relative bg-[#FFFFFF] h-full overflow-hidden ">
             <div className="block_1 relative md:mb-[30%] sm:mb-[50%] mb-[60%]">
@@ -35,7 +38,10 @@ const Home: React.FC = () => {
                                 инструмент для исследования и визуализация
                                 данных вашего бизнеса
                             </p>
-                            <Button className="lg:mt-[120px] md:mt-[60px] mt-[30px]">
+                            <Button
+                                onClick={() => router.push("/#form")}
+                                className="lg:mt-[120px] md:mt-[60px] mt-[30px]"
+                            >
                                 <span className="md:mr-[12px] mr-[8px] text-p2">
                                     Подать заявку
                                 </span>
@@ -117,7 +123,7 @@ const Home: React.FC = () => {
                     </Section>
                 </Container>
                 <img
-                    className="absolute md:left-[5%] right-[5%] sm:top-[10%] top-[30%] md:w-[40%] w-[70%] z-10"
+                    className="absolute md:left-[5%] right-[5%] sm:top-[10%] top-[30%] md:w-[40%] w-[70%] z-10 animate-spin-slow"
                     src="../../../images/2_block/circles_orbit.png"
                 />
                 <img
@@ -142,7 +148,10 @@ const Home: React.FC = () => {
                                     Создавайте визуальные отчеты и принимайте
                                     решения основываясь на данные
                                 </span>
-                                <Button className="lg:mt-[120px] md:mt-[60px] z-30">
+                                <Button
+                                    onClick={() => router.push("/#form")}
+                                    className="lg:mt-[120px] md:mt-[60px] z-30"
+                                >
                                     <span className="md:mr-[12px] mr-[8px] text-p2">
                                         Подать заявку
                                     </span>
@@ -466,7 +475,7 @@ const Home: React.FC = () => {
                     src="../../../images/5_block/circles_gradient.png"
                 />
                 <img
-                    className="absolute md:right-[10%] md:-top-[40%] md:w-[50%] right-[5%] sm:top-[0%] top-[20%] w-[100%]"
+                    className="absolute md:right-[10%] md:-top-[40%] md:w-[50%] right-[5%] sm:top-[0%] top-[20%] w-[100%] animate-spin-slow"
                     src="../../../images/5_block/circles-orbit.png"
                 />
             </div>
@@ -533,7 +542,10 @@ const Home: React.FC = () => {
                                 </p>
                             </BlockService>
                         </div>
-                        <Button className="relative z-30">
+                        <Button
+                            onClick={() => router.push("/#form")}
+                            className="relative z-30"
+                        >
                             <span className="md:mr-[12px] mr-[8px] text-p2">
                                 Подать заявку
                             </span>
@@ -662,7 +674,7 @@ const Home: React.FC = () => {
                     src="../../../images/7_block/circles_gradient_mb.png"
                 />
             </div>
-            <div className="block_8 relative mb-[5%]">
+            <div className="block_8 relative mb-[5%]" id="form">
                 <Container className="relative">
                     <Section className="">
                         <div
@@ -747,7 +759,7 @@ const Home: React.FC = () => {
                     </Section>
                 </Container>
                 <img
-                    className="md:block hidden absolute right-[0] -bottom-[30%] w-[50%]"
+                    className="md:block hidden absolute right-[0] -bottom-[30%] w-[50%] animate-spin-slow"
                     src="../../../images/8_block/circles_orbit.png"
                 />
                 <img
