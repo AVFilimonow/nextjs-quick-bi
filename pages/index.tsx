@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import {
     Container,
@@ -25,7 +26,7 @@ const Home: React.FC = () => {
     const router = useRouter();
 
     return (
-        <div className="relative bg-[#FFFFFF] h-full overflow-hidden ">
+        <div className="relative bg-[#FFFFFF] overflow-hidden ">
             <div className="block_1 relative md:mb-[30%] sm:mb-[50%] mb-[60%]">
                 <Container className="relative">
                     <Section>
@@ -38,18 +39,17 @@ const Home: React.FC = () => {
                                 инструмент для исследования и визуализация
                                 данных вашего бизнеса
                             </p>
-                            <Button
-                                onClick={() => router.push("/#form")}
-                                className="lg:mt-[120px] md:mt-[60px] mt-[30px]"
-                            >
-                                <span className="md:mr-[12px] mr-[8px] text-p2">
-                                    Подать заявку
-                                </span>
-                                <img
-                                    className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
-                                    src="../../../images/Arrow-Right.png"
-                                />
-                            </Button>
+                            <Link href="#form">
+                                <Button className="lg:mt-[120px] md:mt-[60px] mt-[30px]">
+                                    <span className="md:mr-[12px] mr-[8px] text-p2">
+                                        Подать заявку
+                                    </span>
+                                    <img
+                                        className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
+                                        src="../../../images/Arrow-Right.png"
+                                    />
+                                </Button>
+                            </Link>
                         </div>
                     </Section>
                 </Container>
@@ -148,18 +148,17 @@ const Home: React.FC = () => {
                                     Создавайте визуальные отчеты и принимайте
                                     решения основываясь на данные
                                 </span>
-                                <Button
-                                    onClick={() => router.push("/#form")}
-                                    className="lg:mt-[120px] md:mt-[60px] z-30"
-                                >
-                                    <span className="md:mr-[12px] mr-[8px] text-p2">
-                                        Подать заявку
-                                    </span>
-                                    <img
-                                        className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
-                                        src="../../../images/Arrow-Right.png"
-                                    />
-                                </Button>
+                                <Link href="#form">
+                                    <Button className="lg:mt-[120px] md:mt-[60px] z-30">
+                                        <span className="md:mr-[12px] mr-[8px] text-p2">
+                                            Подать заявку
+                                        </span>
+                                        <img
+                                            className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
+                                            src="../../../images/Arrow-Right.png"
+                                        />
+                                    </Button>
+                                </Link>
                             </div>
                             <div className="flex flex-wrap sm:flex-nowrap md:justify-end sm:justify-center justify-between md:w-[60%] w-full lg:gap-[40px] md:gap-[20px] gap-[20px] z-30">
                                 <div
@@ -542,22 +541,21 @@ const Home: React.FC = () => {
                                 </p>
                             </BlockService>
                         </div>
-                        <Button
-                            onClick={() => router.push("/#form")}
-                            className="relative z-30"
-                        >
-                            <span className="md:mr-[12px] mr-[8px] text-p2">
-                                Подать заявку
-                            </span>
-                            <img
-                                className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
-                                src="../../../images/Arrow-Right.png"
-                            />
-                        </Button>
+                        <Link href="#form">
+                            <Button className="relative z-30">
+                                <span className="md:mr-[12px] mr-[8px] text-p2">
+                                    Подать заявку
+                                </span>
+                                <img
+                                    className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
+                                    src="../../../images/Arrow-Right.png"
+                                />
+                            </Button>
+                        </Link>
                     </Section>
                 </Container>
             </div>
-            <div className="block_7 relative md:mb-[15%] mb-[120px]">
+            <div className="block_7 relative md:mb-[20%] mb-[120px]">
                 <Container className="relative">
                     <Section>
                         <div className="relative lg:mb-[64px] mb-[40px] lg:max-w-[660px] md:max-w-[390px] max-w-[270px] z-0">
@@ -585,7 +583,7 @@ const Home: React.FC = () => {
                             </BlockLogo>
                             <BlockLogo className="">
                                 <img
-                                    className="w-[80%]"
+                                    className="w-[60%]"
                                     src="../../../images/7_block/logo_3.png"
                                     alt=""
                                 />
@@ -674,11 +672,11 @@ const Home: React.FC = () => {
                     src="../../../images/7_block/circles_gradient_mb.png"
                 />
             </div>
-            <div className="block_8 relative mb-[5%]" id="form">
+            <div className="block_8 relative" id="form">
                 <Container className="relative">
                     <Section className="">
                         <div
-                            className="relative flex md:flex-row flex-col items-start justify-between z-40"
+                            className="relative flex md:flex-row flex-col items-start justify-between z-40 pb-[60px]"
                             data-aos="fade-right"
                         >
                             <div className="flex flex-col justify-between lg:h-[800px] md:h-[620px] md:mb-[0px] mb-[40px]">
@@ -759,11 +757,11 @@ const Home: React.FC = () => {
                     </Section>
                 </Container>
                 <img
-                    className="md:block hidden absolute right-[0] -bottom-[30%] w-[50%] animate-spin-slow"
+                    className="md:block hidden absolute right-[0] bottom-[30%] w-[50%] animate-spin-slow"
                     src="../../../images/8_block/circles_orbit.png"
                 />
                 <img
-                    className="md:block hidden absolute right-[0] -bottom-[20%] w-[70%]"
+                    className="md:block hidden absolute right-[0] bottom-[0] w-[70%]"
                     src="../../../images/8_block/circles_gradient.png"
                 />
                 <img
@@ -771,12 +769,12 @@ const Home: React.FC = () => {
                     src="../../../images/8_block/circles_gradient_mb.png"
                 />
                 <img
-                    className="md:block hidden absolute right-[0] -bottom-[20%] w-[50%]"
+                    className="md:block hidden absolute right-[0] bottom-[0] w-[50%]"
                     src="../../../images/8_block/rectangle_2.png"
                     data-aos="fade-left"
                 />
                 <img
-                    className="md:block hidden absolute right-[0] md:top-[0%] lg:-bottom-[20%] w-[40%]"
+                    className="md:block hidden absolute right-[0] bottom-[0] w-[40%]"
                     src="../../../images/8_block/rectangle_1.png"
                     data-aos="fade-left"
                 />

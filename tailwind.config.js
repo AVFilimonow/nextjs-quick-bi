@@ -14,6 +14,9 @@ module.exports = {
                 lg: "1600px",
                 // => @media (min-width: 1600px) { ... }
             },
+            animation: {
+                "spin-slow": "spin 35s linear infinite",
+            },
         },
     },
     variants: {
