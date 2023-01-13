@@ -55,19 +55,19 @@ const Home: React.FC = () => {
                 </Container>
                 <img
                     className="absolute left-[0px] top-[0px] md:w-[80%] w-[100%]"
-                    src="/public/images/1_block/rectangle_2.png"
+                    src="./public/images/1_block/rectangle_2.png"
                 />
                 <img
                     className="absolute left-[0px] top-[0px] md:w-[80%] w-[100%]"
-                    src="/public/images/1_block/rectangle_1.png"
+                    src="./public/images/1_block/rectangle_1.png"
                 />
                 <img
                     className="sm:hidden block absolute left-[0px] top-[0px] w-[100%] min-w-[300px]"
-                    src="/public/images/1_block/rectangle_1_mb.png"
+                    src="./public/images/1_block/rectangle_1_mb.png"
                 />
                 <img
                     className="sm:block hidden absolute left-[25%] md:top-[50%] top-[10%] md:w-[50%] w-[100%]"
-                    src="/public/images/1_block/circles_gradient.png"
+                    src="./public/images/1_block/circles_gradient.png"
                 />
                 <img
                     className="sm:block hidden absolute left-[45%] top-[0] md:w-[50%] w-[100%]"
