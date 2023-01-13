@@ -46,7 +46,7 @@ const Home: React.FC = () => {
                                     </span>
                                     <img
                                         className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
-                                        src="../../../images/Arrow-Right.png"
+                                        src="/public/images/Arrow-Right.png"
                                     />
                                 </Button>
                             </Link>
@@ -55,40 +55,40 @@ const Home: React.FC = () => {
                 </Container>
                 <img
                     className="absolute left-[0px] top-[0px] md:w-[80%] w-[100%]"
-                    src="../../../images/1_block/rectangle_2.png"
+                    src="/public/images/1_block/rectangle_2.png"
                 />
                 <img
                     className="absolute left-[0px] top-[0px] md:w-[80%] w-[100%]"
-                    src="../../../images/1_block/rectangle_1.png"
+                    src="/public/images/1_block/rectangle_1.png"
                 />
                 <img
                     className="sm:hidden block absolute left-[0px] top-[0px] w-[100%] min-w-[300px]"
-                    src="../../../images/1_block/rectangle_1_mb.png"
+                    src="/public/images/1_block/rectangle_1_mb.png"
                 />
                 <img
                     className="sm:block hidden absolute left-[25%] md:top-[50%] top-[10%] md:w-[50%] w-[100%]"
-                    src="../../../images/1_block/circles_gradient.png"
+                    src="/public/images/1_block/circles_gradient.png"
                 />
                 <img
                     className="sm:block hidden absolute left-[45%] top-[0] md:w-[50%] w-[100%]"
-                    src="../../../images/1_block/circles_shtrih.png"
+                    src="/public/images/1_block/circles_shtrih.png"
                 />
                 <img
                     className="sm:hidden block absolute left-[0%] top-[0%] w-[115px]"
-                    src="../../../images/1_block/circles_gradient_mb.png"
+                    src="/public/images/1_block/circles_gradient_mb.png"
                 />
                 <img
                     className="sm:hidden block absolute right-[0%] top-[380px] w-[152px]"
-                    src="../../../images/1_block/circles_shtrih_mb.png"
+                    src="/public/images/1_block/circles_shtrih_mb.png"
                 />
                 <img
                     className="sm:block hidden absolute md:right-[0px] -right-[5%] top-[35%] md:w-[60%] w-[50%]"
-                    src="../../../images/1_block/main_frame.png"
+                    src="/public/images/1_block/main_frame.png"
                     data-aos="fade-left"
                 />
                 <img
                     className="sm:hidden block absolute right-[0] top-[60px] w-[100%]"
-                    src="../../../images/1_block/main_frame_mb_2.png"
+                    src="/public/images/1_block/main_frame_mb_2.png"
                     data-aos="fade-left"
                 />
             </div>
