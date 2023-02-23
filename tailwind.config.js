@@ -13,6 +13,7 @@ module.exports = {
                 // => @media (min-width: 800px) { ... }
                 lg: "1600px",
                 // => @media (min-width: 1600px) { ... }
+                xl: "2400px",
             },
             animation: {
                 "spin-slow": "spin 35s linear infinite",

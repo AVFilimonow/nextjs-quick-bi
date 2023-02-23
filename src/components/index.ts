@@ -1,5 +1,4 @@
 export { Button } from "./button";
-export { Main } from "./main";
 export { Container } from "./container";
 export { Section } from "./section";
 export { BlockAdv } from "./block_adv";

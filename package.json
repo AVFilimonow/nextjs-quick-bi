@@ -2,6 +2,7 @@
     "name": "kivenov-fitness",
     "version": "0.1.0",
     "private": true,
+    "homepage": "https://simplecodedev.gitlab.io/quickbi/frontend/quickbi-frontend-nextjs",
     "scripts": {
         "dev": "next",
         "build": "next build",
@@ -52,7 +53,8 @@
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
-            "eslint --quiet --fix"
+            "eslint --cache --quiet --fix",
+            "prettier --cache --write"
         ]
     },
     "husky": {

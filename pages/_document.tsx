@@ -6,7 +6,7 @@ import Document, {
     Main,
     NextScript,
 } from "next/document";
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 
 class CustomDocument extends Document {
     static async getInitialProps(

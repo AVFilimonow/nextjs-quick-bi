@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useRouter } from "next/router";
 import Link from "next/link";
-
 import {
     Container,
     Section,
@@ -22,8 +20,6 @@ const Home: React.FC = () => {
             duration: 500,
         });
     }, []);
-
-    const router = useRouter();
 
     return (
         <div className="relative bg-[#FFFFFF] overflow-hidden ">
@@ -46,7 +42,7 @@ const Home: React.FC = () => {
                                     </span>
                                     <img
                                         className="h-[16px] w-[16px] md:h-[24px] md:w-[24px]"
-                                        src="/images/Arrow-Right.png"
+                                        src="../../../images/Arrow-Right.png"
                                     />
                                 </Button>
                             </Link>
@@ -55,40 +51,40 @@ const Home: React.FC = () => {
                 </Container>
                 <img
                     className="absolute left-[0px] top-[0px] md:w-[80%] w-[100%]"
-                    src="/images/1_block/rectangle_2.png"
+                    src="../../../images/1_block/rectangle_2.png"
                 />
                 <img
                     className="absolute left-[0px] top-[0px] md:w-[80%] w-[100%]"
-                    src="/images/1_block/rectangle_1.png"
+                    src="../../../images/1_block/rectangle_1.png"
                 />
                 <img
                     className="sm:hidden block absolute left-[0px] top-[0px] w-[100%] min-w-[300px]"
-                    src="/images/1_block/rectangle_1_mb.png"
+                    src="../../../images/1_block/rectangle_1_mb.png"
                 />
                 <img
                     className="sm:block hidden absolute left-[25%] md:top-[50%] top-[10%] md:w-[50%] w-[100%]"
-                    src="/images/1_block/circles_gradient.png"
+                    src="../../../images/1_block/circles_gradient.png"
                 />
                 <img
                     className="sm:block hidden absolute left-[45%] top-[0] md:w-[50%] w-[100%]"
-                    src="/images/1_block/circles_shtrih.png"
+                    src="../../../images/1_block/circles_shtrih.png"
                 />
                 <img
                     className="sm:hidden block absolute left-[0%] top-[0%] w-[115px]"
-                    src="/images/1_block/circles_gradient_mb.png"
+                    src="../../../images/1_block/circles_gradient_mb.png"
                 />
                 <img
                     className="sm:hidden block absolute right-[0%] top-[380px] w-[152px]"
-                    src="/images/1_block/circles_shtrih_mb.png"
+                    src="../../../images/1_block/circles_shtrih_mb.png"
                 />
                 <img
                     className="sm:block hidden absolute md:right-[0px] -right-[5%] top-[35%] md:w-[60%] w-[50%]"
-                    src="/images/1_block/main_frame.png"
+                    src="../../../images/1_block/main_frame.png"
                     data-aos="fade-left"
                 />
                 <img
                     className="sm:hidden block absolute right-[0] top-[60px] w-[100%]"
-                    src="/images/1_block/main_frame_mb_2.png"
+                    src="../../../images/1_block/main_frame_mb_2.png"
                     data-aos="fade-left"
                 />
             </div>
@@ -160,14 +156,14 @@ const Home: React.FC = () => {
                                     </Button>
                                 </Link>
                             </div>
-                            <div className="flex flex-wrap sm:flex-nowrap md:justify-end sm:justify-center justify-between md:w-[60%] w-full lg:gap-[40px] md:gap-[20px] gap-[20px] z-30">
+                            <div className="flex flex-wrap sm:flex-nowrap md:justify-end sm:justify-center justify-center md:w-[60%] w-full lg:gap-[40px] md:gap-[20px] gap-[20px] z-30">
                                 <div
-                                    className="lg:-mt-[250px] md:-mt-[180px] mt-[20px] md:w-auto w-[150px] gap-[20px]"
+                                    className="lg:-mt-[250px] md:-mt-[180px] mt-[20px] md:mr-[0px] sm:mr-[0px] md:w-auto w-[170px] gap-[20px]"
                                     data-aos="zoom-in"
                                 >
                                     <BlockAdv className="lg:mb-[40px] md:mb-[20px] mb-[16px] flex flex-col justify-between">
                                         <img
-                                            className="lg:w-[120px] lg:h-[120px] md:w-[62px] md:h-[62px] w-[62px] h-[62px] mb-[16px]"
+                                            className="lg:w-[120px] lg:h-[120px] md:w-[6vw] md:h-[6vw] w-[62px] h-[62px] mb-[16px]"
                                             src="../../../images/3_block/block_circle_1.png"
                                             alt=""
                                         />
@@ -177,7 +173,7 @@ const Home: React.FC = () => {
                                     </BlockAdv>
                                     <BlockAdv className="flex flex-col justify-between">
                                         <img
-                                            className="lg:w-[120px] lg:h-[120px] md:w-[62px] md:h-[62px] w-[62px] h-[62px] mb-[16px]"
+                                            className="lg:w-[120px] lg:h-[120px] md:w-[6vw] md:h-[6vw] w-[62px] h-[62px] mb-[16px]"
                                             src="../../../images/3_block/block_circle_2.png"
                                             alt=""
                                         />
@@ -187,12 +183,12 @@ const Home: React.FC = () => {
                                     </BlockAdv>
                                 </div>
                                 <div
-                                    className="lg:-mt-[150px] md:-mt-[120px] mt-[0px] md:w-auto w-[150px] gap-[20px]"
+                                    className="lg:-mt-[150px] md:-mt-[120px] mt-[0px] md:w-auto w-[170px] gap-[20px]"
                                     data-aos="zoom-in"
                                 >
                                     <BlockAdv className="lg:mb-[40px] md:mb-[20px] mb-[16px] flex flex-col justify-between">
                                         <img
-                                            className="lg:w-[120px] lg:h-[120px] md:w-[62px] md:h-[62px] w-[62px] h-[62px] mb-[16px]"
+                                            className="lg:w-[120px] lg:h-[120px] md:w-[6vw] md:h-[6vw] w-[62px] h-[62px] mb-[16px]"
                                             src="../../../images/3_block/block_circle_3.png"
                                             alt=""
                                         />
@@ -202,7 +198,7 @@ const Home: React.FC = () => {
                                     </BlockAdv>
                                     <BlockAdv className="flex flex-col justify-between">
                                         <img
-                                            className="lg:w-[120px] lg:h-[120px] md:w-[62px] md:h-[62px] w-[62px] h-[62px] mb-[16px]"
+                                            className="lg:w-[120px] lg:h-[120px] md:w-[6vw] md:h-[6vw] w-[62px] h-[62px] mb-[16px]"
                                             src="../../../images/3_block/block_circle_4.png"
                                             alt=""
                                         />
@@ -216,12 +212,12 @@ const Home: React.FC = () => {
                     </Section>
                 </Container>
                 <img
-                    className="hidden md:block absolute right-[0px] -top-[15%] w-[60%]"
+                    className="hidden md:block absolute right-[0px] -top-[15%] w-[60%] h-[60%]"
                     src="../../../images/3_block/rectangle_2.png"
                     data-aos="fade-right"
                 />
                 <img
-                    className="hidden md:block absolute right-[0] top-[0%] w-[55%]"
+                    className="hidden md:block absolute right-[0] top-[0%] w-[60%] h-[80%]"
                     src="../../../images/3_block/rectangle_1.png"
                 />
                 <img
@@ -267,102 +263,100 @@ const Home: React.FC = () => {
             <div className="block_5 relative md:mb-[15%] mb-[120px]">
                 <Container className="relative">
                     <Section>
-                        <div className="flex flex-col md:flex-row justify-between">
+                        <div className="flex flex-col md:flex-row flex-wrap justify-between">
                             <div className="z-20 md:mr-[22px] mr-[0px] md:mb-[0px] mb-[80px]">
-                                <h2 className="text-h2 text-white font-bold font-['SF-Pro-Text']">
+                                <h2 className="text-h2 text-white xl:text-black font-bold font-['SF-Pro-Text']">
                                     Области
                                     <br />
                                     специализации
                                 </h2>
                             </div>
                             <div
-                                className="hidden md:block lg:w-[60%] md:w-[70%] w-full z-30"
+                                className="hidden md:block lg:w-[60%] w-full lg:mt-0 mt-[40px] z-30"
                                 data-aos="fade-right"
                             >
                                 <div className="relative z-30 flex justify-center">
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px]">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px] lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/ecommerce_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
-                                            Электронная <br />
-                                            коммерция
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px] ">
+                                            Электронная <br /> коммерция
                                         </p>
                                     </BlockSpec>
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px]">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px] lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/database_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px]">
                                             IoT
                                         </p>
                                     </BlockSpec>
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[0px]">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[0px] lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/study_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
-                                            Электронное <br />
-                                            обучение
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px]">
+                                            Электронное <br /> обучение
                                         </p>
                                     </BlockSpec>
                                 </div>
-                                <div className="relative z-30 flex justify-center lg:mt-[40px] md:mt-[20px]">
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px]">
+                                <div className="relative z-30 flex justify-center  lg:flex-nowrap md:flex-wrap">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px] lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/social_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px]">
                                             Социальные сети <br />и платформы
                                         </p>
                                     </BlockSpec>
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[0px]">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[0px] lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/bigdata_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px]">
                                             Большие данные
                                         </p>
                                     </BlockSpec>
                                 </div>
-                                <div className="relative z-30 flex justify-center lg:mt-[40px] md:mt-[20px]">
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px]">
+                                <div className="relative z-30 flex lg:flex-nowrap md:flex-wrap justify-center">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px]  lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/logistic_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px]">
                                             Логистика
                                         </p>
                                     </BlockSpec>
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px]">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[16px]  lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/health_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px]">
                                             Здравоохранение
                                         </p>
                                     </BlockSpec>
-                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[0px]">
+                                    <BlockSpec className="flex items-center lg:mr-[40px] md:mr-[0px]  lg:mt-[40px] md:mt-[20px] mt-0">
                                         <img
                                             className="lg:h-[32px] lg:w-[32px] lg:mr-[32px] md:h-[16px] md:w-[16px] md:mr-[16px]"
                                             src="../../../images/5_block/finance_icon.svg"
                                             alt=""
                                         />
-                                        <p className="lg:text-p2 md:text-p3 lg:mr-[32px] md:mr-[20px]">
+                                        <p className="lg:text-p2 md:text-[20px] lg:mr-[32px] md:mr-[20px]">
                                             Финансы
                                         </p>
                                     </BlockSpec>
@@ -380,8 +374,7 @@ const Home: React.FC = () => {
                                             alt=""
                                         />
                                         <p className="text-p3">
-                                            Электронная <br />
-                                            коммерция
+                                            Электронная <br /> коммерция
                                         </p>
                                     </BlockSpec>
                                     <BlockSpec className="flex items-center">
@@ -448,7 +441,7 @@ const Home: React.FC = () => {
                                     </BlockSpec>
                                     <BlockSpec className="flex items-center mb-[16px]">
                                         <img
-                                            className="h-[20px] w-[20px] mr-[16px] "
+                                            className="h-[20px] w-[20px] mr-[16px]"
                                             src="../../../images/5_block/finance_icon.svg"
                                             alt=""
                                         />
@@ -460,7 +453,7 @@ const Home: React.FC = () => {
                     </Section>
                 </Container>
                 <img
-                    className="hidden md:block absolute left-[0px] lg:-top-[60%] md:-top-[50%] lg:w-[750px] lg:h-[770px] md:w-[380px] md:h-[380px]"
+                    className="hidden md:block absolute left-[0px] lg:-top-[60%] md:-top-[25%] lg:h-[800px] md:h-[400px] lg:w-[800px] md:w-[500px]"
                     src="../../../images/5_block/rectangle_1.png"
                     data-aos="fade-right"
                 />
@@ -490,7 +483,7 @@ const Home: React.FC = () => {
                             className="relative flex flex-col md:flex-row justify-between lg:mb-[64px] md:mb-[40px] mb-[24px] z-30"
                             data-aos="zoom-in"
                         >
-                            <BlockService className="flex flex-col md:items-center items-start lg:mr-[32px] md:mr-[16px] mr-[0px] md:mb-[0] mb-[16px] lg:w-[480px] md:w-[248px] w-full">
+                            <BlockService className="flex flex-col md:items-center items-start lg:mr-[32px] md:mr-[16px] mr-[0px] md:mb-[0] mb-[16px] lg:w-[480px] md:w-[30%] w-full">
                                 <img
                                     className="lg:h-[160px] lg:w-[160px] md:h-[84px] md:w-[84px] h-[100px] w-[100px] md:mb-[40px] mb-[20px]"
                                     src="../../../images/6_block/serice_icon_1.svg"
@@ -506,7 +499,7 @@ const Home: React.FC = () => {
                                     вашими корпоративными системами.
                                 </p>
                             </BlockService>
-                            <BlockService className="flex flex-col md:items-center items-start lg:mr-[32px] md:mr-[16px] mr-[0px] md:mb-[0] mb-[16px] lg:w-[480px] md:w-[248px] w-full">
+                            <BlockService className="flex flex-col md:items-center items-start lg:mr-[32px] md:mr-[16px] mr-[0px] md:mb-[0] mb-[16px] lg:w-[480px] md:w-[30%] w-full">
                                 <img
                                     className="lg:h-[160px] lg:w-[160px] md:h-[84px] md:w-[84px] h-[100px] w-[100px] md:mb-[40px] mb-[20px]"
                                     src="../../../images/6_block/serice_icon_2.svg"
@@ -522,7 +515,7 @@ const Home: React.FC = () => {
                                     вашими потребностями.
                                 </p>
                             </BlockService>
-                            <BlockService className="flex flex-col md:items-center items-start lg:mr-[32px] md:mr-[16px] mr-[0px] md:mb-[0] mb-[16px] lg:w-[480px] md:w-[248px] w-full">
+                            <BlockService className="flex flex-col md:items-center items-start lg:mr-[32px] md:mr-[16px] mr-[0px] md:mb-[0] mb-[16px] lg:w-[480px] md:w-[30%] w-full">
                                 <img
                                     className="lg:h-[160px] lg:w-[160px] md:h-[84px] md:w-[84px] h-[100px] w-[100px] md:mb-[40px] mb-[20px]"
                                     src="../../../images/6_block/serice_icon_3.svg"
@@ -567,48 +560,52 @@ const Home: React.FC = () => {
                             className="hidden md:flex relative flex-wrap justify-center z-20 w-full gap-[16px] lg:gap-[32px]"
                             data-aos="zoom-right"
                         >
-                            <BlockLogo className="">
-                                <img
-                                    className="w-[80%]"
-                                    src="../../../images/7_block/logo_1.png"
-                                    alt=""
-                                />
-                            </BlockLogo>
-                            <BlockLogo className="">
-                                <img
-                                    className="w-[80%]"
-                                    src="../../../images/7_block/logo_2.png"
-                                    alt=""
-                                />
-                            </BlockLogo>
-                            <BlockLogo className="">
-                                <img
-                                    className="w-[60%]"
-                                    src="../../../images/7_block/logo_3.png"
-                                    alt=""
-                                />
-                            </BlockLogo>
-                            <BlockLogo className="">
-                                <img
-                                    className="w-[80%]"
-                                    src="../../../images/7_block/logo_4.png"
-                                    alt=""
-                                />
-                            </BlockLogo>
-                            <BlockLogo className="">
-                                <img
-                                    className="w-[80%]"
-                                    src="../../../images/7_block/logo_5.png"
-                                    alt=""
-                                />
-                            </BlockLogo>
-                            <BlockLogo className="">
-                                <img
-                                    className="w-[80%]"
-                                    src="../../../images/7_block/logo_6.png"
-                                    alt=""
-                                />
-                            </BlockLogo>
+                            <div className="flex justify-between gap-[16px] lg:gap-[32px]">
+                                <BlockLogo className="w-[16%]">
+                                    <img
+                                        className="w-[80%]"
+                                        src="../../../images/7_block/logo_1.png"
+                                        alt=""
+                                    />
+                                </BlockLogo>
+                                <BlockLogo className="w-[16%]">
+                                    <img
+                                        className="w-[80%]"
+                                        src="../../../images/7_block/logo_2.png"
+                                        alt=""
+                                    />
+                                </BlockLogo>
+                                <BlockLogo className="w-[16%]">
+                                    <img
+                                        className="w-[60%]"
+                                        src="../../../images/7_block/logo_3.png"
+                                        alt=""
+                                    />
+                                </BlockLogo>
+                            </div>
+                            <div className="flex justify-between gap-[16px] lg:gap-[32px]">
+                                <BlockLogo className="w-[16%]">
+                                    <img
+                                        className="w-[80%]"
+                                        src="../../../images/7_block/logo_4.png"
+                                        alt=""
+                                    />
+                                </BlockLogo>
+                                <BlockLogo className="w-[16%]">
+                                    <img
+                                        className="w-[80%]"
+                                        src="../../../images/7_block/logo_5.png"
+                                        alt=""
+                                    />
+                                </BlockLogo>
+                                <BlockLogo className="w-[16%]">
+                                    <img
+                                        className="w-[80%]"
+                                        src="../../../images/7_block/logo_6.png"
+                                        alt=""
+                                    />
+                                </BlockLogo>
+                            </div>
                         </div>
                         <div
                             className="md:hidden relative flex flex-wrap justify-center z-20 w-full gap-[16px]"
@@ -706,7 +703,7 @@ const Home: React.FC = () => {
                                     Политика конфиденциальности
                                 </a>
                             </div>
-                            <BlockService className="lg:w-[610px] md:w-[350px] w-full py-[40px] md:mb-[0px] mb-[40px]">
+                            <BlockService className="lg:w-[610px] md:w-[50%] w-full py-[40px] md:mb-[0px] mb-[40px]">
                                 <form
                                     action=""
                                     className="w-full flex flex-col justify-between"
@@ -715,7 +712,6 @@ const Home: React.FC = () => {
                                         <h2 className="text-h2 font-bold font-['SF-Pro-Text'] lg:mb-[48px] mb-[40px]">
                                             Подать заявку
                                         </h2>
-
                                         <Input
                                             type="text"
                                             className=""
